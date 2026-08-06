@@ -1,28 +1,21 @@
 import type { ReactNode } from "react";
-import { notFound } from "next/navigation";
+import { Inter } from "next/font/google";
 
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { isLocale, type Locale } from "@/config/locales";
+import "./globals.css";
 
-export default async function LocaleLayout({
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+export default function RootLayout({
   children,
-  params,
 }: {
   children: ReactNode;
-  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-
-  if (!isLocale(locale)) {
-    notFound();
-  }
-
   return (
-    <>
-      <Header locale={locale as Locale} />
-      <main>{children}</main>
-      <Footer locale={locale as Locale} />
-    </>
+    <html lang="es">
+      <body className={inter.className}>{children}</body>
+    </html>
   );
 }
