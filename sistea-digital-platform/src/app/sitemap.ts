@@ -1,34 +1,24 @@
 import type { MetadataRoute } from "next";
 
-import { routes } from "@/config/routes";
-import { siteConfig } from "@/config/site";
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
+  const baseUrl = "https://www.sisteasv.com";
 
   return [
     {
-      url: `${siteConfig.url}${routes.es.home}`,
-      lastModified: now,
+      url: `${baseUrl}/es`,
+      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
-      alternates: {
-        languages: {
-          es: `${siteConfig.url}${routes.es.home}`,
-          en: `${siteConfig.url}${routes.en.home}`,
-          de: `${siteConfig.url}${routes.de.home}`,
-        },
-      },
     },
     {
-      url: `${siteConfig.url}${routes.en.home}`,
-      lastModified: now,
+      url: `${baseUrl}/en`,
+      lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.7,
+      priority: 0.8,
     },
     {
-      url: `${siteConfig.url}${routes.de.home}`,
-      lastModified: now,
+      url: `${baseUrl}/de`,
+      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.7,
     },
