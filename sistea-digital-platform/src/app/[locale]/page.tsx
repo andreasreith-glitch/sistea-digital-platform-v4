@@ -385,7 +385,7 @@ const translations = {
     ],
     reviewTitle: "Kostenlose Stromkosten- und Lastmanagement-Erstprüfung",
     reviewText:
-      "Für eine aussagekräftige Energieanalyse sende uns vorzugsweise 6–12 aufeinanderfolgende Monate deiner Stromrechnungen. Damit können wir Verbrauch, Kosten, Leistungsspitzen, saisonale Schwankungen, Tarifstruktur und Betriebsverhalten bewerten, eine belastbarere Baseline bilden und Ansätze für Verbrauchsreduzierung, Peak Shaving und Lastmanagement identifizieren.",
+      "Für eine aussagekräftige Energieanalyse benötigen wir vorzugsweise 6–12 Monate Stromrechnungen. Damit können wir Verbrauch, Kosten, Leistungsspitzen, saisonale Schwankungen, Tarifstruktur und Betriebsverhalten bewerten, eine belastbarere Baseline bilden und Ansätze für Verbrauchsreduzierung, Peak Shaving und Lastmanagement identifizieren.",
     reviewPrivacy:
       "Vertraulichkeit: SISTEA behandelt alle übermittelten Informationen streng vertraulich und verwendet sie ausschließlich für die technische und energetische Auswertung. Auf Wunsch senden und unterzeichnen wir vor der Datenübermittlung ein NDA.",
     reviewButton: "Erstprüfung anfragen",
@@ -476,6 +476,123 @@ const translations = {
 type Locale = keyof typeof translations;
 const localeOf = (value: string): Locale => (value === "en" || value === "de" ? value : "es");
 
+const salesCopy = {
+  es: {
+    quickEyebrow: "Elija su punto de entrada",
+    quickTitle: "Cuatro caminos. Un solo objetivo: convertir datos en un proyecto ejecutable.",
+    quick: [
+      ["01", "Análisis energético gratuito", "6–12 meses de facturas eléctricas, baseline y potencial de gestión de carga."],
+      ["02", "Engineering Tools", "Primera estimación técnica para estructurar los datos del proyecto."],
+      ["03", "Engineering Series", "Metodología documentada, cálculos y experiencia técnica aplicada."],
+      ["04", "Financiamiento ESI", "Convertir medidas técnicamente sólidas en proyectos financiables."],
+    ],
+    energyVisualTitle: "De la factura al perfil de carga",
+    energyVisualText: "Una sola factura muestra un momento. 6–12 meses de facturas eléctricas muestran estacionalidad, demanda y comportamiento operativo.",
+    billsBadge: "6–12 meses de facturas eléctricas",
+    baselineBadge: "Baseline energética",
+    ndaBadge: "Confidencial · NDA disponible",
+    peakLabel: "Pico",
+    optimizedLabel: "Carga optimizada",
+    energyViewLabel: "Vista energética de 12 meses",
+    energyProfileLabel: "Perfil de carga · demanda · estacionalidad",
+    potentialLabel: "potencial*",
+    visualFootnote: "*Escenario ilustrativo de preevaluación. El ahorro real requiere validación de ingeniería.",
+    sourcingSteps: ["Especificar", "Comparar", "Verificar", "Transportar", "Integrar"],
+    sourcingFlowTitle: "Flujo de compra directa",
+    sourcingYearsLabel: "años",
+    sourcingCountryCards: [["DE", "Especificación"], ["CN", "Fábrica + QC"], ["SV", "Entrega del proyecto"]],
+    appVisualLabel: "Interfaz real de SISTEA Engineering Tools",
+    appVisualText: "Instalable en iPhone y Android. Los cálculos estructuran la conversación técnica y pasan a revisión de SISTEA.",
+    booksVisualLabel: "Competencia visible, no solo afirmada",
+    booksVisualText: "La serie conecta refrigeración, HVAC, energía, automatización y data centers con metodología de ingeniería práctica.",
+    sourcingVisualLabel: "Especificación → fábrica → verificación → logística",
+    sourcingVisualText: "La compra empieza con una especificación técnica clara. Luego comparamos fabricante, solución, calidad y condiciones de suministro.",
+    finalEyebrow: "Siguiente paso",
+    finalTitle: "No empiece comprando equipos. Empiece comprobando dónde está el potencial.",
+    finalText: "SISTEA puede comenzar con una revisión energética, una consulta técnica o una especificación de compra. Después definimos ingeniería, inversión y financiamiento.",
+    finalEnergy: "Iniciar análisis energético",
+    finalProject: "Solicitar revisión de proyecto",
+    mobileAnalyze: "Análisis gratuito",
+    mobileWhatsApp: "WhatsApp",
+  },
+  en: {
+    quickEyebrow: "Choose your entry point",
+    quickTitle: "Four paths. One objective: turn data into an executable project.",
+    quick: [
+      ["01", "Free energy screening", "6–12 months of electricity bills, baseline and load-management potential."],
+      ["02", "Engineering Tools", "An initial technical estimate that structures the project data."],
+      ["03", "Engineering Series", "Documented methodology, calculations and applied engineering experience."],
+      ["04", "ESI Financing", "Turn technically sound measures into financeable projects."],
+    ],
+    energyVisualTitle: "From electricity bills to a load profile",
+    energyVisualText: "One bill shows a moment. 6–12 months of electricity bills reveal seasonality, demand and operating behavior.",
+    billsBadge: "6–12 months of electricity bills",
+    baselineBadge: "Energy baseline",
+    ndaBadge: "Confidential · NDA available",
+    peakLabel: "Peak",
+    optimizedLabel: "Optimized load",
+    energyViewLabel: "12-month energy view",
+    energyProfileLabel: "Load profile · demand · seasonality",
+    potentialLabel: "potential*",
+    visualFootnote: "*Illustrative screening scenario. Actual savings require engineering validation.",
+    sourcingSteps: ["Specify", "Compare", "Verify", "Ship", "Integrate"],
+    sourcingFlowTitle: "Direct sourcing workflow",
+    sourcingYearsLabel: "years",
+    sourcingCountryCards: [["DE", "Specification"], ["CN", "Factory + QC"], ["SV", "Project delivery"]],
+    appVisualLabel: "Actual SISTEA Engineering Tools interface",
+    appVisualText: "Installable on iPhone and Android. Calculations structure the technical discussion and move to SISTEA engineering review.",
+    booksVisualLabel: "Visible competence, not just a claim",
+    booksVisualText: "The series connects refrigeration, HVAC, energy, automation and data centers through practical engineering methodology.",
+    sourcingVisualLabel: "Specification → factory → verification → logistics",
+    sourcingVisualText: "Procurement starts with a clear technical specification. We then compare manufacturer, solution, quality and supply conditions.",
+    finalEyebrow: "Next step",
+    finalTitle: "Do not start by buying equipment. Start by proving where the opportunity is.",
+    finalText: "SISTEA can begin with an energy screening, technical consultation or procurement specification. Then we define engineering, investment and financing.",
+    finalEnergy: "Start energy screening",
+    finalProject: "Request project review",
+    mobileAnalyze: "Free analysis",
+    mobileWhatsApp: "WhatsApp",
+  },
+  de: {
+    quickEyebrow: "Wählen Sie Ihren Einstieg",
+    quickTitle: "Vier Wege. Ein Ziel: aus Daten ein umsetzbares Projekt machen.",
+    quick: [
+      ["01", "Kostenlose Energie-Erstprüfung", "6–12 Monate Stromrechnungen, Baseline und Lastmanagement-Potenzial."],
+      ["02", "Engineering Tools", "Technische Vorberechnung zur strukturierten Erfassung der Projektdaten."],
+      ["03", "Engineering Series", "Dokumentierte Methodik, Berechnungen und angewandte Engineering-Erfahrung."],
+      ["04", "ESI-Finanzierung", "Technisch belastbare Maßnahmen in finanzierbare Projekte überführen."],
+    ],
+    energyVisualTitle: "Von der Stromrechnung zum Lastprofil",
+    energyVisualText: "Eine Stromrechnung zeigt einen Moment. 6–12 Monate Stromrechnungen zeigen Saisonalität, Leistungsspitzen und Betriebsverhalten.",
+    billsBadge: "6–12 Monate Stromrechnungen",
+    baselineBadge: "Energetische Baseline",
+    ndaBadge: "Vertraulich · NDA möglich",
+    peakLabel: "Lastspitze",
+    optimizedLabel: "Optimierte Last",
+    energyViewLabel: "12-Monats-Energieansicht",
+    energyProfileLabel: "Lastprofil · Leistung · Saisonalität",
+    potentialLabel: "Potenzial*",
+    visualFootnote: "*Illustratives Erstprüfungsszenario. Tatsächliche Einsparungen erfordern eine technische Validierung.",
+    sourcingSteps: ["Spezifizieren", "Vergleichen", "Prüfen", "Transportieren", "Integrieren"],
+    sourcingFlowTitle: "Direktbeschaffung – Prozess",
+    sourcingYearsLabel: "Jahre",
+    sourcingCountryCards: [["DE", "Spezifikation"], ["CN", "Werk + QC"], ["SV", "Projektlieferung"]],
+    appVisualLabel: "Echte Oberfläche der SISTEA Engineering Tools",
+    appVisualText: "Installierbar auf iPhone und Android. Die Berechnungen strukturieren das Projekt und führen anschließend zur technischen Prüfung durch SISTEA.",
+    booksVisualLabel: "Kompetenz sichtbar belegen",
+    booksVisualText: "Die Reihe verbindet Kälte, HVAC, Energie, Automation und Data Center mit praxisorientierter Engineering-Methodik.",
+    sourcingVisualLabel: "Spezifikation → Werk → Prüfung → Logistik",
+    sourcingVisualText: "Beschaffung beginnt mit einer klaren technischen Spezifikation. Danach vergleichen wir Hersteller, Lösung, Qualität und Lieferkonditionen.",
+    finalEyebrow: "Nächster Schritt",
+    finalTitle: "Nicht mit dem Gerätekauf beginnen. Zuerst prüfen, wo das Potenzial liegt.",
+    finalText: "SISTEA kann mit einer Energie-Erstprüfung, einer technischen Anfrage oder einer Beschaffungsspezifikation starten. Danach definieren wir Engineering, Investition und Finanzierung.",
+    finalEnergy: "Energieanalyse starten",
+    finalProject: "Projekt prüfen lassen",
+    mobileAnalyze: "Kostenlose Analyse",
+    mobileWhatsApp: "WhatsApp",
+  },
+} as const;
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = translations[localeOf(locale)];
@@ -495,6 +612,53 @@ function CheckIcon() {
     <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
       <path d="m5 12 4 4L19 6" />
     </svg>
+  );
+}
+
+function LoadProfileVisual({
+  peakLabel, optimizedLabel, viewLabel, profileLabel, potentialLabel, footnote,
+}: {
+  peakLabel: string; optimizedLabel: string; viewLabel: string; profileLabel: string; potentialLabel: string; footnote: string;
+}) {
+  return (
+    <div className="relative overflow-hidden rounded-3xl border border-[#b9d5dc] bg-gradient-to-br from-[#31596a] via-[#3e6f7b] to-[#5b8890] p-6 text-white shadow-[0_20px_55px_rgba(48,75,93,.18)] sm:p-8">
+      <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-cyan-300/15 blur-3xl" />
+      <div className="relative">
+        <div className="flex items-start justify-between gap-5">
+          <div>
+            <div className="text-xs font-black uppercase tracking-[.2em] text-cyan-200">{viewLabel}</div>
+            <div className="mt-2 text-2xl font-black">{profileLabel}</div>
+          </div>
+          <div className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-center backdrop-blur">
+            <div className="text-2xl font-black text-cyan-200">~40%</div>
+            <div className="text-[9px] font-black uppercase tracking-[.16em] text-white/65">{potentialLabel}</div>
+          </div>
+        </div>
+        <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-[#264957]/55 p-4">
+          <svg viewBox="0 0 720 300" className="h-auto w-full" role="img" aria-label="Illustrative load profile">
+            <defs>
+              <linearGradient id="loadFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#5ed7f1" stopOpacity=".35" />
+                <stop offset="100%" stopColor="#5ed7f1" stopOpacity="0" />
+              </linearGradient>
+            </defs>
+            {[50,100,150,200,250].map((y) => <line key={y} x1="38" y1={y} x2="690" y2={y} stroke="rgba(255,255,255,.12)" strokeWidth="1" />)}
+            {[80,132,184,236,288,340,392,444,496,548,600,652].map((x,i) => <line key={x} x1={x} y1="35" x2={x} y2="260" stroke="rgba(255,255,255,.07)" strokeWidth="1" />)}
+            <path d="M40 236 C78 225 92 210 118 205 C155 198 165 168 205 171 C244 174 257 125 300 141 C338 155 350 111 390 121 C430 131 435 82 479 102 C521 121 539 64 574 90 C610 116 632 78 684 112 L684 260 L40 260 Z" fill="url(#loadFill)" />
+            <path d="M40 236 C78 225 92 210 118 205 C155 198 165 168 205 171 C244 174 257 125 300 141 C338 155 350 111 390 121 C430 131 435 82 479 102 C521 121 539 64 574 90 C610 116 632 78 684 112" fill="none" stroke="#6de1f5" strokeWidth="6" strokeLinecap="round" />
+            <path d="M40 235 C92 226 120 213 162 207 C210 200 251 183 296 184 C340 185 379 163 420 166 C463 169 510 149 551 153 C596 158 636 143 684 149" fill="none" stroke="#90e4b8" strokeWidth="5" strokeLinecap="round" strokeDasharray="12 10" />
+            <circle cx="574" cy="90" r="9" fill="#ffffff" stroke="#6de1f5" strokeWidth="5" />
+            <line x1="574" y1="90" x2="574" y2="45" stroke="rgba(255,255,255,.55)" strokeDasharray="5 5" />
+            <text x="586" y="55" fill="#fff" fontSize="18" fontWeight="800">{peakLabel}</text>
+          </svg>
+          <div className="mt-1 flex flex-wrap items-center gap-5 text-xs font-bold text-white/75">
+            <span className="inline-flex items-center gap-2"><span className="h-1 w-7 rounded-full bg-cyan-300" />Baseline</span>
+            <span className="inline-flex items-center gap-2"><span className="h-1 w-7 rounded-full bg-emerald-300" />{optimizedLabel}</span>
+          </div>
+        </div>
+        <p className="mt-4 text-xs leading-5 text-white/60">*Illustrative screening scenario. Actual savings require engineering validation.</p>
+      </div>
+    </div>
   );
 }
 
@@ -521,6 +685,44 @@ function Eyebrow({ children, light = false }: { children: ReactNode; light?: boo
   );
 }
 
+function SourcingFlowVisual({ steps, title, yearsLabel, countryCards }: { steps: readonly string[]; title: string; yearsLabel: string; countryCards: readonly (readonly [string, string])[] }) {
+  const icons = ["01", "02", "03", "04", "05"];
+  return (
+    <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-[#244858]/78 p-6 shadow-2xl backdrop-blur-md sm:p-8">
+      <div className="absolute -right-12 -top-12 h-44 w-44 rounded-full bg-cyan-300/15 blur-3xl" />
+      <div className="relative">
+        <div className="flex items-center justify-between gap-4">
+          <div>
+            <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">Shanghai · China</div>
+            <div className="mt-2 text-2xl font-black text-white">{title}</div>
+          </div>
+          <div className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-right">
+            <div className="text-2xl font-black text-cyan-200">20+</div>
+            <div className="text-[9px] font-black uppercase tracking-[.15em] text-white/60">{yearsLabel}</div>
+          </div>
+        </div>
+        <div className="mt-8 grid grid-cols-5 gap-2">
+          {steps.map((step, index) => (
+            <div key={step} className="relative min-w-0">
+              {index < steps.length - 1 && <div className="absolute left-[65%] top-5 h-px w-[75%] bg-cyan-200/35" />}
+              <div className="relative mx-auto grid h-10 w-10 place-items-center rounded-full border border-cyan-200/40 bg-[#31596a] text-[10px] font-black text-cyan-100">{icons[index]}</div>
+              <div className="mt-3 break-words text-center text-[9px] font-black uppercase leading-4 tracking-[.08em] text-white/75 sm:text-[10px]">{step}</div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8 grid grid-cols-3 gap-3 text-center">
+          {countryCards.map(([code, label]) => (
+            <div key={code} className="rounded-xl border border-white/15 bg-white/10 px-2 py-3">
+              <div className="text-base font-black text-cyan-200">{code}</div>
+              <div className="mt-1 text-[9px] font-bold uppercase tracking-[.08em] text-white/55">{label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function BookCard({ code, title, color }: { code: string; title: string; color: string }) {
   return (
     <div className="group relative min-h-[230px] overflow-hidden rounded-2xl border border-[#c6d7dc] bg-[#edf3f4] p-5 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-cyan-300 hover:shadow-xl">
@@ -540,21 +742,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const currentLocale = localeOf(locale);
   const t = translations[currentLocale];
+  const sales = salesCopy[currentLocale];
 
   return (
     <>
       <header className="sticky top-0 z-50 border-b border-[#c6d7dd] bg-[#e8f0f2]/94 shadow-[0_6px_22px_rgba(48,75,93,.08)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 lg:px-6">
-          <Link href={`/${currentLocale}`} className="group flex items-center gap-3" aria-label="SISTEA home">
+          <Link href={`/${currentLocale}`} className="group flex min-w-0 items-center" aria-label="SISTEA home">
             <img
-              src="/images/sistea-logo.jpg"
+              src="/images/sistea-logo-header.png"
               alt="SISTEA – Expertos en Enfriamiento Eficiente · Tecnología Alemana"
-              className="h-14 w-14 rounded-xl object-contain sm:h-16 sm:w-16"
+              className="h-12 w-auto max-w-[210px] object-contain sm:h-14 sm:max-w-[250px]"
             />
-            <div className="hidden sm:block">
-              <div className="text-xl font-black leading-none tracking-tight text-[#304b5d]">SISTEA</div>
-              <div className="mt-1 text-[9px] font-bold uppercase tracking-[.19em] text-slate-500">Systems · Energy · Engineering</div>
-            </div>
           </Link>
 
           <nav className="hidden items-center gap-5 text-sm font-bold text-slate-700 xl:flex">
@@ -631,6 +830,32 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-[#c2d5da]/75 bg-[#d9e6e9]/90 shadow-[0_-8px_30px_rgba(48,75,93,.06)] backdrop-blur-xl">
             <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-8 gap-y-3 px-6 py-4 text-[11px] font-bold uppercase tracking-[.16em] text-[#4d6575] lg:justify-between">
               {['HVAC', 'R717 · NH₃', 'R744 · CO₂', 'CHILLERS', 'PV + BATTERY', 'BMS · PLC', 'ESI FINANCING'].map((item) => <span key={item}>{item}</span>)}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-b border-[#bfd2d8] bg-[#dbe8eb] px-6 py-14 lg:py-16">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-7 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
+              <div>
+                <Eyebrow>{sales.quickEyebrow}</Eyebrow>
+                <h2 className="mt-3 text-2xl font-black tracking-tight text-[#304b5d] sm:text-3xl">{sales.quickTitle}</h2>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {sales.quick.map(([number, title, text], index) => {
+                  const href = ['#energy', '#tools', '#books', '#esi'][index];
+                  return (
+                    <a key={number} href={href} className="group rounded-2xl border border-[#bfd3d9] bg-[#e9f0f2] p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#78cada] hover:bg-[#eef4f5] hover:shadow-lg">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-black tracking-[.16em] text-[#159dc5]">{number}</span>
+                        <span className="text-[#6e8792] transition group-hover:translate-x-1 group-hover:text-[#159dc5]"><ArrowIcon /></span>
+                      </div>
+                      <h3 className="mt-4 font-black text-[#304b5d]">{title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-[#607684]">{text}</p>
+                    </a>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </section>
@@ -724,16 +949,30 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </div>
             </div>
 
-            <div className="rounded-3xl border border-[#d7e8ed] bg-gradient-to-br from-[#dcebed] to-[#e4efed] p-6 text-[#304b5d] shadow-sm sm:p-8">
-              <div className="grid gap-4 sm:grid-cols-2">
-                {t.energyFlow.map(([title, text], index) => (
-                  <div key={title} className="relative overflow-hidden rounded-2xl border border-[#c6d8dd] bg-[#edf3f4] p-6 shadow-sm">
-                    <div className="absolute right-4 top-3 text-5xl font-black text-[#dceef3]">0{index + 1}</div>
-                    <div className="text-xs font-black uppercase tracking-[.18em] text-[#159dc5]">0{index + 1}</div>
-                    <h3 className="mt-4 text-xl font-black text-[#304b5d]">{title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-[#637783]">{text}</p>
-                  </div>
-                ))}
+            <div className="space-y-5">
+              <LoadProfileVisual peakLabel={sales.peakLabel} optimizedLabel={sales.optimizedLabel} viewLabel={sales.energyViewLabel} profileLabel={sales.energyProfileLabel} potentialLabel={sales.potentialLabel} footnote={sales.visualFootnote} />
+              <div className="rounded-3xl border border-[#c6d8dd] bg-[#dfeaed] p-5 shadow-sm sm:p-6">
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {[sales.billsBadge, sales.baselineBadge, sales.ndaBadge].map((label, index) => (
+                    <div key={label} className="rounded-xl border border-[#c3d7dc] bg-[#edf3f4] p-4">
+                      <div className="text-xs font-black text-[#159dc5]">0{index + 1}</div>
+                      <div className="mt-2 text-sm font-black leading-5 text-[#304b5d]">{label}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                  {t.energyFlow.map(([title, text], index) => (
+                    <div key={title} className="rounded-xl border border-[#cad9dd] bg-[#e8eff1] p-4">
+                      <div className="flex items-center gap-3">
+                        <span className="grid h-8 w-8 flex-none place-items-center rounded-lg bg-[#d9f1f6] text-xs font-black text-[#159dc5]">0{index + 1}</span>
+                        <div>
+                          <div className="font-black text-[#304b5d]">{title}</div>
+                          <div className="mt-1 text-xs leading-5 text-[#637783]">{text}</div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -791,30 +1030,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <p className="mt-3 text-sm text-slate-500">{t.toolsNote}</p>
             </div>
 
-            <div className="mx-auto w-full max-w-md rounded-[2.4rem] border-[10px] border-[#58717d] bg-[#58717d] p-2 shadow-2xl shadow-[#365466]/15">
-              <div className="overflow-hidden rounded-[1.75rem] bg-[#dce7ea]">
-                <div className="flex items-center justify-between bg-[#405d70] px-5 py-4 text-white">
-                  <div>
-                    <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-300">SISTEA</div>
-                    <div className="mt-1 font-black">Engineering Tools</div>
-                  </div>
-                  <div className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+            <div className="relative mx-auto w-full max-w-2xl pb-12 lg:pb-16">
+              <div className="overflow-hidden rounded-3xl border border-[#b8cfd6] bg-[#304b5d] p-2 shadow-[0_28px_70px_rgba(48,75,93,.20)]">
+                <div className="flex items-center gap-2 rounded-t-2xl bg-[#3b596b] px-4 py-3">
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#70d8cf]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-[#6fcce3]" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
+                  <span className="ml-3 text-[10px] font-black uppercase tracking-[.16em] text-white/70">{sales.appVisualLabel}</span>
                 </div>
-                <div className="space-y-3 p-5">
-                  {t.tools.map((tool, index) => {
-                    const title = tool[0];
-                    return (
-                      <div key={title} className="flex items-center gap-4 rounded-2xl bg-[#eef4f5] p-4 shadow-sm">
-                        <div className="grid h-11 w-11 place-items-center rounded-xl bg-cyan-50 font-black text-cyan-700">0{index + 1}</div>
-                        <div className="font-black text-slate-900">{title}</div>
-                      </div>
-                    );
-                  })}
-                  <div className="rounded-2xl bg-cyan-600 p-5 text-white">
-                    <div className="text-xs font-bold uppercase tracking-[.16em] text-[#d8f1f5]">Engineering Review</div>
-                    <div className="mt-2 text-lg font-black">SISTEA Technical Check</div>
-                  </div>
-                </div>
+                <img src="/images/marketing/engineering-tools-desktop.webp" alt={sales.appVisualLabel} className="block w-full rounded-b-2xl" />
+              </div>
+              <div className="absolute -bottom-1 right-2 w-[30%] min-w-[145px] max-w-[205px] overflow-hidden rounded-[2rem] border-[7px] border-[#304b5d] bg-[#304b5d] shadow-2xl sm:right-8">
+                <img
+                  src={currentLocale === 'de' ? '/images/marketing/engineering-tools-mobile-de.webp' : '/images/marketing/engineering-tools-mobile-es.webp'}
+                  alt="SISTEA Engineering Tools mobile"
+                  className="block w-full"
+                />
+              </div>
+              <div className="mt-5 max-w-md rounded-2xl border border-[#c3d5da] bg-[#eaf1f2] p-5 text-sm leading-6 text-[#607684] shadow-sm">
+                <div className="font-black text-[#304b5d]">{sales.appVisualLabel}</div>
+                <p className="mt-2">{sales.appVisualText}</p>
               </div>
             </div>
           </div>
@@ -836,15 +1071,27 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </div>
             </div>
 
-            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-              {t.books.map(([code, title, color]) => <BookCard key={code} code={code} title={title} color={color} />)}
-            </div>
-
-            <div className="mt-12 grid gap-3 text-center text-xs font-black uppercase tracking-[.14em] text-[#607684] sm:grid-cols-4">
-              <div className="rounded-xl border border-[#c5d7dc] bg-[#edf3f4] px-4 py-4">Understand</div>
-              <div className="rounded-xl border border-[#c5d7dc] bg-[#edf3f4] px-4 py-4">Calculate</div>
-              <div className="rounded-xl border border-[#c5d7dc] bg-[#edf3f4] px-4 py-4">Design</div>
-              <div className="rounded-xl border border-[#c5d7dc] bg-[#edf3f4] px-4 py-4">Optimize</div>
+            <div className="mt-14 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
+              <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="group overflow-hidden rounded-3xl border border-[#b9ced5] bg-[#304b5d] p-2 shadow-[0_25px_65px_rgba(48,75,93,.16)]">
+                <img src="/images/marketing/engineering-series-amazon.webp" alt="SISTEA Engineering Series on Amazon" className="w-full rounded-[1.25rem] transition duration-500 group-hover:scale-[1.015]" />
+              </a>
+              <div>
+                <div className="rounded-2xl border border-[#bcd1d7] bg-[#e6eff1] p-6">
+                  <div className="text-xs font-black uppercase tracking-[.18em] text-[#159dc5]">{sales.booksVisualLabel}</div>
+                  <p className="mt-3 leading-7 text-[#607684]">{sales.booksVisualText}</p>
+                </div>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+                  {t.books.map(([code, title, color]) => (
+                    <div key={code} className="flex items-center gap-4 rounded-xl border border-[#c4d5da] bg-[#edf3f4] p-4">
+                      <div className="grid h-11 min-w-14 place-items-center rounded-lg px-2 text-xs font-black text-white" style={{backgroundColor: color}}>{code}</div>
+                      <div className="font-black leading-5 text-[#304b5d]">{title}</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-5 grid grid-cols-2 gap-2 text-center text-[10px] font-black uppercase tracking-[.13em] text-[#607684] sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
+                  {['Understand','Calculate','Design','Optimize'].map((label) => <div key={label} className="rounded-lg border border-[#c5d7dc] bg-[#e8eff1] px-3 py-3">{label}</div>)}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -907,16 +1154,24 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col justify-between bg-gradient-to-br from-[#d7e8eb] to-[#dceae6] p-8 text-[#304b5d] sm:p-12 lg:p-14">
-                <div>
-                  <div className="text-xs font-black uppercase tracking-[.18em] text-[#168fb4]">Shanghai · China · Direct Factory Access</div>
-                  <div className="mt-7 text-5xl font-black tracking-tight text-[#304b5d] sm:text-6xl">20+ <span className="text-[#20a8cf]">Years</span></div>
-                  <div className="mt-3 text-lg font-bold text-[#557080]">Engineering + Procurement + Logistics</div>
-                  <p className="mt-8 text-base leading-7 text-[#607684]">{t.sourcingNote}</p>
+              <div className="relative min-h-[540px] overflow-hidden bg-[#31596a] text-white">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_15%,rgba(103,216,230,.18),transparent_28%),linear-gradient(145deg,#234455,#31596a_50%,#4d7f89)]" />
+                <div className="relative flex h-full min-h-[540px] flex-col justify-between p-8 sm:p-12 lg:p-14">
+                  <div>
+                    <div className="inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[.17em] text-cyan-100 backdrop-blur">Shanghai · China · Direct Factory Access</div>
+                    <div className="mt-7"><SourcingFlowVisual steps={sales.sourcingSteps} title={sales.sourcingFlowTitle} yearsLabel={sales.sourcingYearsLabel} countryCards={sales.sourcingCountryCards} /></div>
+                    <div className="mt-6 rounded-2xl border border-white/20 bg-[#244858]/70 p-5 backdrop-blur-md">
+                      <div className="text-xs font-black uppercase tracking-[.17em] text-cyan-200">{sales.sourcingVisualLabel}</div>
+                      <p className="mt-3 text-sm leading-6 text-white/75">{sales.sourcingVisualText}</p>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-sm leading-6 text-white/75">{t.sourcingNote}</p>
+                    <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 text-center font-black text-white shadow-lg transition hover:bg-[#159dc5]">
+                      {t.sourcingButton}<ArrowIcon />
+                    </a>
+                  </div>
                 </div>
-                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 text-center font-black text-white shadow-sm transition hover:bg-[#159dc5]">
-                  {t.sourcingButton}<ArrowIcon />
-                </a>
               </div>
             </div>
           </div>
@@ -936,6 +1191,22 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <p className="mt-3 text-sm leading-6 text-[#607684]">{text}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#d7e5e8] px-6 py-16 lg:py-20">
+          <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-[#b9d1d7] bg-gradient-to-br from-[#31596a] via-[#3f6f7a] to-[#568791] p-8 text-white shadow-[0_24px_70px_rgba(48,75,93,.18)] sm:p-12 lg:p-14">
+            <div className="grid gap-9 lg:grid-cols-[1fr_auto] lg:items-end">
+              <div className="max-w-4xl">
+                <Eyebrow light>{sales.finalEyebrow}</Eyebrow>
+                <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{sales.finalTitle}</h2>
+                <p className="mt-5 max-w-3xl text-lg leading-8 text-white/75">{sales.finalText}</p>
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+                <a href="#energy" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white shadow-lg transition hover:bg-[#159dc5]">{sales.finalEnergy}<ArrowIcon /></a>
+                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-6 py-4 font-black text-white backdrop-blur transition hover:bg-white/20">{sales.finalProject}<ArrowIcon /></a>
+              </div>
             </div>
           </div>
         </section>
@@ -974,12 +1245,17 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </footer>
 
+      <div className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-2 gap-2 rounded-2xl border border-[#a8c4cc] bg-[#e9f1f2]/96 p-2 shadow-2xl backdrop-blur-xl md:hidden">
+        <a href="#energy" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#25b4dc] px-3 text-center text-xs font-black text-white">{sales.mobileAnalyze}</a>
+        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-emerald-600 px-3 text-center text-xs font-black text-white">{sales.mobileWhatsApp}</a>
+      </div>
+
       <a
         href={WHATSAPP_URL}
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"
-        className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-emerald-600 text-white shadow-2xl transition hover:scale-105 hover:bg-emerald-700"
+        className="fixed bottom-5 right-5 z-50 hidden h-14 w-14 place-items-center md:grid rounded-full bg-emerald-600 text-white shadow-2xl transition hover:scale-105 hover:bg-emerald-700"
       >
         <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor" aria-hidden="true">
           <path d="M20.52 3.48A11.81 11.81 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.95L.05 24l6.27-1.64a11.9 11.9 0 0 0 5.75 1.46h.01C18.65 23.82 24 18.47 24 11.9c0-3.18-1.24-6.17-3.48-8.42Zm-8.44 18.33h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.72.98.99-3.63-.24-.37a9.86 9.86 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.93-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.01c-.01 5.47-4.46 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.1 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z" />
