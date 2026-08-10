@@ -9,7 +9,7 @@ const labels = {
   es: {
     eyebrow: "CÁLCULO GRATUITO",
     title: "Calcula el costo anual de energía y tres escenarios de ahorro",
-    text: "Usa los valores de una factura eléctrica reciente. El resultado es una primera referencia y no sustituye un estudio técnico ni constituye una garantía de ahorro.",
+    text: "Para un cálculo rápido puedes usar una factura reciente o sumar varios meses. Para una evaluación energética más sólida, SISTEA recomienda analizar 6–12 meses consecutivos de facturación. El resultado de esta calculadora es solo una primera referencia y no sustituye un estudio técnico ni constituye una garantía de ahorro.",
     bill: "Importe de la factura",
     kwh: "Consumo de la factura (kWh)",
     months: "Meses cubiertos por la factura",
@@ -22,14 +22,15 @@ const labels = {
     saving: "Ahorro anual potencial",
     after: "Costo anual después del ahorro",
     disclaimer: "Los escenarios del 20 %, 30 % y ~40 % son valores de evaluación. El potencial real depende del perfil de carga, tarifas, equipos, horarios, control, producción, clima y medidas aplicables.",
-    send: "Enviar 1–3 facturas a SISTEA",
+    send: "Enviar 6–12 meses a SISTEA",
     email: "Enviar por e-mail",
-    whatsappText: "Hola SISTEA. Quiero una revisión energética gratuita. Deseo enviar 1–3 facturas eléctricas para evaluar costos, demanda y potencial de ahorro/gestión de carga.",
+    privacy: "SISTEA trata la documentación y los datos recibidos de forma estrictamente confidencial y únicamente para la evaluación técnica y energética. Podemos enviar y firmar un NDA antes de recibir la información.",
+    whatsappText: "Hola SISTEA. Quiero una revisión energética gratuita. Deseo enviar 6–12 meses consecutivos de facturas eléctricas para evaluar costos, demanda, estacionalidad y potencial de ahorro/gestión de carga. Entiendo que SISTEA tratará la información de forma confidencial; si es necesario, solicito un NDA antes del envío.",
   },
   en: {
     eyebrow: "FREE CALCULATION",
     title: "Estimate annual energy cost and three savings scenarios",
-    text: "Use values from a recent electricity bill. The result is an initial reference only and does not replace an engineering study or guarantee savings.",
+    text: "For a quick calculation, use one recent electricity bill or aggregate several months. For a more robust energy assessment, SISTEA recommends analyzing 6–12 consecutive months of billing. This calculator provides an initial reference only and does not replace an engineering study or guarantee savings.",
     bill: "Electricity bill amount",
     kwh: "Bill consumption (kWh)",
     months: "Months covered by the bill",
@@ -42,14 +43,15 @@ const labels = {
     saving: "Potential annual savings",
     after: "Annual cost after savings",
     disclaimer: "The 20%, 30% and ~40% scenarios are screening values. Actual potential depends on load profile, tariff structure, equipment, operating hours, controls, production, climate and applicable measures.",
-    send: "Send 1–3 bills to SISTEA",
+    send: "Send 6–12 months to SISTEA",
     email: "Send by e-mail",
-    whatsappText: "Hello SISTEA. I would like a free energy review. I want to send 1–3 electricity bills to evaluate costs, demand and energy/load-management savings potential.",
+    privacy: "SISTEA treats all documents and data received as strictly confidential and uses them solely for the technical and energy assessment. We can provide and sign an NDA before any information is shared.",
+    whatsappText: "Hello SISTEA. I would like a free energy review. I want to send 6–12 consecutive months of electricity bills to evaluate costs, demand, seasonality and energy/load-management savings potential. I understand that SISTEA will treat the information as confidential; if required, I would like an NDA before sending the documents.",
   },
   de: {
     eyebrow: "KOSTENLOSE BERECHNUNG",
     title: "Jahresenergiekosten und drei Einsparszenarien direkt berechnen",
-    text: "Übernimm die Werte aus einer aktuellen Stromrechnung. Das Ergebnis ist eine erste Orientierung und ersetzt keine technische Studie. Es stellt keine Einspargarantie dar.",
+    text: "Für eine schnelle Berechnung kannst du eine aktuelle Stromrechnung verwenden oder mehrere Monate zusammenfassen. Für eine belastbarere Energieanalyse empfiehlt SISTEA die Auswertung von 6–12 aufeinanderfolgenden Abrechnungsmonaten. Das Ergebnis dieser Berechnung ist nur eine erste Orientierung und ersetzt keine technische Studie. Es stellt keine Einspargarantie dar.",
     bill: "Rechnungsbetrag Strom",
     kwh: "Verbrauch der Rechnung (kWh)",
     months: "Von der Rechnung abgedeckte Monate",
@@ -62,9 +64,10 @@ const labels = {
     saving: "Mögliche jährliche Einsparung",
     after: "Jahreskosten nach Einsparung",
     disclaimer: "Die Szenarien 20 %, 30 % und ca. 40 % dienen der Erstbewertung. Das reale Potenzial hängt von Lastprofil, Tarifstruktur, Anlagen, Betriebszeiten, Regelung, Produktion, Klima und umsetzbaren Maßnahmen ab.",
-    send: "1–3 Stromrechnungen an SISTEA senden",
+    send: "6–12 Monate an SISTEA senden",
     email: "Per E-Mail senden",
-    whatsappText: "Hallo SISTEA. Ich möchte eine kostenlose energetische Erstprüfung. Ich möchte 1–3 Stromrechnungen senden, damit Energiekosten, Leistungsspitzen und Einspar-/Lastmanagementpotenzial geprüft werden.",
+    privacy: "SISTEA behandelt alle übermittelten Unterlagen und Daten streng vertraulich und verwendet sie ausschließlich für die technische und energetische Auswertung. Auf Wunsch senden und unterzeichnen wir vor der Datenübermittlung ein NDA.",
+    whatsappText: "Hallo SISTEA. Ich möchte eine kostenlose energetische Erstprüfung. Ich möchte 6–12 aufeinanderfolgende Monate meiner Stromrechnungen senden, damit Energiekosten, Leistungsspitzen, saisonale Schwankungen und Einspar-/Lastmanagementpotenzial geprüft werden. Ich gehe davon aus, dass SISTEA die Informationen vertraulich behandelt; falls erforderlich, bitte ich vorab um ein NDA.",
   },
 } as const;
 
@@ -133,9 +136,9 @@ export default function EnergyCostCalculator({ locale }: { locale: Locale }) {
             <label className="grid gap-2 text-sm font-bold text-[#4f6877]">
               {t.months}
               <select value={months} onChange={(e) => setMonths(Number(e.target.value))} className="rounded-xl border border-[#c1d4da] bg-[#f0f5f6] px-4 py-3 text-base font-semibold outline-none focus:border-[#25b4dc]">
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
+                {Array.from({ length: 12 }, (_, i) => i + 1).map((m) => (
+                  <option key={m} value={m}>{m}</option>
+                ))}
               </select>
             </label>
             <label className="grid gap-2 text-sm font-bold text-[#4f6877] sm:col-span-2">
@@ -184,7 +187,10 @@ export default function EnergyCostCalculator({ locale }: { locale: Locale }) {
       </div>
 
       <div className="border-t border-[#c4d6db] bg-[#e1ebee] p-6 sm:p-8 lg:flex lg:items-center lg:justify-between lg:gap-8">
-        <p className="max-w-3xl text-sm leading-6 text-[#718692]">{t.disclaimer}</p>
+        <div className="max-w-3xl">
+          <p className="text-sm leading-6 text-[#718692]">{t.disclaimer}</p>
+          <p className="mt-3 rounded-xl border border-[#bfd7dd] bg-[#eaf2f4] px-4 py-3 text-sm font-semibold leading-6 text-[#516b79]">{t.privacy}</p>
+        </div>
         <div className="mt-5 flex flex-col gap-3 sm:flex-row lg:mt-0 lg:flex-none">
           <a href={whatsapp} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-5 py-3 font-black text-white transition hover:bg-emerald-700">{t.send}</a>
           <a href={mailto} className="inline-flex items-center justify-center rounded-xl border border-[#bfd2d8] bg-[#eef4f5] px-5 py-3 font-black text-slate-900 transition hover:bg-[#e3edef]">{t.email}</a>
