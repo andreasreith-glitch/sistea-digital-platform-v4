@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-
+export const runtime = "edge";
 const contactFormSchema = z.object({
   name: z.string().min(2),
   company: z.string().optional(),
