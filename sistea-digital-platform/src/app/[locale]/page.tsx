@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import Link from "next/link";
 export const runtime = "edge";
 
 const content = {
@@ -204,45 +204,44 @@ export default async function HomePage({
         }}
       >
         <div className="mx-auto max-w-7xl">
-          <div className="mb-10 flex flex-wrap gap-3 text-sm">
-            <a
-              href="/es"
-              className={
-                currentLocale === "es"
-                  ? "font-bold text-cyan-400"
-                  : "text-white hover:text-cyan-400"
-              }
-            >
-              Español
-            </a>
+        <div className="mb-10 flex flex-wrap gap-3 text-sm">
+  <Link
+    href="/es"
+    className={
+      currentLocale === "es"
+        ? "font-bold text-cyan-400"
+        : "text-white hover:text-cyan-400"
+    }
+  >
+    Español
+  </Link>
 
-            <span className="text-slate-500">|</span>
+  <span className="text-slate-500">|</span>
 
-            <a
-              href="/en"
-              className={
-                currentLocale === "en"
-                  ? "font-bold text-cyan-400"
-                  : "text-white hover:text-cyan-400"
-              }
-            >
-              English
-            </a>
+  <Link
+    href="/en"
+    className={
+      currentLocale === "en"
+        ? "font-bold text-cyan-400"
+        : "text-white hover:text-cyan-400"
+    }
+  >
+    English
+  </Link>
 
-            <span className="text-slate-500">|</span>
+  <span className="text-slate-500">|</span>
 
-            <a
-              href="/de"
-              className={
-                currentLocale === "de"
-                  ? "font-bold text-cyan-400"
-                  : "text-white hover:text-cyan-400"
-              }
-            >
-              Deutsch
-            </a>
-          </div>
-
+  <Link
+    href="/de"
+    className={
+      currentLocale === "de"
+        ? "font-bold text-cyan-400"
+        : "text-white hover:text-cyan-400"
+    }
+  >
+    Deutsch
+  </Link>
+</div>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
             {page.eyebrow}
           </p>
