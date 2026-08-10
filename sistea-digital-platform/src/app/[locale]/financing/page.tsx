@@ -183,20 +183,6 @@ export default async function FinancingPage({ params }: { params: Promise<{ loca
 
   return (
     <main className="min-h-screen bg-[#e4edef] text-[#304b5d]">
-      <header className="sticky top-0 z-50 border-b border-[#c6d7dd] bg-[#e8f0f2]/95 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3">
-          <Link href={`/${lang}`} className="flex items-center">
-            <img src="/images/sistea-logo-header.png" alt="SISTEA" className="h-12 w-auto max-w-[220px] object-contain" />
-          </Link>
-          <div className="flex items-center gap-2">
-            {(["es","en","de"] as const).map((l) => (
-              <Link key={l} href={`/${l}/financing`} className={l === lang ? "rounded-lg bg-[#26afd3] px-3 py-2 text-xs font-black text-white" : "rounded-lg bg-[#dce8ec] px-3 py-2 text-xs font-black text-[#496172]"}>
-                {l.toUpperCase()}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </header>
 
       <section className="bg-gradient-to-br from-[#31596a] via-[#3d6d79] to-[#5a8a92] px-6 py-20 text-white lg:py-28">
         <div className="mx-auto max-w-7xl">
