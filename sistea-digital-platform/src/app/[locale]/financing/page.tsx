@@ -6,6 +6,7 @@ export const runtime = "edge";
 const BASE_ESI_URL = "https://energy-base.org/projects/energy-savings-insurance-europe/";
 const BASE_CAAS_URL = "https://energy-base.org/projects/cooling-as-a-service-initiative/";
 const SET_ALLIANCE_URL = "https://set-alliance.org/";
+const SET_PARTNERS_URL = "https://set-alliance.org/partners/";
 const UNEP_CAAS_URL = "https://www.unep.org/index.php/events/webinar/cooling-service-catalyzing-innovation-and-efficiency";
 const UNEP_COOLING_FINANCE_URL = "https://www.unep.org/resources/publication/cooler-finance-mobilizing-investment-developing-worlds-sustainable-cooling";
 const WHATSAPP_URL = "https://wa.me/50377282624";
@@ -53,6 +54,8 @@ const copy = {
     unepCaas: "UNEP · Cooling-as-a-Service",
     unepFinance: "UNEP / Cool Coalition · Sustainable Cooling Finance",
     membership: "SISTEA ist im BASE-/ESI-Umfeld aktiv und Mitglied der SET Alliance. Wir nutzen diese internationalen Ansätze als Referenz für geeignete Projekte in Zentralamerika.",
+    partnerProof: "SISTEA bei der SET Alliance",
+    partnerProofText: "Offizielles Partnerverzeichnis der SET Alliance öffnen",
     noteTitle: "Wichtiger Hinweis",
     note: "Die dargestellten Modelle sind keine automatische Finanzierungszusage und keine Einspargarantie. Verfügbarkeit, Versicherung, Finanzierung, Vertragsstruktur und Konditionen hängen vom Projekt, Land, Finanzierungspartner, Versicherer, Validierung und der technischen Prüfung ab.",
     ctaTitle: "Beginnen wir mit dem Projekt – nicht mit dem Finanzprodukt.",
@@ -99,6 +102,8 @@ const copy = {
     unepCaas: "UNEP · Cooling-as-a-Service",
     unepFinance: "UNEP / Cool Coalition · Sustainable Cooling Finance",
     membership: "SISTEA participates in the BASE / ESI ecosystem and is a member of the SET Alliance. We use these international approaches as references for suitable projects in Central America.",
+    partnerProof: "SISTEA at the SET Alliance",
+    partnerProofText: "Open the official SET Alliance partner directory",
     noteTitle: "Important note",
     note: "The models shown are not an automatic financing commitment or savings guarantee. Availability, insurance, financing, contract structure and terms depend on the project, country, financing partner, insurer, validation and technical review.",
     ctaTitle: "Start with the project – not with the financial product.",
@@ -145,6 +150,8 @@ const copy = {
     unepCaas: "UNEP · Cooling-as-a-Service",
     unepFinance: "UNEP / Cool Coalition · Sustainable Cooling Finance",
     membership: "SISTEA participa en el ecosistema BASE / ESI y es miembro de la SET Alliance. Utilizamos estos enfoques internacionales como referencia para proyectos adecuados en Centroamérica.",
+    partnerProof: "SISTEA en la SET Alliance",
+    partnerProofText: "Abrir el directorio oficial de socios de la SET Alliance",
     noteTitle: "Nota importante",
     note: "Los modelos descritos no constituyen una aprobación automática de financiamiento ni una garantía de ahorro. La disponibilidad, seguro, financiamiento, estructura contractual y condiciones dependen del proyecto, país, socio financiero, asegurador, validación y revisión técnica.",
     ctaTitle: "Empecemos por el proyecto, no por el producto financiero.",
@@ -275,6 +282,18 @@ export default async function FinancingPage({ params }: { params: Promise<{ loca
             <div className="text-xs font-black uppercase tracking-[.17em] text-cyan-200">{t.intlTitle}</div>
             <p className="mt-5 text-lg leading-8 text-white/80">{t.intlText}</p>
             <p className="mt-5 rounded-2xl border border-white/15 bg-white/10 p-5 text-sm font-semibold leading-6 text-white/80">{t.membership}</p>
+            <a
+              href={SET_PARTNERS_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 flex max-w-2xl items-center justify-between gap-4 rounded-2xl border border-cyan-200/30 bg-cyan-200/10 px-5 py-4 transition hover:bg-cyan-200/20"
+            >
+              <span>
+                <span className="block text-xs font-black uppercase tracking-[.16em] text-cyan-200">{t.partnerProof}</span>
+                <span className="mt-1 block text-sm font-bold text-white">{t.partnerProofText}</span>
+              </span>
+              <Arrow />
+            </a>
           </div>
           <div className="mt-8 grid gap-3 md:grid-cols-2">
             {sources.map(([label, url]) => (
