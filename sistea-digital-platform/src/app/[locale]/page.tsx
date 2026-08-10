@@ -784,37 +784,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-[#c6d7dd] bg-[#e8f0f2]/94 shadow-[0_6px_22px_rgba(48,75,93,.08)] backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 lg:px-6">
-          <Link href={`/${currentLocale}`} className="group flex min-w-0 items-center" aria-label="SISTEA home">
-            <img
-              src="/images/sistea-logo-header.png"
-              alt="SISTEA – Expertos en Enfriamiento Eficiente · Tecnología Alemana"
-              className="h-12 w-auto max-w-[210px] object-contain sm:h-14 sm:max-w-[250px]"
-            />
-          </Link>
-
-          <nav className="hidden items-center gap-5 text-sm font-bold text-slate-700 xl:flex">
-            {['#system', '#solutions', '#energy', '#tools', '#books', '#esi', '#contact'].map((href, i) => (
-              <a key={href} href={href} className="transition hover:text-cyan-700">{t.nav[i]}</a>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-1.5">
-            {(['es', 'en', 'de'] as const).map((language) => (
-              <Link
-                key={language}
-                href={`/${language}`}
-                className={currentLocale === language
-                  ? 'rounded-lg bg-[#26afd3] px-3 py-2 text-xs font-black text-white shadow-sm'
-                  : 'rounded-lg bg-[#dce8ec] px-3 py-2 text-xs font-black text-[#496172] transition hover:bg-[#d1e3e8]'}
-              >
-                {language.toUpperCase()}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </header>
 
       <main>
         <section className="relative min-h-[760px] overflow-hidden bg-[#cddfe4] text-[#f5f8f9]">
