@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Link from "next/link";
 import ContactForm from "./components/ContactForm";
 
@@ -10,626 +11,510 @@ const WHATSAPP_URL = "https://wa.me/50377282624";
 
 const translations = {
   es: {
-    title: "SISTEA | HVAC, Refrigeración, Energía y ESI",
+    title: "SISTEA | Ingeniería, HVAC, Refrigeración, Energía y ESI",
     description:
-      "Ingeniería integral para HVAC, refrigeración industrial, chillers, energía, automatización, gestión de cargas y financiamiento ESI en Centroamérica.",
-
-    heroEyebrow: "Ingeniería integral para Centroamérica",
-    heroTitle:
-      "Reducimos el consumo energético y diseñamos sistemas para una operación más eficiente, resiliente y autónoma.",
+      "Ingeniería integral para HVAC, refrigeración industrial, chillers, eficiencia energética, fotovoltaica, baterías, automatización y financiamiento ESI en Centroamérica.",
+    nav: ["Sistema", "Soluciones", "Energía", "App", "Libros", "Financiamiento", "Contacto"],
+    heroEyebrow: "Ingeniería alemana · ejecución local · Centroamérica",
+    heroTitle: "Ingeniería que conecta eficiencia, refrigeración, energía y financiamiento.",
     heroText:
-      "SISTEA integra HVAC, refrigeración industrial, chillers, ventilación, fotovoltaica, baterías, automatización, agua, gestión de cargas y financiamiento ESI.",
-
-    project: "Solicitar análisis de proyecto",
-    app: "Instalar Engineering Tools",
-    free: "Evaluación energética gratuita",
-
-    consultingEyebrow: "Energy & Engineering Consulting",
-    consultingTitle:
-      "De la factura eléctrica a una estrategia de máxima autonomía energética",
-    consultingText:
-      "Analizamos el consumo total, reducimos primero la demanda y después integramos generación propia, almacenamiento y control inteligente. El objetivo es reducir drásticamente la energía comprada a la red y avanzar, cuando sea técnica y económicamente viable, hacia una operación ampliamente autónoma.",
-
-    consultingPoints: [
-      "Análisis de facturas, demanda máxima y perfiles de carga",
-      "Medición por áreas, procesos y equipos",
-      "Optimización de chillers, HVAC, bombas, ventiladores y refrigeración",
-      "Gestión de cargas, peak shaving y desplazamiento de demanda",
-      "Fotovoltaica y almacenamiento con baterías",
-      "Recuperación de calor y aprovechamiento de energía residual",
-      "BMS, PLC, BACnet, Modbus y control inteligente",
-      "CAPEX, OPEX, ROI y estrategia de implementación",
+      "SISTEA analiza, diseña, optimiza e integra HVAC, refrigeración industrial, chillers, ventilación, deshumidificación, fotovoltaica, baterías, automatización, agua y soluciones de eficiencia energética.",
+    heroPrimary: "Analizar mi proyecto",
+    heroSecondary: "Abrir Engineering Tools",
+    heroThird: "Ver soluciones",
+    stats: [
+      ["40+", "años de experiencia técnica"],
+      ["3", "idiomas de ingeniería"],
+      ["360°", "visión técnica y económica"],
     ],
-
-    chillerEyebrow: "Chiller Engineering",
-    chillerTitle:
-      "Chillers de alta eficiencia para edificios, industria y procesos",
-    chillerText:
-      "Evaluamos carga real, clima, perfil operativo, temperaturas de agua, redundancia, eficiencia estacional y costo total de propiedad.",
-    chillerBrands: "Marcas consideradas según proyecto",
-
-    chillerTech: [
-      "Chillers enfriados por aire y por agua",
-      "Scroll, tornillo y centrífugos",
-      "Variadores de frecuencia y control de carga parcial",
-      "Rodamientos magnéticos cuando la aplicación lo justifique",
-      "Optimización hidráulica de plantas de agua helada",
-      "Variable Primary Flow y sistemas primario/secundario",
-      "Torres de enfriamiento y tratamiento de agua",
-      "Recuperación de calor y retrofit",
-      "Integración BMS y secuenciación automática",
+    storyEyebrow: "Un sistema conectado",
+    storyTitle: "De la primera medición al proyecto financiado",
+    storyText:
+      "Cada elemento de la plataforma cumple una función concreta. La web explica. Los libros documentan. La app permite una primera aproximación. SISTEA convierte los datos en ingeniería y el financiamiento elimina barreras de inversión.",
+    storySteps: [
+      ["01", "Detectar", "Problema, consumo, carga y oportunidad."],
+      ["02", "Calcular", "Herramientas digitales para una primera estimación."],
+      ["03", "Validar", "Revisión técnica y análisis de factibilidad."],
+      ["04", "Diseñar", "Engineering completo, selección y control."],
+      ["05", "Financiar", "ESI y modelos adecuados al proyecto."],
+      ["06", "Implementar", "Proyecto, puesta en marcha y optimización."],
     ],
-
-    refrigeration: "Refrigeración industrial y cadena de frío",
-
-    refrigerationItems: [
-      "NH₃ / R717",
-      "CO₂ / R744",
-      "Cámaras frigoríficas y congelación",
-      "Alimentos y bebidas",
-      "Farmacéutica",
-      "Almacenes y logística",
-      "Recuperación de calor",
-      "Optimización energética",
+    systemEyebrow: "SISTEA 5-Module System",
+    systemTitle: "Cinco módulos que trabajan como un solo sistema",
+    systemText:
+      "No optimizamos equipos aislados. Coordinamos carga térmica, humedad, energía, control y envolvente para reducir consumo y aumentar estabilidad operativa.",
+    modules: [
+      ["01", "Deshumidificación", "Control preciso de humedad y punto de rocío para procesos, almacenamiento y confort."],
+      ["02", "Enfriamiento adiabático en dos etapas", "Reducción de temperatura de aire de suministro sin humidificar directamente el espacio acondicionado."],
+      ["03", "Fotovoltaica + baterías", "Generación propia, respaldo, peak shaving y mayor independencia de la red."],
+      ["04", "Control inteligente", "BMS, PLC, BACnet, Modbus, secuenciación y optimización basada en datos."],
+      ["05", "MIG coatings", "Recubrimientos interiores y exteriores para reducir carga térmica y apoyar la eficiencia del sistema."],
     ],
-
-    loadEyebrow: "Load Management",
-    loadTitle: "Gestión inteligente de cargas y reducción de picos",
-    loadText:
-      "Medimos dónde, cuándo y por qué se consume energía y coordinamos las cargas sin afectar la producción.",
-
-    loadItems: [
-      "Monitoreo de múltiples puntos",
-      "Detección de picos y simultaneidades",
-      "Priorización automática de cargas",
-      "Integración de chillers, bombas, compresores, HVAC y producción",
-      "Peak shaving con baterías",
-      "Coordinación con fotovoltaica",
-      "Alarmas, tendencias y dashboards",
-      "Control BMS/PLC",
-    ],
-
-    freeTitle: "Primera revisión gratuita del consumo eléctrico",
-    freeText:
-      "Envíanos una factura eléctrica reciente y datos básicos de operación. SISTEA realiza una primera evaluación para identificar potencial de ahorro.",
-
-    esiEyebrow: "ESI Financing",
-    esiTitle: "La eficiencia energética también debe ser financiable",
-    esiText:
-      "SISTEA combina evaluación técnica, estimación de ahorro, análisis económico y estructuración financiera para convertir oportunidades de ahorro en proyectos ejecutables.",
-    esiButton: "Cómo funciona el financiamiento ESI",
-
-    toolsEyebrow: "SISTEA Engineering Tools",
-    toolsTitle: "Lleva nuestras herramientas de cálculo en tu teléfono",
-    toolsText:
-      "Después del registro, SISTEA revisa los datos de contacto y habilita el acceso. Los cálculos pueden enviarse directamente a SISTEA para revisión técnica.",
-    toolsButton: "Abrir e instalar la app",
-    toolsNote: "App web instalable para iPhone y Android.",
-
-    tools: [
-      [
-        "Cold Room Designer",
-        "Cámaras frigoríficas y congelación.",
-      ],
-      [
-        "Chiller System Designer",
-        "Chillers, caudales e hidráulica.",
-      ],
-      [
-        "Comfort Cooling Load",
-        "Carga térmica para confort.",
-      ],
-      [
-        "Engineering Unit Converter",
-        "kW, TR, BTU/h, presión, caudal y más.",
-      ],
-    ],
-
-    competence: "Competencias SISTEA",
-
+    solutionsEyebrow: "Competencias integradas",
+    solutionsTitle: "Una sola ingeniería para sistemas que normalmente se planifican por separado",
+    solutionsText:
+      "La mayor oportunidad suele estar en las interacciones: refrigeración con calor residual, HVAC con generación solar, chillers con almacenamiento, automatización con gestión de demanda.",
     competences: [
-      [
-        "HVAC",
-        "Climatización de edificios e industria.",
-      ],
-      [
-        "Refrigeración industrial",
-        "Proceso, almacenamiento y cadena de frío.",
-      ],
-      [
-        "Ventilación",
-        "Calidad de aire, extracción y distribución.",
-      ],
-      [
-        "PV + baterías",
-        "Generación propia, respaldo y peak shaving.",
-      ],
-      [
-        "Automation",
-        "BMS, PLC, BACnet, Modbus y monitoreo.",
-      ],
-      [
-        "Agua",
-        "Tratamiento y acondicionamiento.",
-      ],
-      [
-        "Recuperación de calor",
-        "Aprovechamiento de energía térmica residual.",
-      ],
-      [
-        "Consultoría",
-        "Estudios, ingeniería, factibilidad y optimización.",
-      ],
+      ["HVAC", "Climatización, deshumidificación, calidad de aire y ventilación."],
+      ["Refrigeración industrial", "NH₃ / R717, CO₂ / R744, cámaras, procesos y cadena de frío."],
+      ["Chiller plants", "Aire/agua, hidráulica, VPF, torres, secuenciación y retrofit."],
+      ["PV + baterías", "Autogeneración, respaldo, peak shaving y gestión energética."],
+      ["Automatización", "BMS, PLC, BACnet, Modbus, sensores, dashboards y alarmas."],
+      ["Recuperación de calor", "Reutilización de energía térmica para agua caliente y procesos."],
+      ["Tratamiento de agua", "Acondicionamiento para procesos, torres y sistemas técnicos."],
+      ["Consulting", "Factibilidad, ingeniería, CAPEX/OPEX, ROI, proyecto y commissioning."],
     ],
-
-    booksEyebrow: "SISTEA Engineering Series",
-    booksTitle: "Ingeniería explicada desde la práctica",
-    booksText:
-      "Nuestros libros profundizan en refrigeración, HVAC, energía y sistemas industriales. Los principios de nuestros Engineering Tools se documentan en la SISTEA Engineering Series.",
-    booksButton: "Ver libros en Amazon",
-
-    contactTitle: "Hablemos de su proyecto",
-    contactText:
-      "Envíanos los datos básicos o contáctanos directamente por WhatsApp.",
-
-    nav: [
-      "Soluciones",
-      "Energía",
-      "Chillers",
-      "Financiamiento",
-      "App",
-      "Libros",
-      "Contacto",
+    energyEyebrow: "Energy & Engineering Consulting",
+    energyTitle: "Primero reducimos la demanda. Después producimos, almacenamos y controlamos mejor la energía.",
+    energyText:
+      "La factura eléctrica es el punto de partida, no el diagnóstico. Analizamos perfiles de carga, simultaneidades, equipos, horarios, temperaturas, caudales y estrategia de control para localizar el costo real de la ineficiencia.",
+    energyFlow: [
+      ["Medir", "Facturas, demanda, submedición y perfiles"],
+      ["Reducir", "Chillers, HVAC, bombas, ventiladores y procesos"],
+      ["Recuperar", "Calor residual y energía útil"],
+      ["Generar", "Fotovoltaica y otras fuentes adecuadas"],
+      ["Almacenar", "Baterías y desplazamiento de demanda"],
+      ["Controlar", "BMS, PLC, IA y gestión de cargas"],
     ],
-  },
-
-  en: {
-    title: "SISTEA | HVAC, Refrigeration, Energy and ESI",
-    description:
-      "Integrated engineering for HVAC, industrial refrigeration, chillers, energy, automation, load management and ESI financing in Central America.",
-
-    heroEyebrow: "Integrated engineering for Central America",
-    heroTitle:
-      "We reduce energy consumption and design systems for more efficient, resilient and autonomous operations.",
-    heroText:
-      "SISTEA integrates HVAC, industrial refrigeration, chillers, ventilation, solar PV, batteries, automation, water, load management and ESI financing.",
-
-    project: "Request project analysis",
-    app: "Install Engineering Tools",
-    free: "Free energy review",
-
-    consultingEyebrow: "Energy & Engineering Consulting",
-    consultingTitle:
-      "From the electric bill to a maximum-energy-autonomy strategy",
-    consultingText:
-      "We analyze total energy use, reduce demand first and then integrate onsite generation, storage and intelligent control. The objective is to drastically reduce grid purchases and move, where technically and economically viable, toward highly autonomous operation.",
-
-    consultingPoints: [
-      "Utility bills, peak demand and load profiles",
-      "Submetering by area, process and equipment",
-      "Optimization of chillers, HVAC, pumps, fans and refrigeration",
-      "Load management, peak shaving and demand shifting",
-      "Solar PV and battery storage",
-      "Heat recovery and waste-energy utilization",
-      "BMS, PLC, BACnet, Modbus and intelligent controls",
-      "CAPEX, OPEX, ROI and implementation strategy",
+    reviewTitle: "Evaluación energética inicial gratuita",
+    reviewText:
+      "Envíanos una factura eléctrica reciente y datos básicos de operación. Identificamos dónde vale la pena profundizar antes de que inviertas en un estudio completo.",
+    reviewButton: "Solicitar primera revisión",
+    refrigerationEyebrow: "Cooling Engineering",
+    refrigerationTitle: "Chillers, refrigeración industrial y cadena de frío con enfoque de sistema",
+    refrigerationText:
+      "Evaluamos carga real, clima, temperaturas de operación, redundancia, eficiencia estacional, hidráulica, control y costo total de propiedad. La selección del equipo llega después del análisis.",
+    refrigerationCards: [
+      ["Chiller Engineering", "Air-cooled · Water-cooled · Scroll · Screw · Centrifugal · VFD · Magnetic bearing"],
+      ["NH₃ / R717", "Industria alimentaria, proceso, almacenamiento, seguridad y eficiencia energética."],
+      ["CO₂ / R744", "Sistemas subcríticos y transcríticos, recuperación de calor y control de alta presión."],
+      ["Cold Chain", "Cámaras frigoríficas, congelación, farmacéutica, logística y distribución."],
     ],
-
-    chillerEyebrow: "Chiller Engineering",
-    chillerTitle:
-      "High-efficiency chillers for buildings, industry and process applications",
-    chillerText:
-      "We evaluate real load, climate, operating profile, water temperatures, redundancy, seasonal efficiency and total cost of ownership.",
-    chillerBrands: "Brands considered according to project",
-
-    chillerTech: [
-      "Air-cooled and water-cooled chillers",
-      "Scroll, screw and centrifugal chillers",
-      "Variable-speed drives and part-load control",
-      "Magnetic-bearing systems where justified",
-      "Hydraulic optimization of chilled-water plants",
-      "Variable Primary Flow and primary/secondary systems",
-      "Cooling towers and water treatment",
-      "Heat recovery and retrofit",
-      "BMS integration and automatic sequencing",
-    ],
-
-    refrigeration: "Industrial refrigeration and cold chain",
-
-    refrigerationItems: [
-      "NH₃ / R717",
-      "CO₂ / R744",
-      "Cold and freezer rooms",
-      "Food and beverage",
-      "Pharmaceutical",
-      "Warehouses and logistics",
-      "Heat recovery",
-      "Energy optimization",
-    ],
-
-    loadEyebrow: "Load Management",
-    loadTitle:
-      "Intelligent load management and peak-demand reduction",
-    loadText:
-      "We measure where, when and why energy is consumed and coordinate loads without compromising production.",
-
-    loadItems: [
-      "Multi-point monitoring",
-      "Peak and simultaneity detection",
-      "Automatic load prioritization",
-      "Integration of chillers, pumps, compressors, HVAC and production",
-      "Battery peak shaving",
-      "Coordination with solar PV",
-      "Alarms, trends and dashboards",
-      "BMS/PLC control",
-    ],
-
-    freeTitle: "Free initial electricity-consumption review",
-    freeText:
-      "Send us a recent electric bill and basic operating data. SISTEA performs an initial review to identify savings potential.",
-
-    esiEyebrow: "ESI Financing",
-    esiTitle: "Energy efficiency must also be financeable",
-    esiText:
-      "SISTEA combines technical evaluation, savings estimates, economic analysis and financing structure to turn efficiency opportunities into executable projects.",
-    esiButton: "How ESI financing works",
-
+    brandsLabel: "Fabricantes considerados según aplicación y proyecto",
+    brands: ["YORK", "Carrier", "Trane", "TICA"],
     toolsEyebrow: "SISTEA Engineering Tools",
-    toolsTitle: "Take our engineering calculators with you",
+    toolsTitle: "Herramientas útiles sin sustituir la ingeniería profesional",
     toolsText:
-      "After registration, SISTEA reviews the contact information and enables access. Calculations can be sent directly to SISTEA for technical review.",
+      "La app entrega una primera estimación y ayuda a estructurar los datos del proyecto. Para selección final, seguridad, normas, control y dimensionamiento completo, el cálculo pasa a revisión de SISTEA.",
+    tools: [
+      ["Cold Room Designer", "Cámaras frigoríficas y congelación."],
+      ["Chiller System Designer", "Capacidad, caudal e hidráulica inicial."],
+      ["Comfort Cooling Load", "Estimación de carga térmica para confort."],
+      ["Engineering Unit Converter", "kW, TR, BTU/h, presión, caudal y más."],
+    ],
+    toolsButton: "Abrir e instalar la app",
+    toolsNote: "Web app instalable en iPhone y Android.",
+    booksEyebrow: "SISTEA Engineering Series",
+    booksTitle: "Documentamos la metodología que aplicamos en nuestros proyectos",
+    booksText:
+      "Los libros no son un catálogo. Son evidencia técnica. Explican planificación, cálculo, operación, mantenimiento, seguridad, eficiencia energética y automatización en los mismos campos donde SISTEA desarrolla proyectos reales.",
+    books: [
+      ["R744", "CO₂ Refrigeration", "#0f5d8f"],
+      ["R717", "Ammonia Refrigeration", "#9a5b2f"],
+      ["HEAT", "Heat Pumps & Recovery", "#187b7a"],
+      ["ENERGY", "Industrial Efficiency", "#3b7d44"],
+      ["HVAC", "Intelligent Cooling", "#5c4a8b"],
+      ["AI DC", "Data Center Cooling", "#233b64"],
+    ],
+    booksButton: "Ver la serie en Amazon",
+    booksLinkText: "Disponible en alemán, inglés y español según edición.",
+    financeEyebrow: "ESI Financing",
+    financeTitle: "Una buena medida de eficiencia también debe ser ejecutable financieramente",
+    financeText:
+      "SISTEA combina análisis técnico, ahorro esperado, inversión, riesgo, desempeño y estructura financiera. Así una oportunidad de ahorro puede convertirse en un proyecto bancable y medible.",
+    financePoints: [
+      "Evaluación técnica y línea base",
+      "Estimación de ahorro y desempeño",
+      "CAPEX, OPEX, ROI y sensibilidad",
+      "Estructuración ESI y modelos de servicio",
+      "Seguimiento técnico durante la implementación",
+    ],
+    financeButton: "Conocer financiamiento ESI",
+    industriesEyebrow: "Aplicaciones",
+    industriesTitle: "Ingeniería adaptada a la operación real de cada sector",
+    industries: [
+      ["Industria", "Producción, procesos, utilidades y grandes cargas eléctricas."],
+      ["Alimentos & bebidas", "Refrigeración, congelación, calor de proceso y recuperación."],
+      ["Farmacéutica", "Temperatura, humedad, almacenamiento y continuidad operativa."],
+      ["Hoteles & hospitales", "Confort, agua caliente, chillers, calidad de aire y respaldo."],
+      ["Logística", "Cold chain, almacenes, ventilación, energía y monitoreo."],
+      ["Data Centers", "Alta densidad térmica, redundancia, energía, baterías y control."],
+    ],
+    whyEyebrow: "Por qué SISTEA",
+    whyTitle: "Conocimiento, herramientas y ejecución en una sola cadena",
+    why: [
+      ["Experiencia", "Más de cuatro décadas en refrigeración, HVAC, energía y sistemas técnicos."],
+      ["Visión de sistema", "Analizamos interacciones y no solo componentes individuales."],
+      ["Tecnología abierta", "Seleccionamos la solución adecuada al proyecto, no una marca fija."],
+      ["Implementación", "Del estudio y cálculo hasta la puesta en marcha y optimización."],
+    ],
+    contactTitle: "Cuéntanos dónde está el problema técnico o energético",
+    contactText:
+      "Puede ser una factura elevada, un chiller ineficiente, humedad, falta de capacidad, picos de demanda, un proyecto fotovoltaico o una nueva instalación. Empezamos por los datos.",
+    whatsapp: "Hablar por WhatsApp",
+  },
+  en: {
+    title: "SISTEA | Engineering, HVAC, Refrigeration, Energy and ESI",
+    description:
+      "Integrated engineering for HVAC, industrial refrigeration, chillers, energy efficiency, solar PV, batteries, automation and ESI financing in Central America.",
+    nav: ["System", "Solutions", "Energy", "App", "Books", "Financing", "Contact"],
+    heroEyebrow: "German engineering · local execution · Central America",
+    heroTitle: "Engineering that connects efficiency, refrigeration, energy and financing.",
+    heroText:
+      "SISTEA analyzes, designs, optimizes and integrates HVAC, industrial refrigeration, chillers, ventilation, dehumidification, solar PV, batteries, automation, water and energy-efficiency solutions.",
+    heroPrimary: "Analyze my project",
+    heroSecondary: "Open Engineering Tools",
+    heroThird: "View solutions",
+    stats: [["40+", "years of technical experience"], ["3", "engineering languages"], ["360°", "technical and economic view"]],
+    storyEyebrow: "One connected system",
+    storyTitle: "From first measurement to a financed project",
+    storyText:
+      "Every platform element has a clear role. The website explains. The books document. The app provides a first approximation. SISTEA turns data into engineering and financing removes investment barriers.",
+    storySteps: [
+      ["01", "Detect", "Problem, consumption, load and opportunity."],
+      ["02", "Calculate", "Digital tools for an initial estimate."],
+      ["03", "Validate", "Technical review and feasibility analysis."],
+      ["04", "Design", "Complete engineering, selection and controls."],
+      ["05", "Finance", "ESI and project-appropriate models."],
+      ["06", "Implement", "Project delivery, commissioning and optimization."],
+    ],
+    systemEyebrow: "SISTEA 5-Module System",
+    systemTitle: "Five modules working as one integrated system",
+    systemText:
+      "We do not optimize isolated equipment. We coordinate thermal load, humidity, energy, controls and the building envelope to reduce consumption and improve operating stability.",
+    modules: [
+      ["01", "Dehumidification", "Precise humidity and dew-point control for processes, storage and comfort."],
+      ["02", "Two-stage adiabatic cooling", "Supply-air temperature reduction without directly humidifying the conditioned space."],
+      ["03", "Solar PV + batteries", "Onsite generation, backup, peak shaving and greater grid independence."],
+      ["04", "Intelligent controls", "BMS, PLC, BACnet, Modbus, sequencing and data-driven optimization."],
+      ["05", "MIG coatings", "Interior and exterior coatings that reduce thermal load and support system efficiency."],
+    ],
+    solutionsEyebrow: "Integrated capabilities",
+    solutionsTitle: "One engineering approach for systems that are usually planned separately",
+    solutionsText:
+      "The largest opportunity often sits in the interactions: refrigeration with waste heat, HVAC with solar generation, chillers with storage, automation with demand management.",
+    competences: [
+      ["HVAC", "Air conditioning, dehumidification, indoor air quality and ventilation."],
+      ["Industrial refrigeration", "NH₃ / R717, CO₂ / R744, cold rooms, processes and cold chain."],
+      ["Chiller plants", "Air/water cooled, hydraulics, VPF, towers, sequencing and retrofit."],
+      ["PV + batteries", "Onsite generation, backup, peak shaving and energy management."],
+      ["Automation", "BMS, PLC, BACnet, Modbus, sensors, dashboards and alarms."],
+      ["Heat recovery", "Reuse of thermal energy for hot water and process applications."],
+      ["Water treatment", "Conditioning for processes, cooling towers and technical systems."],
+      ["Consulting", "Feasibility, engineering, CAPEX/OPEX, ROI, project and commissioning."],
+    ],
+    energyEyebrow: "Energy & Engineering Consulting",
+    energyTitle: "First reduce demand. Then generate, store and control energy better.",
+    energyText:
+      "The electric bill is the starting point, not the diagnosis. We analyze load profiles, simultaneity, equipment, schedules, temperatures, flows and control strategy to locate the real cost of inefficiency.",
+    energyFlow: [
+      ["Measure", "Bills, demand, submetering and profiles"],
+      ["Reduce", "Chillers, HVAC, pumps, fans and processes"],
+      ["Recover", "Waste heat and useful energy"],
+      ["Generate", "Solar PV and suitable onsite sources"],
+      ["Store", "Batteries and demand shifting"],
+      ["Control", "BMS, PLC, AI and load management"],
+    ],
+    reviewTitle: "Free initial energy review",
+    reviewText:
+      "Send us a recent utility bill and basic operating data. We identify where deeper analysis is worthwhile before you invest in a full study.",
+    reviewButton: "Request initial review",
+    refrigerationEyebrow: "Cooling Engineering",
+    refrigerationTitle: "Chillers, industrial refrigeration and cold chain with a systems approach",
+    refrigerationText:
+      "We evaluate real load, climate, operating temperatures, redundancy, seasonal efficiency, hydraulics, controls and total cost of ownership. Equipment selection comes after the analysis.",
+    refrigerationCards: [
+      ["Chiller Engineering", "Air-cooled · Water-cooled · Scroll · Screw · Centrifugal · VFD · Magnetic bearing"],
+      ["NH₃ / R717", "Food industry, process, storage, safety and energy efficiency."],
+      ["CO₂ / R744", "Subcritical and transcritical systems, heat recovery and high-pressure control."],
+      ["Cold Chain", "Cold rooms, freezing, pharmaceutical, logistics and distribution."],
+    ],
+    brandsLabel: "Manufacturers considered according to application and project",
+    brands: ["YORK", "Carrier", "Trane", "TICA"],
+    toolsEyebrow: "SISTEA Engineering Tools",
+    toolsTitle: "Useful tools without replacing professional engineering",
+    toolsText:
+      "The app provides an initial estimate and helps structure project data. Final selection, safety, standards, controls and full sizing are reviewed by SISTEA.",
+    tools: [
+      ["Cold Room Designer", "Cold rooms and freezing applications."],
+      ["Chiller System Designer", "Initial capacity, flow and hydraulics."],
+      ["Comfort Cooling Load", "Preliminary comfort cooling load."],
+      ["Engineering Unit Converter", "kW, TR, BTU/h, pressure, flow and more."],
+    ],
     toolsButton: "Open and install the app",
     toolsNote: "Installable web app for iPhone and Android.",
-
-    tools: [
-      [
-        "Cold Room Designer",
-        "Cold and freezer rooms.",
-      ],
-      [
-        "Chiller System Designer",
-        "Chillers, flows and hydraulics.",
-      ],
-      [
-        "Comfort Cooling Load",
-        "Comfort cooling-load estimation.",
-      ],
-      [
-        "Engineering Unit Converter",
-        "kW, TR, BTU/h, pressure, flow and more.",
-      ],
-    ],
-
-    competence: "SISTEA capabilities",
-
-    competences: [
-      [
-        "HVAC",
-        "Climate control for buildings and industry.",
-      ],
-      [
-        "Industrial refrigeration",
-        "Process, storage and cold chain.",
-      ],
-      [
-        "Ventilation",
-        "Air quality, exhaust and distribution.",
-      ],
-      [
-        "Solar PV + batteries",
-        "Onsite generation, backup and peak shaving.",
-      ],
-      [
-        "Automation",
-        "BMS, PLC, BACnet, Modbus and monitoring.",
-      ],
-      [
-        "Water",
-        "Treatment and conditioning.",
-      ],
-      [
-        "Heat recovery",
-        "Use of residual thermal energy.",
-      ],
-      [
-        "Consulting",
-        "Studies, engineering, feasibility and optimization.",
-      ],
-    ],
-
     booksEyebrow: "SISTEA Engineering Series",
-    booksTitle:
-      "Engineering knowledge built from practical experience",
+    booksTitle: "We document the methodology we apply in real projects",
     booksText:
-      "Our books cover refrigeration, HVAC, energy and industrial systems in depth. The principles behind our Engineering Tools are documented in the SISTEA Engineering Series.",
-    booksButton: "View books on Amazon",
-
-    contactTitle: "Let's discuss your project",
-    contactText:
-      "Send us the basic information or contact us directly through WhatsApp.",
-
-    nav: [
-      "Solutions",
-      "Energy",
-      "Chillers",
-      "Financing",
-      "App",
-      "Books",
-      "Contact",
+      "The books are not a catalog. They are technical evidence. They cover planning, calculation, operation, maintenance, safety, energy efficiency and automation in the same fields where SISTEA develops real projects.",
+    books: [
+      ["R744", "CO₂ Refrigeration", "#0f5d8f"],
+      ["R717", "Ammonia Refrigeration", "#9a5b2f"],
+      ["HEAT", "Heat Pumps & Recovery", "#187b7a"],
+      ["ENERGY", "Industrial Efficiency", "#3b7d44"],
+      ["HVAC", "Intelligent Cooling", "#5c4a8b"],
+      ["AI DC", "Data Center Cooling", "#233b64"],
     ],
+    booksButton: "View the series on Amazon",
+    booksLinkText: "Available in German, English and Spanish depending on edition.",
+    financeEyebrow: "ESI Financing",
+    financeTitle: "A strong efficiency measure must also be financially executable",
+    financeText:
+      "SISTEA combines technical analysis, expected savings, investment, risk, performance and financing structure. This turns a savings opportunity into a measurable, bankable project.",
+    financePoints: ["Technical assessment and baseline", "Savings and performance estimate", "CAPEX, OPEX, ROI and sensitivity", "ESI structure and service models", "Technical follow-up during implementation"],
+    financeButton: "Explore ESI financing",
+    industriesEyebrow: "Applications",
+    industriesTitle: "Engineering adapted to each sector's real operating conditions",
+    industries: [
+      ["Industry", "Production, processes, utilities and large electrical loads."],
+      ["Food & beverage", "Refrigeration, freezing, process heat and heat recovery."],
+      ["Pharmaceutical", "Temperature, humidity, storage and operational continuity."],
+      ["Hotels & hospitals", "Comfort, hot water, chillers, air quality and backup."],
+      ["Logistics", "Cold chain, warehouses, ventilation, energy and monitoring."],
+      ["Data Centers", "High heat density, redundancy, energy, batteries and controls."],
+    ],
+    whyEyebrow: "Why SISTEA",
+    whyTitle: "Knowledge, tools and execution in one chain",
+    why: [
+      ["Experience", "More than four decades in refrigeration, HVAC, energy and technical systems."],
+      ["Systems view", "We analyze interactions instead of isolated components."],
+      ["Open technology", "We select what fits the project rather than forcing one brand."],
+      ["Implementation", "From study and calculation through commissioning and optimization."],
+    ],
+    contactTitle: "Tell us where the technical or energy problem is",
+    contactText:
+      "It may be a high utility bill, an inefficient chiller, humidity, insufficient capacity, demand peaks, a solar project or a new installation. We start with the data.",
+    whatsapp: "Talk on WhatsApp",
   },
-
   de: {
-    title: "SISTEA | HVAC, Kälte, Energie und ESI",
+    title: "SISTEA | Engineering, HVAC, Kälte, Energie und ESI",
     description:
-      "Ganzheitliches Engineering für HVAC, Industriekälte, Chiller, Energie, Automation, Lastmanagement und ESI-Finanzierung in Zentralamerika.",
-
-    heroEyebrow: "Ganzheitliches Engineering für Zentralamerika",
-    heroTitle:
-      "Wir reduzieren Energieverbrauch und entwickeln Systeme für effizientere, resilientere und möglichst autonome Betriebe.",
+      "Integriertes Engineering für HVAC, Industriekälte, Chiller, Energieeffizienz, Photovoltaik, Batteriespeicher, Automation und ESI-Finanzierung in Zentralamerika.",
+    nav: ["System", "Lösungen", "Energie", "App", "Bücher", "Finanzierung", "Kontakt"],
+    heroEyebrow: "Deutsches Engineering · lokale Umsetzung · Zentralamerika",
+    heroTitle: "Engineering, das Effizienz, Kälte, Energie und Finanzierung verbindet.",
     heroText:
-      "SISTEA verbindet HVAC, Industriekälte, Chiller, Lüftung, Photovoltaik, Batteriespeicher, Automation, Wasser, Lastmanagement und ESI-Finanzierung.",
-
-    project: "Projektanalyse anfragen",
-    app: "Engineering Tools installieren",
-    free: "Kostenlose Energieprüfung",
-
-    consultingEyebrow: "Energy & Engineering Consulting",
-    consultingTitle:
-      "Von der Stromrechnung zur Strategie für maximale Energieautarkie",
-    consultingText:
-      "Wir analysieren den gesamten Energieverbrauch, reduzieren zuerst die Nachfrage und integrieren anschließend Eigenerzeugung, Speicher und intelligente Regelung. Ziel ist eine drastische Reduzierung des Netzenergiebezugs und – wo technisch und wirtschaftlich sinnvoll – eine weitgehend autonome Betriebsweise.",
-
-    consultingPoints: [
-      "Stromrechnungen, Spitzenleistung und Lastprofile",
-      "Messung nach Bereichen, Prozessen und Einzelverbrauchern",
-      "Optimierung von Chillern, HVAC, Pumpen, Ventilatoren und Kälteanlagen",
-      "Lastmanagement, Peak Shaving und Lastverschiebung",
-      "Photovoltaik und Batteriespeicher",
-      "Wärmerückgewinnung und Nutzung von Abwärme",
-      "BMS, PLC, BACnet, Modbus und intelligente Regelung",
-      "CAPEX, OPEX, ROI und Umsetzungsstrategie",
+      "SISTEA analysiert, plant, optimiert und integriert HVAC, Industriekälte, Chiller, Lüftung, Entfeuchtung, Photovoltaik, Batteriespeicher, Automation, Wasser und Energieeffizienzlösungen.",
+    heroPrimary: "Projekt analysieren",
+    heroSecondary: "Engineering Tools öffnen",
+    heroThird: "Lösungen ansehen",
+    stats: [["40+", "Jahre technische Erfahrung"], ["3", "Engineering-Sprachen"], ["360°", "technische und wirtschaftliche Sicht"]],
+    storyEyebrow: "Ein verbundenes System",
+    storyTitle: "Von der ersten Messung bis zum finanzierten Projekt",
+    storyText:
+      "Jedes Element der Plattform hat eine klare Funktion. Die Website erklärt. Die Fachbücher dokumentieren. Die App ermöglicht eine erste Abschätzung. SISTEA macht daraus Engineering und die Finanzierung reduziert Investitionshürden.",
+    storySteps: [
+      ["01", "Erkennen", "Problem, Verbrauch, Last und Potenzial."],
+      ["02", "Berechnen", "Digitale Tools für eine erste Abschätzung."],
+      ["03", "Prüfen", "Technische Validierung und Machbarkeit."],
+      ["04", "Planen", "Vollständiges Engineering, Auswahl und Regelung."],
+      ["05", "Finanzieren", "ESI und passende Projektmodelle."],
+      ["06", "Umsetzen", "Projekt, Inbetriebnahme und Optimierung."],
     ],
-
-    chillerEyebrow: "Chiller Engineering",
-    chillerTitle:
-      "Hocheffiziente Chillersysteme für Gebäude, Industrie und Prozesse",
-    chillerText:
-      "Wir bewerten reale Kühllast, Klima, Betriebsprofil, Kaltwassertemperaturen, Redundanz, saisonale Effizienz und Total Cost of Ownership.",
-    chillerBrands: "Je nach Projekt berücksichtigte Marken",
-
-    chillerTech: [
-      "Luft- und wassergekühlte Chiller",
-      "Scroll-, Schrauben- und Zentrifugaltechnik",
-      "Frequenzregelung und Teillastoptimierung",
-      "Magnetlagertechnik, wenn sinnvoll",
-      "Hydraulische Optimierung von Kaltwasseranlagen",
-      "Variable Primary Flow und Primär-/Sekundärsysteme",
-      "Kühltürme und Wasseraufbereitung",
-      "Wärmerückgewinnung und Retrofit",
-      "BMS-Integration und automatische Sequenzierung",
+    systemEyebrow: "SISTEA 5-Modul-System",
+    systemTitle: "Fünf Module arbeiten als ein integriertes System",
+    systemText:
+      "Wir optimieren keine Einzelgeräte. Wir koordinieren thermische Last, Feuchte, Energie, Regelung und Gebäudehülle, um Verbrauch zu senken und den Betrieb stabiler zu machen.",
+    modules: [
+      ["01", "Entfeuchtung", "Präzise Feuchte- und Taupunktregelung für Prozesse, Lagerung und Komfort."],
+      ["02", "Zweistufige adiabate Kühlung", "Absenkung der Zulufttemperatur ohne direkte Befeuchtung des konditionierten Raums."],
+      ["03", "PV + Batteriespeicher", "Eigenerzeugung, Backup, Peak Shaving und höhere Netzunabhängigkeit."],
+      ["04", "Intelligente Regelung", "BMS, PLC, BACnet, Modbus, Sequenzierung und datenbasierte Optimierung."],
+      ["05", "MIG-Beschichtungen", "Innen- und Außenbeschichtungen zur Reduzierung der Wärmelast und Unterstützung der Systemeffizienz."],
     ],
-
-    refrigeration: "Industriekälte und Kühlkette",
-
-    refrigerationItems: [
-      "NH₃ / R717",
-      "CO₂ / R744",
-      "Kühl- und Tiefkühlräume",
-      "Lebensmittel und Getränke",
-      "Pharma",
-      "Lager und Logistik",
-      "Wärmerückgewinnung",
-      "Energieoptimierung",
-    ],
-
-    loadEyebrow: "Lastmanagement",
-    loadTitle:
-      "Intelligentes Lastmanagement und Reduzierung von Leistungsspitzen",
-    loadText:
-      "Wir messen, wo, wann und warum Energie verbraucht wird und koordinieren Lasten ohne Beeinträchtigung der Produktion.",
-
-    loadItems: [
-      "Monitoring vieler Verbrauchspunkte",
-      "Erkennung von Lastspitzen und Gleichzeitigkeit",
-      "Automatische Lastpriorisierung",
-      "Integration von Chillern, Pumpen, Kompressoren, HVAC und Produktion",
-      "Peak Shaving mit Batteriespeichern",
-      "Koordination mit Photovoltaik",
-      "Alarme, Trends und Dashboards",
-      "BMS-/PLC-Steuerung",
-    ],
-
-    freeTitle:
-      "Kostenlose Erstprüfung des elektrischen Verbrauchs",
-    freeText:
-      "Sende uns eine aktuelle Stromrechnung und grundlegende Betriebsdaten. SISTEA prüft zunächst kostenlos, ob ein relevantes Einsparpotenzial erkennbar ist.",
-
-    esiEyebrow: "ESI-Finanzierung",
-    esiTitle: "Energieeffizienz muss auch finanzierbar sein",
-    esiText:
-      "SISTEA verbindet technische Bewertung, Einsparprognose, Wirtschaftlichkeitsanalyse und Finanzierungsstruktur zu umsetzbaren Effizienzprojekten.",
-    esiButton: "ESI-Finanzierung verstehen",
-
-    toolsEyebrow: "SISTEA Engineering Tools",
-    toolsTitle:
-      "Unsere Berechnungstools direkt auf deinem Smartphone",
-    toolsText:
-      "Nach der Registrierung prüft SISTEA die Kontaktdaten und gibt den Zugang frei. Berechnungen können direkt zur technischen Prüfung an SISTEA übertragen werden.",
-    toolsButton: "App öffnen und installieren",
-    toolsNote:
-      "Installierbare Web-App für iPhone und Android.",
-
-    tools: [
-      [
-        "Cold Room Designer",
-        "Kühl- und Tiefkühlräume.",
-      ],
-      [
-        "Chiller System Designer",
-        "Chiller, Volumenströme und Hydraulik.",
-      ],
-      [
-        "Comfort Cooling Load",
-        "Kühllast für Komfortklima.",
-      ],
-      [
-        "Engineering Unit Converter",
-        "kW, TR, BTU/h, Druck, Volumenstrom und mehr.",
-      ],
-    ],
-
-    competence: "SISTEA-Kompetenzen",
-
+    solutionsEyebrow: "Integrierte Kompetenzen",
+    solutionsTitle: "Ein Engineering-Ansatz für Systeme, die sonst getrennt geplant werden",
+    solutionsText:
+      "Das größte Potenzial steckt oft in den Schnittstellen: Kälte mit Abwärme, HVAC mit PV, Chiller mit Speicher, Automation mit Lastmanagement.",
     competences: [
-      [
-        "HVAC",
-        "Klimatisierung für Gebäude und Industrie.",
-      ],
-      [
-        "Industriekälte",
-        "Prozess, Lagerung und Kühlkette.",
-      ],
-      [
-        "Lüftung",
-        "Luftqualität, Absaugung und Verteilung.",
-      ],
-      [
-        "PV + Batteriespeicher",
-        "Eigenerzeugung, Backup und Peak Shaving.",
-      ],
-      [
-        "Automation",
-        "BMS, PLC, BACnet, Modbus und Monitoring.",
-      ],
-      [
-        "Wasser",
-        "Aufbereitung und Konditionierung.",
-      ],
-      [
-        "Wärmerückgewinnung",
-        "Nutzung thermischer Restenergie.",
-      ],
-      [
-        "Consulting",
-        "Studien, Engineering, Machbarkeit und Optimierung.",
-      ],
+      ["HVAC", "Klimatisierung, Entfeuchtung, Raumluftqualität und Lüftung."],
+      ["Industriekälte", "NH₃ / R717, CO₂ / R744, Kühlräume, Prozesse und Kühlkette."],
+      ["Chiller-Anlagen", "Luft/Wasser, Hydraulik, VPF, Kühltürme, Sequenzierung und Retrofit."],
+      ["PV + Batteriespeicher", "Eigenerzeugung, Backup, Peak Shaving und Energiemanagement."],
+      ["Automation", "BMS, PLC, BACnet, Modbus, Sensorik, Dashboards und Alarmierung."],
+      ["Wärmerückgewinnung", "Nutzung thermischer Restenergie für Warmwasser und Prozesse."],
+      ["Wasseraufbereitung", "Konditionierung für Prozesse, Kühltürme und technische Systeme."],
+      ["Consulting", "Machbarkeit, Engineering, CAPEX/OPEX, ROI, Projekt und Commissioning."],
     ],
-
+    energyEyebrow: "Energy & Engineering Consulting",
+    energyTitle: "Zuerst den Bedarf senken. Danach Energie besser erzeugen, speichern und regeln.",
+    energyText:
+      "Die Stromrechnung ist der Ausgangspunkt, nicht die Diagnose. Wir analysieren Lastprofile, Gleichzeitigkeit, Anlagen, Betriebszeiten, Temperaturen, Volumenströme und Regelstrategien, um die tatsächlichen Kosten der Ineffizienz zu finden.",
+    energyFlow: [
+      ["Messen", "Rechnungen, Leistung, Unterzähler und Profile"],
+      ["Reduzieren", "Chiller, HVAC, Pumpen, Ventilatoren und Prozesse"],
+      ["Rückgewinnen", "Abwärme und nutzbare Restenergie"],
+      ["Erzeugen", "Photovoltaik und passende Eigenversorgung"],
+      ["Speichern", "Batterien und Lastverschiebung"],
+      ["Regeln", "BMS, PLC, KI und Lastmanagement"],
+    ],
+    reviewTitle: "Kostenlose energetische Erstprüfung",
+    reviewText:
+      "Sende uns eine aktuelle Stromrechnung und grundlegende Betriebsdaten. Wir zeigen, wo eine vertiefte Analyse sinnvoll ist, bevor du in eine vollständige Studie investierst.",
+    reviewButton: "Erstprüfung anfragen",
+    refrigerationEyebrow: "Cooling Engineering",
+    refrigerationTitle: "Chiller, Industriekälte und Kühlkette mit Systemansatz",
+    refrigerationText:
+      "Wir bewerten reale Last, Klima, Betriebstemperaturen, Redundanz, saisonale Effizienz, Hydraulik, Regelung und Total Cost of Ownership. Die Geräteauswahl folgt erst nach der Analyse.",
+    refrigerationCards: [
+      ["Chiller Engineering", "Air-cooled · Water-cooled · Scroll · Screw · Centrifugal · VFD · Magnetic bearing"],
+      ["NH₃ / R717", "Lebensmittelindustrie, Prozess, Lagerung, Sicherheit und Energieeffizienz."],
+      ["CO₂ / R744", "Subkritische und transkritische Systeme, Wärmerückgewinnung und Hochdruckregelung."],
+      ["Cold Chain", "Kühlräume, Tiefkühlung, Pharma, Logistik und Distribution."],
+    ],
+    brandsLabel: "Hersteller je nach Anwendung und Projekt",
+    brands: ["YORK", "Carrier", "Trane", "TICA"],
+    toolsEyebrow: "SISTEA Engineering Tools",
+    toolsTitle: "Nützliche Werkzeuge, ohne professionelles Engineering zu ersetzen",
+    toolsText:
+      "Die App liefert eine erste Abschätzung und strukturiert Projektdaten. Endauswahl, Sicherheit, Normen, Regelung und vollständige Auslegung werden von SISTEA geprüft.",
+    tools: [
+      ["Cold Room Designer", "Kühlräume und Tiefkühlanwendungen."],
+      ["Chiller System Designer", "Erste Kapazität, Volumenstrom und Hydraulik."],
+      ["Comfort Cooling Load", "Vorbemessung der Kühllast für Komfortklima."],
+      ["Engineering Unit Converter", "kW, TR, BTU/h, Druck, Volumenstrom und mehr."],
+    ],
+    toolsButton: "App öffnen und installieren",
+    toolsNote: "Installierbare Web-App für iPhone und Android.",
     booksEyebrow: "SISTEA Engineering Series",
-    booksTitle: "Ingenieurwissen aus der Praxis",
+    booksTitle: "Wir dokumentieren die Methodik, die wir in realen Projekten anwenden",
     booksText:
-      "Unsere Fachbücher vertiefen Kältetechnik, HVAC, Energie und industrielle Systeme. Die Grundlagen unserer Engineering Tools werden in der SISTEA Engineering Series dokumentiert.",
-    booksButton: "Fachbücher bei Amazon ansehen",
-
-    contactTitle: "Lass uns dein Projekt prüfen",
-    contactText:
-      "Sende uns die wichtigsten Angaben oder kontaktiere uns direkt über WhatsApp.",
-
-    nav: [
-      "Lösungen",
-      "Energie",
-      "Chiller",
-      "Finanzierung",
-      "App",
-      "Bücher",
-      "Kontakt",
+      "Die Fachbücher sind kein Katalog. Sie sind ein technischer Kompetenznachweis. Sie behandeln Planung, Berechnung, Betrieb, Wartung, Sicherheit, Energieeffizienz und Automation in denselben Bereichen, in denen SISTEA Projekte realisiert.",
+    books: [
+      ["R744", "CO₂-Kältetechnik", "#0f5d8f"],
+      ["R717", "Ammoniak-Kältetechnik", "#9a5b2f"],
+      ["HEAT", "Wärmepumpen & Rückgewinnung", "#187b7a"],
+      ["ENERGY", "Industrielle Energieeffizienz", "#3b7d44"],
+      ["HVAC", "Intelligente Kühlsysteme", "#5c4a8b"],
+      ["AI DC", "Rechenzentrumskühlung", "#233b64"],
     ],
+    booksButton: "Serie bei Amazon ansehen",
+    booksLinkText: "Je nach Ausgabe auf Deutsch, Englisch und Spanisch verfügbar.",
+    financeEyebrow: "ESI-Finanzierung",
+    financeTitle: "Eine gute Effizienzmaßnahme muss auch finanziell umsetzbar sein",
+    financeText:
+      "SISTEA verbindet technische Analyse, erwartete Einsparung, Investition, Risiko, Performance und Finanzierungsstruktur. So wird aus einem Einsparpotenzial ein messbares, finanzierbares Projekt.",
+    financePoints: ["Technische Bewertung und Baseline", "Einspar- und Performanceprognose", "CAPEX, OPEX, ROI und Sensitivität", "ESI-Struktur und Servicemodelle", "Technische Begleitung der Umsetzung"],
+    financeButton: "ESI-Finanzierung ansehen",
+    industriesEyebrow: "Anwendungen",
+    industriesTitle: "Engineering passend zum realen Betrieb jeder Branche",
+    industries: [
+      ["Industrie", "Produktion, Prozesse, Utilities und große elektrische Lasten."],
+      ["Lebensmittel & Getränke", "Kälte, Tiefkühlung, Prozesswärme und Rückgewinnung."],
+      ["Pharma", "Temperatur, Feuchte, Lagerung und Betriebssicherheit."],
+      ["Hotels & Krankenhäuser", "Komfort, Warmwasser, Chiller, Luftqualität und Backup."],
+      ["Logistik", "Cold Chain, Lager, Lüftung, Energie und Monitoring."],
+      ["Data Center", "Hohe Wärmedichte, Redundanz, Energie, Batterien und Regelung."],
+    ],
+    whyEyebrow: "Warum SISTEA",
+    whyTitle: "Wissen, Werkzeuge und Umsetzung in einer Kette",
+    why: [
+      ["Erfahrung", "Mehr als vier Jahrzehnte in Kälte, HVAC, Energie und technischen Systemen."],
+      ["Systemblick", "Wir analysieren Wechselwirkungen statt isolierter Komponenten."],
+      ["Technologieoffen", "Wir wählen die passende Lösung statt eine feste Marke vorzugeben."],
+      ["Umsetzung", "Von Studie und Berechnung bis Inbetriebnahme und Optimierung."],
+    ],
+    contactTitle: "Sag uns, wo das technische oder energetische Problem liegt",
+    contactText:
+      "Hohe Stromkosten, ineffizienter Chiller, Feuchte, fehlende Kapazität, Lastspitzen, PV-Projekt oder Neubau: Wir beginnen mit den Daten.",
+    whatsapp: "Über WhatsApp sprechen",
   },
 } as const;
 
 type Locale = keyof typeof translations;
+const localeOf = (value: string): Locale => (value === "en" || value === "de" ? value : "es");
 
-function localeOf(value: string): Locale {
-  if (value === "en" || value === "de") {
-    return value;
-  }
-
-  return "es";
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = translations[localeOf(locale)];
-
-  return {
-    title: t.title,
-    description: t.description,
-  };
+  return { title: t.title, description: t.description };
 }
 
-function Bullets({
-  items,
-}: {
-  items: readonly string[];
-}) {
+function ArrowIcon() {
   return (
-    <ul className="grid gap-3 sm:grid-cols-2">
-      {items.map((item) => (
-        <li
-          key={item}
-          className="flex gap-3 text-sm leading-6 text-slate-700"
-        >
-          <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-cyan-600" />
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
+    <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
   );
 }
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="m5 12 4 4L19 6" />
+    </svg>
+  );
+}
+
+function TechIcon({ index }: { index: number }) {
+  const paths = [
+    <path key="a" d="M4 17h16M6 14V7h12v7M9 7V4h6v3M8 11h8" />,
+    <path key="b" d="M5 18c3-8 11-8 14 0M7 8h10M9 5h6M12 8v7" />,
+    <path key="c" d="M4 15h16M6 15V8h12v7M8 11h8M9 5h6" />,
+    <path key="d" d="M12 3v18M5 12h14M7 7l10 10M17 7 7 17" />,
+    <path key="e" d="M4 16c4-9 12-9 16 0M7 16v4M12 13v7M17 16v4" />,
+  ];
+  return (
+    <svg viewBox="0 0 24 24" className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.6">
+      {paths[index % paths.length]}
+    </svg>
+  );
+}
+
+function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
+  return (
+    <p className={`text-xs font-black uppercase tracking-[.22em] ${light ? "text-cyan-300" : "text-cyan-700"}`}>
+      {children}
+    </p>
+  );
+}
+
+function BookCard({ code, title, color }: { code: string; title: string; color: string }) {
+  return (
+    <div className="group relative min-h-[230px] overflow-hidden rounded-2xl border border-white/15 bg-white/5 p-5 shadow-2xl transition duration-300 hover:-translate-y-2 hover:border-white/35">
+      <div className="absolute inset-x-0 top-0 h-2" style={{ backgroundColor: color }} />
+      <div className="absolute -right-8 top-10 h-28 w-28 rounded-full opacity-20 blur-2xl" style={{ backgroundColor: color }} />
+      <div className="relative flex h-full flex-col">
+        <span className="text-[10px] font-bold uppercase tracking-[.18em] text-slate-400">SISTEA Engineering Series</span>
+        <div className="mt-8 text-3xl font-black" style={{ color }}>{code}</div>
+        <h3 className="mt-3 text-lg font-black leading-tight text-white">{title}</h3>
+        <div className="mt-auto pt-8 text-xs uppercase tracking-[.16em] text-slate-400">Planning · Design · Operation</div>
+      </div>
+    </div>
+  );
+}
+
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const currentLocale = localeOf(locale);
   const t = translations[currentLocale];
 
-  const navLinks = [
-    "#solutions",
-    "#energy",
-    "#chillers",
-    "#esi",
-    "#tools",
-    "#books",
-    "#contact",
-  ];
-
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
-          <Link
-            href={`/${currentLocale}`}
-            className="text-2xl font-black text-slate-950"
-          >
-            SISTEA
+      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 lg:px-6">
+          <Link href={`/${currentLocale}`} className="group flex items-center gap-3">
+            <span className="grid h-10 w-10 place-items-center rounded-xl bg-slate-950 text-sm font-black text-cyan-300 transition group-hover:bg-cyan-600 group-hover:text-white">S</span>
+            <div>
+              <div className="text-xl font-black leading-none tracking-tight text-slate-950">SISTEA</div>
+              <div className="mt-1 text-[9px] font-bold uppercase tracking-[.19em] text-slate-500">Systems · Energy · Engineering</div>
+            </div>
           </Link>
 
-          <nav className="hidden gap-5 text-sm font-semibold text-slate-700 xl:flex">
-            {navLinks.map((href, index) => (
-              <a key={href} href={href}>
-                {t.nav[index]}
-              </a>
+          <nav className="hidden items-center gap-5 text-sm font-bold text-slate-700 xl:flex">
+            {['#system', '#solutions', '#energy', '#tools', '#books', '#esi', '#contact'].map((href, i) => (
+              <a key={href} href={href} className="transition hover:text-cyan-700">{t.nav[i]}</a>
             ))}
           </nav>
 
-          <div className="flex gap-2">
-            {(["es", "en", "de"] as const).map((language) => (
+          <div className="flex items-center gap-1.5">
+            {(['es', 'en', 'de'] as const).map((language) => (
               <Link
                 key={language}
                 href={`/${language}`}
-                className={
-                  currentLocale === language
-                    ? "rounded bg-cyan-600 px-3 py-2 text-xs font-black text-white"
-                    : "rounded bg-slate-100 px-3 py-2 text-xs font-black text-slate-700"
-                }
+                className={currentLocale === language
+                  ? 'rounded-lg bg-slate-950 px-3 py-2 text-xs font-black text-white'
+                  : 'rounded-lg bg-slate-100 px-3 py-2 text-xs font-black text-slate-600 transition hover:bg-slate-200'}
               >
                 {language.toUpperCase()}
               </Link>
@@ -638,363 +523,370 @@ export default async function HomePage({
         </div>
       </header>
 
-      <section className="relative min-h-[720px] overflow-hidden bg-slate-950 text-white">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          poster="/images/hero/san-salvador-skyline.jpg"
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source
-            src="/videos/sistea-hero-web.mp4"
-            type="video/mp4"
-          />
-        </video>
+      <main>
+        <section className="relative min-h-[760px] overflow-hidden bg-slate-950 text-white">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/hero/san-salvador-skyline.jpg"
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/videos/sistea-hero-web.mp4" type="video/mp4" />
+            <source src="/videos/sistea-hero.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
 
-        <div className="absolute inset-0 bg-slate-950/70" />
+          <div className="relative z-10 mx-auto grid min-h-[760px] max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-[1.25fr_.75fr] lg:py-28">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur">
+                <span className="h-2 w-2 rounded-full bg-cyan-400" />
+                <span className="text-xs font-black uppercase tracking-[.16em] text-cyan-100">{t.heroEyebrow}</span>
+              </div>
+              <h1 className="mt-7 max-w-5xl text-4xl font-black tracking-[-.04em] sm:text-5xl lg:text-7xl lg:leading-[1.02]">
+                {t.heroTitle}
+              </h1>
+              <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-200 lg:text-xl">{t.heroText}</p>
+              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-4 font-black text-slate-950 transition hover:bg-cyan-300">
+                  {t.heroPrimary}<ArrowIcon />
+                </a>
+                <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 font-black text-slate-950 transition hover:bg-slate-100">
+                  {t.heroSecondary}<ArrowIcon />
+                </a>
+                <a href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/5 px-6 py-4 font-black text-white backdrop-blur transition hover:bg-white/10">
+                  {t.heroThird}
+                </a>
+              </div>
+            </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 py-28 lg:py-36">
-          <p className="text-sm font-black uppercase tracking-[0.2em] text-cyan-400">
-            {t.heroEyebrow}
-          </p>
-
-          <h1 className="mt-6 max-w-5xl text-4xl font-black tracking-tight sm:text-5xl lg:text-7xl">
-            {t.heroTitle}
-          </h1>
-
-          <p className="mt-7 max-w-4xl text-lg leading-8 text-slate-200">
-            {t.heroText}
-          </p>
-
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-            <a
-              href="#contact"
-              className="rounded-lg bg-cyan-600 px-6 py-3 text-center font-black"
-            >
-              {t.project}
-            </a>
-
-            <a
-              href={APP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg bg-white px-6 py-3 text-center font-black text-slate-950"
-            >
-              {t.app}
-            </a>
-
-            <a
-              href="#energy-review"
-              className="rounded-lg border border-white/40 px-6 py-3 text-center font-black"
-            >
-              {t.free}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="energy"
-        className="bg-white px-6 py-24"
-      >
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
-          <div>
-            <p className="font-black uppercase tracking-[0.18em] text-cyan-700">
-              {t.consultingEyebrow}
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black text-slate-950">
-              {t.consultingTitle}
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-slate-600">
-              {t.consultingText}
-            </p>
-
-            <a
-              href="#energy-review"
-              className="mt-8 inline-flex rounded-lg bg-slate-950 px-6 py-3 font-black text-white"
-            >
-              {t.free}
-            </a>
-          </div>
-
-          <div className="rounded-2xl bg-slate-50 p-8">
-            <Bullets items={t.consultingPoints} />
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="chillers"
-        className="bg-slate-950 px-6 py-24 text-white"
-      >
-        <div className="mx-auto max-w-7xl">
-          <p className="font-black uppercase tracking-[0.18em] text-cyan-400">
-            {t.chillerEyebrow}
-          </p>
-
-          <h2 className="mt-4 max-w-4xl text-4xl font-black">
-            {t.chillerTitle}
-          </h2>
-
-          <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">
-            {t.chillerText}
-          </p>
-
-          <p className="mt-10 text-sm font-black uppercase tracking-[0.16em] text-slate-300">
-            {t.chillerBrands}
-          </p>
-
-          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {["YORK", "Carrier", "Trane", "TICA"].map(
-              (brand) => (
-                <div
-                  key={brand}
-                  className="rounded-xl border border-white/15 bg-white/5 p-7 text-center text-2xl font-black"
-                >
-                  {brand}
+            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+              {t.stats.map(([value, label]) => (
+                <div key={label} className="rounded-2xl border border-white/15 bg-slate-950/45 p-6 backdrop-blur-md">
+                  <div className="text-4xl font-black text-cyan-300">{value}</div>
+                  <div className="mt-2 text-sm font-semibold leading-6 text-slate-200">{label}</div>
                 </div>
-              ),
-            )}
-          </div>
-
-          <div className="mt-10 rounded-2xl bg-white p-8 text-slate-950">
-            <Bullets items={t.chillerTech} />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <h2 className="text-4xl font-black">
-            {t.refrigeration}
-          </h2>
-
-          <div className="mt-9">
-            <Bullets items={t.refrigerationItems} />
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="energy-review"
-        className="bg-cyan-50 px-6 py-24"
-      >
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
-          <div>
-            <p className="font-black uppercase tracking-[0.18em] text-cyan-800">
-              {t.loadEyebrow}
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black">
-              {t.loadTitle}
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-slate-700">
-              {t.loadText}
-            </p>
-
-            <div className="mt-8">
-              <Bullets items={t.loadItems} />
+              ))}
             </div>
           </div>
 
-          <div className="rounded-2xl bg-white p-8 shadow-sm">
-            <h3 className="text-2xl font-black">
-              {t.freeTitle}
-            </h3>
-
-            <p className="mt-4 leading-7 text-slate-600">
-              {t.freeText}
-            </p>
-
-            <a
-              href="#contact"
-              className="mt-7 inline-flex rounded-lg bg-cyan-600 px-6 py-3 font-black text-white"
-            >
-              {t.free}
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="esi"
-        className="bg-white px-6 py-24"
-      >
-        <div className="mx-auto max-w-7xl">
-          <p className="font-black uppercase tracking-[0.18em] text-cyan-700">
-            {t.esiEyebrow}
-          </p>
-
-          <h2 className="mt-4 text-4xl font-black">
-            {t.esiTitle}
-          </h2>
-
-          <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-600">
-            {t.esiText}
-          </p>
-
-          <Link
-            href={`/${currentLocale}/esi`}
-            className="mt-8 inline-flex rounded-lg bg-slate-950 px-6 py-3 font-black text-white"
-          >
-            {t.esiButton}
-          </Link>
-        </div>
-      </section>
-
-      <section
-        id="tools"
-        className="bg-slate-950 px-6 py-24 text-white"
-      >
-        <div className="mx-auto max-w-7xl">
-          <p className="font-black uppercase tracking-[0.18em] text-cyan-400">
-            {t.toolsEyebrow}
-          </p>
-
-          <h2 className="mt-4 text-4xl font-black">
-            {t.toolsTitle}
-          </h2>
-
-          <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">
-            {t.toolsText}
-          </p>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {t.tools.map(([title, text]) => (
-              <div
-                key={title}
-                className="rounded-xl border border-white/15 bg-white/5 p-7"
-              >
-                <h3 className="text-xl font-black">
-                  {title}
-                </h3>
-
-                <p className="mt-3 text-slate-300">
-                  {text}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <a
-            href={APP_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-10 inline-flex rounded-lg bg-cyan-500 px-7 py-4 text-lg font-black text-slate-950"
-          >
-            {t.toolsButton}
-          </a>
-
-          <p className="mt-3 text-sm text-slate-400">
-            {t.toolsNote}
-          </p>
-        </div>
-      </section>
-
-      <section
-        id="solutions"
-        className="bg-white px-6 py-24"
-      >
-        <div className="mx-auto max-w-7xl">
-          <h2 className="text-4xl font-black">
-            {t.competence}
-          </h2>
-
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {t.competences.map(([title, text]) => (
-              <div
-                key={title}
-                className="rounded-xl border border-slate-200 bg-slate-50 p-6"
-              >
-                <h3 className="font-black">
-                  {title}
-                </h3>
-
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  {text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="books"
-        className="bg-slate-100 px-6 py-24"
-      >
-        <div className="mx-auto max-w-7xl rounded-2xl bg-white p-10">
-          <p className="font-black uppercase tracking-[0.18em] text-cyan-700">
-            {t.booksEyebrow}
-          </p>
-
-          <h2 className="mt-4 text-4xl font-black">
-            {t.booksTitle}
-          </h2>
-
-          <p className="mt-5 max-w-4xl text-lg leading-8 text-slate-600">
-            {t.booksText}
-          </p>
-
-          <a
-            href={AMAZON_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 inline-flex rounded-lg bg-slate-950 px-6 py-3 font-black text-white"
-          >
-            {t.booksButton}
-          </a>
-        </div>
-      </section>
-
-      <section
-        id="contact"
-        className="bg-white px-6 py-24"
-      >
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-2">
-          <div>
-            <h2 className="text-4xl font-black">
-              {t.contactTitle}
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              {t.contactText}
-            </p>
-
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-8 inline-flex rounded-lg bg-emerald-600 px-6 py-3 font-black text-white"
-            >
-              WhatsApp
-            </a>
-
-            <div className="mt-8 space-y-2 text-sm text-slate-600">
-              <p>SISTEA S.A. de C.V.</p>
-              <p>info@sisteasv.com</p>
-              <p>www.sisteasv.com</p>
-              <p>WhatsApp +503 7728-2624</p>
+          <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 bg-slate-950/65 backdrop-blur">
+            <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-8 gap-y-3 px-6 py-4 text-[11px] font-bold uppercase tracking-[.16em] text-slate-300 lg:justify-between">
+              {['HVAC', 'R717 · NH₃', 'R744 · CO₂', 'CHILLERS', 'PV + BATTERY', 'BMS · PLC', 'ESI FINANCING'].map((item) => <span key={item}>{item}</span>)}
             </div>
           </div>
+        </section>
 
-          <ContactForm locale={currentLocale} />
+        <section className="bg-white px-6 py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-4xl">
+              <Eyebrow>{t.storyEyebrow}</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.storyTitle}</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">{t.storyText}</p>
+            </div>
+            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
+              {t.storySteps.map(([number, title, text]) => (
+                <div key={number} className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:bg-white hover:shadow-xl">
+                  <div className="text-sm font-black text-cyan-700">{number}</div>
+                  <h3 className="mt-5 text-lg font-black text-slate-950">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="system" className="relative overflow-hidden bg-slate-950 px-6 py-24 text-white">
+          <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+          <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
+          <div className="relative mx-auto max-w-7xl">
+            <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+              <div>
+                <Eyebrow light>{t.systemEyebrow}</Eyebrow>
+                <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.systemTitle}</h2>
+              </div>
+              <p className="text-lg leading-8 text-slate-300">{t.systemText}</p>
+            </div>
+
+            <div className="mt-14 grid gap-4 lg:grid-cols-5">
+              {t.modules.map(([number, title, text], index) => (
+                <article key={number} className="group rounded-2xl border border-white/15 bg-white/5 p-6 transition duration-300 hover:-translate-y-2 hover:border-cyan-300/50 hover:bg-white/10">
+                  <div className="flex items-center justify-between">
+                    <div className="grid h-12 w-12 place-items-center rounded-xl bg-cyan-400/10 text-cyan-300"><TechIcon index={index} /></div>
+                    <span className="text-sm font-black text-slate-500">{number}</span>
+                  </div>
+                  <h3 className="mt-8 text-xl font-black">{title}</h3>
+                  <p className="mt-4 text-sm leading-6 text-slate-300">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="solutions" className="bg-slate-50 px-6 py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-4xl">
+              <Eyebrow>{t.solutionsEyebrow}</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.solutionsTitle}</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">{t.solutionsText}</p>
+            </div>
+
+            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {t.competences.map(([title, text], index) => (
+                <article key={title} className={`rounded-2xl border p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${index === 0 || index === 3 ? 'border-cyan-200 bg-cyan-50' : 'border-slate-200 bg-white'}`}>
+                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-slate-950 text-cyan-300"><TechIcon index={index} /></div>
+                  <h3 className="mt-6 text-lg font-black text-slate-950">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="energy" className="bg-white px-6 py-24">
+          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
+            <div className="lg:sticky lg:top-28">
+              <Eyebrow>{t.energyEyebrow}</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.energyTitle}</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">{t.energyText}</p>
+
+              <div className="mt-9 rounded-2xl border border-cyan-200 bg-cyan-50 p-7">
+                <h3 className="text-xl font-black text-slate-950">{t.reviewTitle}</h3>
+                <p className="mt-4 leading-7 text-slate-700">{t.reviewText}</p>
+                <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-3 font-black text-white transition hover:bg-cyan-700">
+                  {t.reviewButton}<ArrowIcon />
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-3xl bg-slate-950 p-6 text-white sm:p-8">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {t.energyFlow.map(([title, text], index) => (
+                  <div key={title} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <div className="absolute right-4 top-3 text-5xl font-black text-white/[.035]">0{index + 1}</div>
+                    <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-300">0{index + 1}</div>
+                    <h3 className="mt-4 text-xl font-black">{title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-950 px-6 py-24 text-white">
+          <div className="mx-auto max-w-7xl">
+            <Eyebrow light>{t.refrigerationEyebrow}</Eyebrow>
+            <h2 className="mt-4 max-w-5xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.refrigerationTitle}</h2>
+            <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">{t.refrigerationText}</p>
+
+            <div className="mt-12 grid gap-5 md:grid-cols-2">
+              {t.refrigerationCards.map(([title, text], index) => (
+                <article key={title} className="rounded-2xl border border-white/15 bg-white/5 p-7 transition hover:bg-white/10">
+                  <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-300">Engineering 0{index + 1}</div>
+                  <h3 className="mt-4 text-2xl font-black">{title}</h3>
+                  <p className="mt-4 leading-7 text-slate-300">{text}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-10 rounded-2xl border border-white/10 bg-white/[.03] p-6">
+              <p className="text-xs font-black uppercase tracking-[.18em] text-slate-400">{t.brandsLabel}</p>
+              <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+                {t.brands.map((brand) => <div key={brand} className="rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-center text-xl font-black text-slate-200">{brand}</div>)}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tools" className="relative overflow-hidden bg-gradient-to-br from-cyan-50 via-white to-slate-100 px-6 py-24">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.9fr] lg:items-center">
+            <div>
+              <Eyebrow>{t.toolsEyebrow}</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.toolsTitle}</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">{t.toolsText}</p>
+              <div className="mt-9 grid gap-4 sm:grid-cols-2">
+                {t.tools.map(([title, text], index) => (
+                  <div key={title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                    <div className="flex items-center gap-3">
+                      <div className="grid h-9 w-9 place-items-center rounded-lg bg-slate-950 text-xs font-black text-cyan-300">0{index + 1}</div>
+                      <h3 className="font-black text-slate-950">{title}</h3>
+                    </div>
+                    <p className="mt-4 text-sm leading-6 text-slate-600">{text}</p>
+                  </div>
+                ))}
+              </div>
+              <a href={APP_URL} target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-2 rounded-xl bg-cyan-600 px-6 py-4 font-black text-white transition hover:bg-cyan-700">
+                {t.toolsButton}<ArrowIcon />
+              </a>
+              <p className="mt-3 text-sm text-slate-500">{t.toolsNote}</p>
+            </div>
+
+            <div className="mx-auto w-full max-w-md rounded-[2.4rem] border-[10px] border-slate-950 bg-slate-950 p-2 shadow-2xl">
+              <div className="overflow-hidden rounded-[1.75rem] bg-slate-100">
+                <div className="flex items-center justify-between bg-slate-950 px-5 py-4 text-white">
+                  <div>
+                    <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-300">SISTEA</div>
+                    <div className="mt-1 font-black">Engineering Tools</div>
+                  </div>
+                  <div className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                </div>
+                <div className="space-y-3 p-5">
+                  {t.tools.map((tool, index) => {
+                    const title = tool[0];
+                    return (
+                      <div key={title} className="flex items-center gap-4 rounded-2xl bg-white p-4 shadow-sm">
+                        <div className="grid h-11 w-11 place-items-center rounded-xl bg-cyan-50 font-black text-cyan-700">0{index + 1}</div>
+                        <div className="font-black text-slate-900">{title}</div>
+                      </div>
+                    );
+                  })}
+                  <div className="rounded-2xl bg-cyan-600 p-5 text-white">
+                    <div className="text-xs font-bold uppercase tracking-[.16em] text-cyan-100">Engineering Review</div>
+                    <div className="mt-2 text-lg font-black">SISTEA Technical Check</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="books" className="bg-slate-950 px-6 py-24 text-white">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
+              <div>
+                <Eyebrow light>{t.booksEyebrow}</Eyebrow>
+                <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.booksTitle}</h2>
+              </div>
+              <div>
+                <p className="text-lg leading-8 text-slate-300">{t.booksText}</p>
+                <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 font-black text-slate-950 transition hover:bg-cyan-100">
+                  {t.booksButton}<ArrowIcon />
+                </a>
+                <p className="mt-3 text-sm text-slate-400">{t.booksLinkText}</p>
+              </div>
+            </div>
+
+            <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+              {t.books.map(([code, title, color]) => <BookCard key={code} code={code} title={title} color={color} />)}
+            </div>
+
+            <div className="mt-12 grid gap-3 text-center text-xs font-black uppercase tracking-[.14em] text-slate-400 sm:grid-cols-4">
+              <div className="rounded-xl border border-white/10 px-4 py-4">Understand</div>
+              <div className="rounded-xl border border-white/10 px-4 py-4">Calculate</div>
+              <div className="rounded-xl border border-white/10 px-4 py-4">Design</div>
+              <div className="rounded-xl border border-white/10 px-4 py-4">Optimize</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="esi" className="bg-white px-6 py-24">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.85fr] lg:items-center">
+            <div>
+              <Eyebrow>{t.financeEyebrow}</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">{t.financeText}</p>
+              <Link href={`/${currentLocale}/esi`} className="mt-8 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-4 font-black text-white transition hover:bg-cyan-700">
+                {t.financeButton}<ArrowIcon />
+              </Link>
+            </div>
+            <div className="rounded-3xl bg-emerald-50 p-7 sm:p-9">
+              <div className="text-xs font-black uppercase tracking-[.18em] text-emerald-800">Technical → Economic → Financeable</div>
+              <div className="mt-7 space-y-4">
+                {t.financePoints.map((point) => (
+                  <div key={point} className="flex items-start gap-3 rounded-xl bg-white p-4 text-slate-800 shadow-sm">
+                    <span className="mt-0.5 text-emerald-700"><CheckIcon /></span>
+                    <span className="font-semibold leading-6">{point}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-slate-100 px-6 py-24">
+          <div className="mx-auto max-w-7xl">
+            <Eyebrow>{t.industriesEyebrow}</Eyebrow>
+            <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.industriesTitle}</h2>
+            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {t.industries.map(([title, text], index) => (
+                <article key={title} className="group relative overflow-hidden rounded-2xl bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="absolute right-4 top-1 text-7xl font-black text-slate-100 transition group-hover:text-cyan-50">0{index + 1}</div>
+                  <div className="relative">
+                    <h3 className="text-xl font-black text-slate-950">{title}</h3>
+                    <p className="mt-4 max-w-sm leading-7 text-slate-600">{text}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-6 py-24">
+          <div className="mx-auto max-w-7xl rounded-3xl bg-slate-950 p-8 text-white sm:p-12 lg:p-14">
+            <div className="max-w-4xl">
+              <Eyebrow light>{t.whyEyebrow}</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.whyTitle}</h2>
+            </div>
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+              {t.why.map(([title, text], index) => (
+                <div key={title} className="border-l border-cyan-400/40 pl-5">
+                  <div className="text-xs font-black text-cyan-300">0{index + 1}</div>
+                  <h3 className="mt-4 text-xl font-black">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" className="bg-gradient-to-b from-white to-cyan-50 px-6 py-24">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.85fr_1.15fr]">
+            <div>
+              <Eyebrow>Project Contact</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.contactTitle}</h2>
+              <p className="mt-6 text-lg leading-8 text-slate-600">{t.contactText}</p>
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 font-black text-white transition hover:bg-emerald-700">
+                {t.whatsapp}<ArrowIcon />
+              </a>
+              <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 text-sm leading-7 text-slate-600 shadow-sm">
+                <div className="font-black text-slate-950">SISTEA S.A. de C.V.</div>
+                <div>www.sisteasv.com</div>
+                <div>info@sisteasv.com</div>
+                <div>WhatsApp +503 7728-2624</div>
+              </div>
+            </div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-xl sm:p-8">
+              <ContactForm locale={currentLocale} />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-800 bg-slate-950 px-6 py-8 text-slate-300">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between">
+          <div><span className="font-black text-white">SISTEA S.A. de C.V.</span> · Engineering for efficient systems</div>
+          <div className="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-[.13em] text-slate-500">
+            <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="hover:text-cyan-300">Engineering Series</a>
+            <a href={APP_URL} target="_blank" rel="noreferrer" className="hover:text-cyan-300">Engineering Tools</a>
+            <a href="#contact" className="hover:text-cyan-300">Contact</a>
+          </div>
         </div>
-      </section>
+      </footer>
 
       <a
         href={WHATSAPP_URL}
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-5 right-5 z-50 rounded-full bg-emerald-600 px-5 py-4 font-black text-white shadow-xl"
+        aria-label="WhatsApp"
+        className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-emerald-600 text-white shadow-2xl transition hover:scale-105 hover:bg-emerald-700"
       >
-        WhatsApp
+        <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor" aria-hidden="true">
+          <path d="M20.52 3.48A11.81 11.81 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.95L.05 24l6.27-1.64a11.9 11.9 0 0 0 5.75 1.46h.01C18.65 23.82 24 18.47 24 11.9c0-3.18-1.24-6.17-3.48-8.42Zm-8.44 18.33h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.72.98.99-3.63-.24-.37a9.86 9.86 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.93-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.01c-.01 5.47-4.46 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.1 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z" />
+        </svg>
       </a>
     </>
   );
