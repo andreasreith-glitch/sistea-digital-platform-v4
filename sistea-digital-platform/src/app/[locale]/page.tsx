@@ -565,6 +565,13 @@ const salesCopy = {
     sourcingCountryCards: [["DE", "Especificación"], ["CN", "Fábrica + QC"], ["SV", "Entrega del proyecto"]],
     appVisualLabel: "Interfaz real de SISTEA Engineering Tools",
     appVisualText: "Instalable en iPhone y Android. Los cálculos estructuran la conversación técnica y pasan a revisión de SISTEA.",
+    appBoundaryTitle: "La app calcula. SISTEA valida.",
+    appBoundaryText: "Engineering Tools entrega una primera aproximación. La selección definitiva, seguridad, normativa, control, integración y diseño pertenecen al engineering completo del proyecto.",
+    appProjectButton: "Pasar a revisión de ingeniería",
+    booksProjectButton: "Aplicar esta metodología a mi proyecto",
+    knowledgeBridgeTitle: "Del conocimiento documentado al proyecto real",
+    knowledgeBridgeText: "Los libros explican la metodología. Engineering Tools la convierte en una primera estimación. SISTEA valida, diseña, financia e implementa el proyecto.",
+    bookActions: ["Comprender", "Calcular", "Diseñar", "Optimizar"],
     booksVisualLabel: "Competencia visible, no solo afirmada",
     booksVisualText: "La serie conecta refrigeración, HVAC, energía, automatización y data centers con metodología de ingeniería práctica.",
     sourcingVisualLabel: "Especificación → fábrica → verificación → logística",
@@ -603,6 +610,13 @@ const salesCopy = {
     sourcingCountryCards: [["DE", "Specification"], ["CN", "Factory + QC"], ["SV", "Project delivery"]],
     appVisualLabel: "Actual SISTEA Engineering Tools interface",
     appVisualText: "Installable on iPhone and Android. Calculations structure the technical discussion and move to SISTEA engineering review.",
+    appBoundaryTitle: "The app calculates. SISTEA validates.",
+    appBoundaryText: "Engineering Tools provides an initial approximation. Final equipment selection, safety, compliance, controls, integration and design belong to the complete engineering project.",
+    appProjectButton: "Move to engineering review",
+    booksProjectButton: "Apply this methodology to my project",
+    knowledgeBridgeTitle: "From documented knowledge to the real project",
+    knowledgeBridgeText: "The books explain the methodology. Engineering Tools turns it into an initial estimate. SISTEA validates, designs, finances and implements the project.",
+    bookActions: ["Understand", "Calculate", "Design", "Optimize"],
     booksVisualLabel: "Visible competence, not just a claim",
     booksVisualText: "The series connects refrigeration, HVAC, energy, automation and data centers through practical engineering methodology.",
     sourcingVisualLabel: "Specification → factory → verification → logistics",
@@ -641,6 +655,13 @@ const salesCopy = {
     sourcingCountryCards: [["DE", "Spezifikation"], ["CN", "Werk + QC"], ["SV", "Projektlieferung"]],
     appVisualLabel: "Echte Oberfläche der SISTEA Engineering Tools",
     appVisualText: "Installierbar auf iPhone und Android. Die Berechnungen strukturieren das Projekt und führen anschließend zur technischen Prüfung durch SISTEA.",
+    appBoundaryTitle: "Die App rechnet. SISTEA validiert.",
+    appBoundaryText: "Engineering Tools liefert eine erste technische Annäherung. Endgültige Geräteauswahl, Sicherheit, Normen, Regelung, Integration und Auslegung gehören zum vollständigen Engineering-Projekt.",
+    appProjectButton: "Zur Engineering-Prüfung",
+    booksProjectButton: "Diese Methodik auf mein Projekt anwenden",
+    knowledgeBridgeTitle: "Vom dokumentierten Wissen zum realen Projekt",
+    knowledgeBridgeText: "Die Bücher erklären die Methodik. Engineering Tools macht daraus eine erste Abschätzung. SISTEA validiert, plant, finanziert und realisiert das Projekt.",
+    bookActions: ["Verstehen", "Berechnen", "Planen", "Optimieren"],
     booksVisualLabel: "Kompetenz sichtbar belegen",
     booksVisualText: "Die Reihe verbindet Kälte, HVAC, Energie, Automation und Data Center mit praxisorientierter Engineering-Methodik.",
     sourcingVisualLabel: "Spezifikation → Werk → Prüfung → Logistik",
@@ -1109,10 +1130,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   </div>
                 ))}
               </div>
-              <a href={APP_URL} target="_blank" rel="noreferrer" className="mt-9 inline-flex items-center gap-2 rounded-xl bg-cyan-600 px-6 py-4 font-black text-white transition hover:bg-cyan-700">
-                {t.toolsButton}<ArrowIcon />
-              </a>
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-600 px-6 py-4 font-black text-white transition hover:bg-cyan-700">
+                  {t.toolsButton}<ArrowIcon />
+                </a>
+                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-6 py-4 font-black text-[#304b5d] transition hover:border-[#7fd7e9] hover:bg-white">
+                  {sales.appProjectButton}<ArrowIcon />
+                </a>
+              </div>
               <p className="mt-3 text-sm text-slate-500">{t.toolsNote}</p>
+              <div className="mt-6 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-5">
+                <div className="text-xs font-black uppercase tracking-[.16em] text-emerald-800">{sales.appBoundaryTitle}</div>
+                <p className="mt-2 text-sm leading-6 text-[#526b78]">{sales.appBoundaryText}</p>
+              </div>
             </div>
 
             <div className="relative mx-auto w-full max-w-2xl pb-12 lg:pb-16">
@@ -1123,15 +1153,25 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
                   <span className="ml-3 text-[10px] font-black uppercase tracking-[.16em] text-white/70">{sales.appVisualLabel}</span>
                 </div>
-                <img src="/images/marketing/engineering-tools-desktop.webp" alt={sales.appVisualLabel} className="block w-full rounded-b-2xl" />
+                <a href={APP_URL} target="_blank" rel="noreferrer" aria-label={t.toolsButton} className="block">
+                  <img src="/images/marketing/engineering-tools-desktop.webp" alt={sales.appVisualLabel} className="block w-full rounded-b-2xl transition duration-500 hover:scale-[1.008]" />
+                </a>
               </div>
-              <div className="absolute -bottom-1 right-2 w-[30%] min-w-[145px] max-w-[205px] overflow-hidden rounded-[2rem] border-[7px] border-[#304b5d] bg-[#304b5d] shadow-2xl sm:right-8">
-                <img
-                  src={currentLocale === 'de' ? '/images/marketing/engineering-tools-mobile-de.webp' : '/images/marketing/engineering-tools-mobile-es.webp'}
-                  alt="SISTEA Engineering Tools mobile"
-                  className="block w-full"
-                />
-              </div>
+              {currentLocale !== 'en' && (
+                <a
+                  href={APP_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="absolute -bottom-1 right-2 w-[30%] min-w-[145px] max-w-[205px] overflow-hidden rounded-[2rem] border-[7px] border-[#304b5d] bg-[#304b5d] shadow-2xl transition hover:-translate-y-1 sm:right-8"
+                  aria-label={t.toolsButton}
+                >
+                  <img
+                    src={currentLocale === 'de' ? '/images/marketing/engineering-tools-mobile-de.webp' : '/images/marketing/engineering-tools-mobile-es.webp'}
+                    alt="SISTEA Engineering Tools mobile"
+                    className="block w-full"
+                  />
+                </a>
+              )}
               <div className="mt-5 max-w-md rounded-2xl border border-[#c3d5da] bg-[#eaf1f2] p-5 text-sm leading-6 text-[#607684] shadow-sm">
                 <div className="font-black text-[#304b5d]">{sales.appVisualLabel}</div>
                 <p className="mt-2">{sales.appVisualText}</p>
@@ -1149,9 +1189,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </div>
               <div>
                 <p className="text-lg leading-8 text-[#607684]">{t.booksText}</p>
-                <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-3.5 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
-                  {t.booksButton}<ArrowIcon />
-                </a>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-3.5 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
+                    {t.booksButton}<ArrowIcon />
+                  </a>
+                  <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-6 py-3.5 font-black text-[#304b5d] transition hover:border-[#7fd7e9] hover:bg-white">
+                    {sales.booksProjectButton}<ArrowIcon />
+                  </a>
+                </div>
                 <p className="mt-3 text-sm text-[#718692]">{t.booksLinkText}</p>
               </div>
             </div>
@@ -1165,6 +1210,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <div className="text-xs font-black uppercase tracking-[.18em] text-[#159dc5]">{sales.booksVisualLabel}</div>
                   <p className="mt-3 leading-7 text-[#607684]">{sales.booksVisualText}</p>
                 </div>
+                <div className="mt-4 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-6">
+                  <div className="text-xs font-black uppercase tracking-[.18em] text-emerald-800">{sales.knowledgeBridgeTitle}</div>
+                  <p className="mt-3 text-sm leading-6 text-[#526b78]">{sales.knowledgeBridgeText}</p>
+                  <div className="mt-5 flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-[.12em] text-[#496172]">
+                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Books</span>
+                    <span>→</span>
+                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Tools</span>
+                    <span>→</span>
+                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Engineering</span>
+                    <span>→</span>
+                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Project</span>
+                  </div>
+                </div>
                 <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
                   {t.books.map(([code, title, color]) => (
                     <div key={code} className="flex items-center gap-4 rounded-xl border border-[#c4d5da] bg-[#edf3f4] p-4">
@@ -1174,7 +1232,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   ))}
                 </div>
                 <div className="mt-5 grid grid-cols-2 gap-2 text-center text-[10px] font-black uppercase tracking-[.13em] text-[#607684] sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-                  {['Understand','Calculate','Design','Optimize'].map((label) => <div key={label} className="rounded-lg border border-[#c5d7dc] bg-[#e8eff1] px-3 py-3">{label}</div>)}
+                  {sales.bookActions.map((label) => <div key={label} className="rounded-lg border border-[#c5d7dc] bg-[#e8eff1] px-3 py-3">{label}</div>)}
                 </div>
               </div>
             </div>
