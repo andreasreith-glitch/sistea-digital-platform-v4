@@ -98,6 +98,14 @@ const translations = {
       ["CO₂ / R744", "Sistemas subcríticos y transcríticos, recuperación de calor y control de alta presión."],
       ["Cold Chain", "Cámaras frigoríficas, congelación, farmacéutica, logística y distribución."],
     ],
+    visualSolutions: [
+      ["Chillers", "Plantas enfriadoras de aire o agua, hidráulica, VFD, redundancia y control integral."],
+      ["VRF / VRV", "Sistemas de volumen de refrigerante variable para edificios, oficinas, hoteles y retrofit."],
+      ["Climatización adiabática de 2 etapas", "Preenfriamiento indirecto/adiabático para reducir la temperatura de impulsión con muy bajo consumo eléctrico."],
+      ["Cámaras frigoríficas + BITZER", "Cámaras de conservación y congelación con selección profesional de evaporadores, condensación y compresores."],
+      ["Refrigeración industrial", "Skids, salas de máquinas, NH₃/R717, CO₂/R744, procesos, recuperación de calor y automatización."],
+      ["Sistemas adiabáticos reales", "Integración de equipos adiabáticos en instalaciones industriales, comerciales y de proceso."],
+    ],
     brandsLabel: "Fabricantes considerados según aplicación y proyecto",
     brands: ["YORK", "Carrier", "Trane", "TICA"],
     toolsEyebrow: "SISTEA Engineering Tools",
@@ -261,6 +269,14 @@ const translations = {
       ["CO₂ / R744", "Subcritical and transcritical systems, heat recovery and high-pressure control."],
       ["Cold Chain", "Cold rooms, freezing, pharmaceutical, logistics and distribution."],
     ],
+    visualSolutions: [
+      ["Chillers", "Air- or water-cooled chiller plants, hydraulics, VFD, redundancy and integrated controls."],
+      ["VRF / VRV", "Variable refrigerant flow systems for buildings, offices, hotels and retrofit projects."],
+      ["Two-stage adiabatic cooling", "Indirect/adiabatic pre-cooling to reduce supply-air temperature with very low electrical consumption."],
+      ["Cold rooms + BITZER", "Chilled and frozen rooms with professional evaporator, condensing-unit and compressor selection."],
+      ["Industrial refrigeration", "Skids, machine rooms, NH₃/R717, CO₂/R744, processes, heat recovery and automation."],
+      ["Real adiabatic systems", "Integration of adiabatic equipment in industrial, commercial and process applications."],
+    ],
     brandsLabel: "Manufacturers considered according to application and project",
     brands: ["YORK", "Carrier", "Trane", "TICA"],
     toolsEyebrow: "SISTEA Engineering Tools",
@@ -423,6 +439,14 @@ const translations = {
       ["NH₃ / R717", "Lebensmittelindustrie, Prozess, Lagerung, Sicherheit und Energieeffizienz."],
       ["CO₂ / R744", "Subkritische und transkritische Systeme, Wärmerückgewinnung und Hochdruckregelung."],
       ["Cold Chain", "Kühlräume, Tiefkühlung, Pharma, Logistik und Distribution."],
+    ],
+    visualSolutions: [
+      ["Chilleranlagen", "Luft- oder wassergekühlte Chillerzentralen, Hydraulik, VFD, Redundanz und integrierte Regelung."],
+      ["VRF / VRV", "Variable-Kältemittelstrom-Systeme für Gebäude, Büros, Hotels und Retrofit-Projekte."],
+      ["Zweistufige adiabate Kühlung", "Indirekte/adiabate Vorkühlung zur Absenkung der Zulufttemperatur bei sehr geringem Strombedarf."],
+      ["Kühlzellen + BITZER", "Kühl- und Tiefkühlzellen mit professioneller Auswahl von Verdampfern, Verflüssigung und Verdichtern."],
+      ["Industriekälte", "Skids, Maschinenräume, NH₃/R717, CO₂/R744, Prozesse, Wärmerückgewinnung und Automation."],
+      ["Reale adiabate Systeme", "Integration adiabater Geräte in Industrie-, Gewerbe- und Prozessanwendungen."],
     ],
     brandsLabel: "Hersteller je nach Anwendung und Projekt",
     brands: ["YORK", "Carrier", "Trane", "TICA"],
@@ -776,6 +800,22 @@ function BookCard({ code, title, color }: { code: string; title: string; color: 
   );
 }
 
+
+const visualSolutionImages = [
+  "/images/solutions/water-cooled-chiller-arkref.webp",
+  "/images/solutions/vrf-outdoor-unit.webp",
+  "/images/solutions/two-stage-adiabatic-system-diagram.webp",
+  "/images/solutions/bitzer-cold-room-condensing-unit.webp",
+  "/images/solutions/industrial-refrigeration-plant.webp",
+  "/images/solutions/adiabatic-cooling-installation.webp",
+] as const;
+
+const chillerManufacturerLinks = [
+  ["YORK", "https://www.york.com/commercial-equipment/chilled-water-systems/condensing-units/yvaa_ch/yvaa-variable-speed-drive-screw-chiller"],
+  ["Carrier", "https://www.carrier.com/us/en/commercial/chillers/23xw/"],
+  ["Trane", "https://www.trane.com/commercial/latin-america/sv/es/products-systems/chillers.html"],
+] as const;
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const currentLocale = localeOf(locale);
@@ -995,20 +1035,50 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <h2 className="mt-4 max-w-5xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.refrigerationTitle}</h2>
             <p className="mt-6 max-w-4xl text-lg leading-8 text-[#607684]">{t.refrigerationText}</p>
 
-            <div className="mt-12 grid gap-5 md:grid-cols-2">
-              {t.refrigerationCards.map(([title, text], index) => (
-                <article key={title} className="rounded-2xl border border-[#c6d8dd] bg-[#edf3f4] p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#7fd7e9] hover:shadow-lg">
-                  <div className="text-xs font-black uppercase tracking-[.16em] text-[#159dc5]">Engineering 0{index + 1}</div>
-                  <h3 className="mt-4 text-2xl font-black text-[#304b5d]">{title}</h3>
-                  <p className="mt-4 leading-7 text-[#607684]">{text}</p>
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {t.visualSolutions.map(([title, body], index) => (
+                <article key={title} className="group overflow-hidden rounded-3xl border border-[#c2d6dc] bg-[#edf3f4] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="relative h-56 overflow-hidden bg-white">
+                    <img
+                      src={visualSolutionImages[index]}
+                      alt={title}
+                      loading="lazy"
+                      className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${index === 1 || index === 2 || index === 3 ? "object-contain p-4" : "object-cover"}`}
+                    />
+                    <div className="absolute left-4 top-4 rounded-full bg-[#31596a]/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[.16em] text-white backdrop-blur">
+                      Engineering 0{index + 1}
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-black text-[#304b5d]">{title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-[#607684]">{body}</p>
+                  </div>
                 </article>
               ))}
             </div>
 
-            <div className="mt-10 rounded-2xl border border-[#c6d8dd] bg-[#edf3f4] p-6 shadow-sm">
-              <p className="text-xs font-black uppercase tracking-[.18em] text-[#718692]">{t.brandsLabel}</p>
-              <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {t.brands.map((brand) => <div key={brand} className="rounded-xl border border-[#d7e8ed] bg-[#dce7ea] px-5 py-4 text-center text-xl font-black text-[#405d70]">{brand}</div>)}
+            <div className="mt-10 rounded-3xl border border-[#c6d8dd] bg-[#e6eef0] p-6 shadow-sm sm:p-8">
+              <div className="grid gap-6 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[.18em] text-[#718692]">{t.brandsLabel}</p>
+                  <p className="mt-3 text-sm leading-6 text-[#607684]">
+                    YORK · Carrier · Trane werden projektbezogen nach Lastprofil, Effizienz, Hydraulik, Schall, Redundanz, Service und Total Cost of Ownership bewertet.
+                  </p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {chillerManufacturerLinks.map(([brand, href]) => (
+                    <a
+                      key={brand}
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group rounded-2xl border border-[#c4d7dc] bg-[#f2f7f8] px-5 py-5 text-center transition hover:-translate-y-0.5 hover:border-[#7fd7e9] hover:shadow-lg"
+                    >
+                      <div className="text-xl font-black text-[#405d70]">{brand}</div>
+                      <div className="mt-2 text-[10px] font-black uppercase tracking-[.14em] text-[#159dc5]">Official product portfolio ↗</div>
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
