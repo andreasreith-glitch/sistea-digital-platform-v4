@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+export const runtime = "edge";
 const content = {
   es: {
     title: "SISTEA | HVAC, Refrigeración Industrial y Eficiencia Energética",
