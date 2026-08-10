@@ -509,7 +509,7 @@ function TechIcon({ index }: { index: number }) {
 
 function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
-    <p className={`text-xs font-black uppercase tracking-[.22em] ${light ? "text-cyan-300" : "text-cyan-700"}`}>
+    <p className={`text-xs font-black uppercase tracking-[.22em] ${light ? "text-[#2aaed1]" : "text-[#168fb4]"}`}>
       {children}
     </p>
   );
@@ -517,13 +517,13 @@ function Eyebrow({ children, light = false }: { children: ReactNode; light?: boo
 
 function BookCard({ code, title, color }: { code: string; title: string; color: string }) {
   return (
-    <div className="group relative min-h-[230px] overflow-hidden rounded-2xl border border-white/15 bg-white/5 p-5 shadow-2xl transition duration-300 hover:-translate-y-2 hover:border-white/35">
+    <div className="group relative min-h-[230px] overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-cyan-300 hover:shadow-xl">
       <div className="absolute inset-x-0 top-0 h-2" style={{ backgroundColor: color }} />
-      <div className="absolute -right-8 top-10 h-28 w-28 rounded-full opacity-20 blur-2xl" style={{ backgroundColor: color }} />
+      <div className="absolute -right-8 top-10 h-28 w-28 rounded-full opacity-10 blur-2xl" style={{ backgroundColor: color }} />
       <div className="relative flex h-full flex-col">
         <span className="text-[10px] font-bold uppercase tracking-[.18em] text-slate-400">SISTEA Engineering Series</span>
         <div className="mt-8 text-3xl font-black" style={{ color }}>{code}</div>
-        <h3 className="mt-3 text-lg font-black leading-tight text-white">{title}</h3>
+        <h3 className="mt-3 text-lg font-black leading-tight text-[#304b5d]">{title}</h3>
         <div className="mt-auto pt-8 text-xs uppercase tracking-[.16em] text-slate-400">Planning · Design · Operation</div>
       </div>
     </div>
@@ -537,12 +537,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 border-b border-[#d8e7ed] bg-white/90 shadow-[0_6px_24px_rgba(48,75,93,.06)] backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 lg:px-6">
-          <Link href={`/${currentLocale}`} className="group flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-xl bg-slate-950 text-sm font-black text-cyan-300 transition group-hover:bg-cyan-600 group-hover:text-white">S</span>
-            <div>
-              <div className="text-xl font-black leading-none tracking-tight text-slate-950">SISTEA</div>
+          <Link href={`/${currentLocale}`} className="group flex items-center gap-3" aria-label="SISTEA home">
+            <img
+              src="/images/sistea-logo.jpg"
+              alt="SISTEA – Expertos en Enfriamiento Eficiente · Tecnología Alemana"
+              className="h-14 w-14 rounded-xl object-contain sm:h-16 sm:w-16"
+            />
+            <div className="hidden sm:block">
+              <div className="text-xl font-black leading-none tracking-tight text-[#304b5d]">SISTEA</div>
               <div className="mt-1 text-[9px] font-bold uppercase tracking-[.19em] text-slate-500">Systems · Energy · Engineering</div>
             </div>
           </Link>
@@ -559,8 +563,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 key={language}
                 href={`/${language}`}
                 className={currentLocale === language
-                  ? 'rounded-lg bg-slate-950 px-3 py-2 text-xs font-black text-white'
-                  : 'rounded-lg bg-slate-100 px-3 py-2 text-xs font-black text-slate-600 transition hover:bg-slate-200'}
+                  ? 'rounded-lg bg-[#26afd3] px-3 py-2 text-xs font-black text-white shadow-sm'
+                  : 'rounded-lg bg-[#eef5f7] px-3 py-2 text-xs font-black text-[#496172] transition hover:bg-[#dff1f5]'}
               >
                 {language.toUpperCase()}
               </Link>
@@ -570,40 +574,39 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </header>
 
       <main>
-        <section className="relative min-h-[760px] overflow-hidden bg-slate-950 text-white">
+        <section className="relative min-h-[760px] overflow-hidden bg-[#dceef3] text-white">
           <video
             autoPlay
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="auto"
             poster="/images/hero/san-salvador-skyline.jpg"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover [filter:brightness(1.20)_contrast(.94)_saturate(.98)]"
           >
             <source src="/videos/sistea-hero-web.mp4" type="video/mp4" />
-            <source src="/videos/sistea-hero.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#2e5368]/72 via-[#2e5368]/34 to-white/5" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#d7f0f3]/12 via-transparent to-white/10" />
 
           <div className="relative z-10 mx-auto grid min-h-[760px] max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-[1.25fr_.75fr] lg:py-28">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/55 bg-white/18 px-4 py-2 shadow-sm backdrop-blur-md">
                 <span className="h-2 w-2 rounded-full bg-cyan-400" />
                 <span className="text-xs font-black uppercase tracking-[.16em] text-cyan-100">{t.heroEyebrow}</span>
               </div>
               <h1 className="mt-7 max-w-5xl text-4xl font-black tracking-[-.04em] sm:text-5xl lg:text-7xl lg:leading-[1.02]">
                 {t.heroTitle}
               </h1>
-              <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-200 lg:text-xl">{t.heroText}</p>
+              <p className="mt-7 max-w-3xl text-lg leading-8 text-white/92 [text-shadow:0_2px_12px_rgba(22,53,70,.35)] lg:text-xl">{t.heroText}</p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-500 px-6 py-4 font-black text-slate-950 transition hover:bg-cyan-300">
+                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white shadow-lg shadow-cyan-950/10 transition hover:bg-[#159dc5]">
                   {t.heroPrimary}<ArrowIcon />
                 </a>
-                <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-4 font-black text-slate-950 transition hover:bg-slate-100">
+                <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/95 px-6 py-4 font-black text-[#304b5d] shadow-lg shadow-slate-950/10 transition hover:bg-white">
                   {t.heroSecondary}<ArrowIcon />
                 </a>
-                <a href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/5 px-6 py-4 font-black text-white backdrop-blur transition hover:bg-white/10">
+                <a href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/60 bg-white/16 px-6 py-4 font-black text-white shadow-sm backdrop-blur-md transition hover:bg-white/24">
                   {t.heroThird}
                 </a>
               </div>
@@ -611,16 +614,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
             <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
               {t.stats.map(([value, label]) => (
-                <div key={label} className="rounded-2xl border border-white/15 bg-slate-950/45 p-6 backdrop-blur-md">
-                  <div className="text-4xl font-black text-cyan-300">{value}</div>
-                  <div className="mt-2 text-sm font-semibold leading-6 text-slate-200">{label}</div>
+                <div key={label} className="rounded-2xl border border-white/70 bg-white/88 p-6 text-[#304b5d] shadow-xl shadow-[#234b61]/10 backdrop-blur-xl">
+                  <div className="text-4xl font-black text-[#20a8cf]">{value}</div>
+                  <div className="mt-2 text-sm font-semibold leading-6 text-[#4d6575]">{label}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 bg-slate-950/65 backdrop-blur">
-            <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-8 gap-y-3 px-6 py-4 text-[11px] font-bold uppercase tracking-[.16em] text-slate-300 lg:justify-between">
+          <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/60 bg-white/86 shadow-[0_-8px_30px_rgba(48,75,93,.06)] backdrop-blur-xl">
+            <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-8 gap-y-3 px-6 py-4 text-[11px] font-bold uppercase tracking-[.16em] text-[#4d6575] lg:justify-between">
               {['HVAC', 'R717 · NH₃', 'R744 · CO₂', 'CHILLERS', 'PV + BATTERY', 'BMS · PLC', 'ESI FINANCING'].map((item) => <span key={item}>{item}</span>)}
             </div>
           </div>
@@ -630,14 +633,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="mx-auto max-w-7xl">
             <div className="max-w-4xl">
               <Eyebrow>{t.storyEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.storyTitle}</h2>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.storyTitle}</h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">{t.storyText}</p>
             </div>
             <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
               {t.storySteps.map(([number, title, text]) => (
                 <div key={number} className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:bg-white hover:shadow-xl">
                   <div className="text-sm font-black text-cyan-700">{number}</div>
-                  <h3 className="mt-5 text-lg font-black text-slate-950">{title}</h3>
+                  <h3 className="mt-5 text-lg font-black text-[#304b5d]">{title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
                 </div>
               ))}
@@ -645,27 +648,27 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section id="system" className="relative overflow-hidden bg-slate-950 px-6 py-24 text-white">
-          <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
-          <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-emerald-400/10 blur-3xl" />
+        <section id="system" className="relative overflow-hidden bg-gradient-to-br from-[#edf8fb] via-white to-[#eef9f7] px-6 py-24 text-[#304b5d]">
+          <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-[#25b4dc]/12 blur-3xl" />
+          <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#70d8cf]/14 blur-3xl" />
           <div className="relative mx-auto max-w-7xl">
             <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
               <div>
-                <Eyebrow light>{t.systemEyebrow}</Eyebrow>
+                <Eyebrow>{t.systemEyebrow}</Eyebrow>
                 <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.systemTitle}</h2>
               </div>
-              <p className="text-lg leading-8 text-slate-300">{t.systemText}</p>
+              <p className="text-lg leading-8 text-[#5d7180]">{t.systemText}</p>
             </div>
 
             <div className="mt-14 grid gap-4 lg:grid-cols-5">
               {t.modules.map(([number, title, text], index) => (
-                <article key={number} className="group rounded-2xl border border-white/15 bg-white/5 p-6 transition duration-300 hover:-translate-y-2 hover:border-cyan-300/50 hover:bg-white/10">
+                <article key={number} className="group rounded-2xl border border-[#d7e8ed] bg-white/90 p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#7fd7e9] hover:shadow-xl">
                   <div className="flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-xl bg-cyan-400/10 text-cyan-300"><TechIcon index={index} /></div>
-                    <span className="text-sm font-black text-slate-500">{number}</span>
+                    <div className="grid h-12 w-12 place-items-center rounded-xl bg-[#e2f6fb] text-[#159dc5]"><TechIcon index={index} /></div>
+                    <span className="text-sm font-black text-[#8ca0ab]">{number}</span>
                   </div>
                   <h3 className="mt-8 text-xl font-black">{title}</h3>
-                  <p className="mt-4 text-sm leading-6 text-slate-300">{text}</p>
+                  <p className="mt-4 text-sm leading-6 text-[#637783]">{text}</p>
                 </article>
               ))}
             </div>
@@ -676,15 +679,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="mx-auto max-w-7xl">
             <div className="max-w-4xl">
               <Eyebrow>{t.solutionsEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.solutionsTitle}</h2>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.solutionsTitle}</h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">{t.solutionsText}</p>
             </div>
 
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {t.competences.map(([title, text], index) => (
                 <article key={title} className={`rounded-2xl border p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${index === 0 || index === 3 ? 'border-cyan-200 bg-cyan-50' : 'border-slate-200 bg-white'}`}>
-                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-slate-950 text-cyan-300"><TechIcon index={index} /></div>
-                  <h3 className="mt-6 text-lg font-black text-slate-950">{title}</h3>
+                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-[#e3f6fb] text-[#159dc5]"><TechIcon index={index} /></div>
+                  <h3 className="mt-6 text-lg font-black text-[#304b5d]">{title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
                 </article>
               ))}
@@ -696,32 +699,32 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
             <div className="lg:sticky lg:top-28">
               <Eyebrow>{t.energyEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.energyTitle}</h2>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.energyTitle}</h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">{t.energyText}</p>
 
               <div className="mt-9 rounded-2xl border border-cyan-200 bg-cyan-50 p-7">
                 <div className="flex items-start justify-between gap-5">
-                  <h3 className="text-xl font-black text-slate-950">{t.reviewTitle}</h3>
-                  <div className="flex-none rounded-xl bg-slate-950 px-4 py-3 text-center text-white">
-                    <div className="text-2xl font-black text-cyan-300">~40%</div>
-                    <div className="mt-1 text-[10px] font-black uppercase tracking-[.12em] text-slate-300">Potential</div>
+                  <h3 className="text-xl font-black text-[#304b5d]">{t.reviewTitle}</h3>
+                  <div className="flex-none rounded-xl border border-[#bfe8f1] bg-white px-4 py-3 text-center shadow-sm">
+                    <div className="text-2xl font-black text-[#159dc5]">~40%</div>
+                    <div className="mt-1 text-[10px] font-black uppercase tracking-[.12em] text-[#6d8390]">Potential</div>
                   </div>
                 </div>
                 <p className="mt-4 leading-7 text-slate-700">{t.reviewText}</p>
-                <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-3 font-black text-white transition hover:bg-cyan-700">
+                <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25b4dc] px-5 py-3 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
                   {t.reviewButton}<ArrowIcon />
                 </a>
               </div>
             </div>
 
-            <div className="rounded-3xl bg-slate-950 p-6 text-white sm:p-8">
+            <div className="rounded-3xl border border-[#d7e8ed] bg-gradient-to-br from-[#f2fbfd] to-[#eef8f7] p-6 text-[#304b5d] shadow-sm sm:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
                 {t.energyFlow.map(([title, text], index) => (
-                  <div key={title} className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6">
-                    <div className="absolute right-4 top-3 text-5xl font-black text-white/[.035]">0{index + 1}</div>
-                    <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-300">0{index + 1}</div>
-                    <h3 className="mt-4 text-xl font-black">{title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
+                  <div key={title} className="relative overflow-hidden rounded-2xl border border-[#d7e8ed] bg-white p-6 shadow-sm">
+                    <div className="absolute right-4 top-3 text-5xl font-black text-[#dceef3]">0{index + 1}</div>
+                    <div className="text-xs font-black uppercase tracking-[.18em] text-[#159dc5]">0{index + 1}</div>
+                    <h3 className="mt-4 text-xl font-black text-[#304b5d]">{title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-[#637783]">{text}</p>
                   </div>
                 ))}
               </div>
@@ -733,26 +736,26 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section className="bg-slate-950 px-6 py-24 text-white">
+        <section className="bg-[#f2f8fa] px-6 py-24 text-[#304b5d]">
           <div className="mx-auto max-w-7xl">
-            <Eyebrow light>{t.refrigerationEyebrow}</Eyebrow>
+            <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-5xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.refrigerationTitle}</h2>
-            <p className="mt-6 max-w-4xl text-lg leading-8 text-slate-300">{t.refrigerationText}</p>
+            <p className="mt-6 max-w-4xl text-lg leading-8 text-[#607684]">{t.refrigerationText}</p>
 
             <div className="mt-12 grid gap-5 md:grid-cols-2">
               {t.refrigerationCards.map(([title, text], index) => (
-                <article key={title} className="rounded-2xl border border-white/15 bg-white/5 p-7 transition hover:bg-white/10">
-                  <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-300">Engineering 0{index + 1}</div>
-                  <h3 className="mt-4 text-2xl font-black">{title}</h3>
-                  <p className="mt-4 leading-7 text-slate-300">{text}</p>
+                <article key={title} className="rounded-2xl border border-[#d7e8ed] bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#7fd7e9] hover:shadow-lg">
+                  <div className="text-xs font-black uppercase tracking-[.16em] text-[#159dc5]">Engineering 0{index + 1}</div>
+                  <h3 className="mt-4 text-2xl font-black text-[#304b5d]">{title}</h3>
+                  <p className="mt-4 leading-7 text-[#607684]">{text}</p>
                 </article>
               ))}
             </div>
 
-            <div className="mt-10 rounded-2xl border border-white/10 bg-white/[.03] p-6">
-              <p className="text-xs font-black uppercase tracking-[.18em] text-slate-400">{t.brandsLabel}</p>
+            <div className="mt-10 rounded-2xl border border-[#d7e8ed] bg-white p-6 shadow-sm">
+              <p className="text-xs font-black uppercase tracking-[.18em] text-[#718692]">{t.brandsLabel}</p>
               <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                {t.brands.map((brand) => <div key={brand} className="rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-center text-xl font-black text-slate-200">{brand}</div>)}
+                {t.brands.map((brand) => <div key={brand} className="rounded-xl border border-[#d7e8ed] bg-[#f7fbfc] px-5 py-4 text-center text-xl font-black text-[#405d70]">{brand}</div>)}
               </div>
             </div>
           </div>
@@ -762,14 +765,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.9fr] lg:items-center">
             <div>
               <Eyebrow>{t.toolsEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.toolsTitle}</h2>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.toolsTitle}</h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">{t.toolsText}</p>
               <div className="mt-9 grid gap-4 sm:grid-cols-2">
                 {t.tools.map(([title, text], index) => (
                   <div key={title} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                     <div className="flex items-center gap-3">
-                      <div className="grid h-9 w-9 place-items-center rounded-lg bg-slate-950 text-xs font-black text-cyan-300">0{index + 1}</div>
-                      <h3 className="font-black text-slate-950">{title}</h3>
+                      <div className="grid h-9 w-9 place-items-center rounded-lg bg-[#dff4f8] text-xs font-black text-[#159dc5]">0{index + 1}</div>
+                      <h3 className="font-black text-[#304b5d]">{title}</h3>
                     </div>
                     <p className="mt-4 text-sm leading-6 text-slate-600">{text}</p>
                   </div>
@@ -781,9 +784,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <p className="mt-3 text-sm text-slate-500">{t.toolsNote}</p>
             </div>
 
-            <div className="mx-auto w-full max-w-md rounded-[2.4rem] border-[10px] border-slate-950 bg-slate-950 p-2 shadow-2xl">
+            <div className="mx-auto w-full max-w-md rounded-[2.4rem] border-[10px] border-[#4d6575] bg-[#4d6575] p-2 shadow-2xl shadow-[#365466]/15">
               <div className="overflow-hidden rounded-[1.75rem] bg-slate-100">
-                <div className="flex items-center justify-between bg-slate-950 px-5 py-4 text-white">
+                <div className="flex items-center justify-between bg-[#405d70] px-5 py-4 text-white">
                   <div>
                     <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-300">SISTEA</div>
                     <div className="mt-1 font-black">Engineering Tools</div>
@@ -810,19 +813,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section id="books" className="bg-slate-950 px-6 py-24 text-white">
+        <section id="books" className="bg-gradient-to-br from-[#f5fafb] via-white to-[#eef8fa] px-6 py-24 text-[#304b5d]">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
               <div>
-                <Eyebrow light>{t.booksEyebrow}</Eyebrow>
+                <Eyebrow>{t.booksEyebrow}</Eyebrow>
                 <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.booksTitle}</h2>
               </div>
               <div>
-                <p className="text-lg leading-8 text-slate-300">{t.booksText}</p>
-                <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3.5 font-black text-slate-950 transition hover:bg-cyan-100">
+                <p className="text-lg leading-8 text-[#607684]">{t.booksText}</p>
+                <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="mt-7 inline-flex items-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-3.5 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
                   {t.booksButton}<ArrowIcon />
                 </a>
-                <p className="mt-3 text-sm text-slate-400">{t.booksLinkText}</p>
+                <p className="mt-3 text-sm text-[#718692]">{t.booksLinkText}</p>
               </div>
             </div>
 
@@ -830,11 +833,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {t.books.map(([code, title, color]) => <BookCard key={code} code={code} title={title} color={color} />)}
             </div>
 
-            <div className="mt-12 grid gap-3 text-center text-xs font-black uppercase tracking-[.14em] text-slate-400 sm:grid-cols-4">
-              <div className="rounded-xl border border-white/10 px-4 py-4">Understand</div>
-              <div className="rounded-xl border border-white/10 px-4 py-4">Calculate</div>
-              <div className="rounded-xl border border-white/10 px-4 py-4">Design</div>
-              <div className="rounded-xl border border-white/10 px-4 py-4">Optimize</div>
+            <div className="mt-12 grid gap-3 text-center text-xs font-black uppercase tracking-[.14em] text-[#607684] sm:grid-cols-4">
+              <div className="rounded-xl border border-[#d7e8ed] bg-white px-4 py-4">Understand</div>
+              <div className="rounded-xl border border-[#d7e8ed] bg-white px-4 py-4">Calculate</div>
+              <div className="rounded-xl border border-[#d7e8ed] bg-white px-4 py-4">Design</div>
+              <div className="rounded-xl border border-[#d7e8ed] bg-white px-4 py-4">Optimize</div>
             </div>
           </div>
         </section>
@@ -843,9 +846,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.85fr] lg:items-center">
             <div>
               <Eyebrow>{t.financeEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">{t.financeText}</p>
-              <Link href={`/${currentLocale}/esi`} className="mt-8 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-6 py-4 font-black text-white transition hover:bg-cyan-700">
+              <Link href={`/${currentLocale}/esi`} className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
                 {t.financeButton}<ArrowIcon />
               </Link>
             </div>
@@ -866,13 +869,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <section className="bg-slate-100 px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <Eyebrow>{t.industriesEyebrow}</Eyebrow>
-            <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.industriesTitle}</h2>
+            <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.industriesTitle}</h2>
             <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
               {t.industries.map(([title, text], index) => (
                 <article key={title} className="group relative overflow-hidden rounded-2xl bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
                   <div className="absolute right-4 top-1 text-7xl font-black text-slate-100 transition group-hover:text-cyan-50">0{index + 1}</div>
                   <div className="relative">
-                    <h3 className="text-xl font-black text-slate-950">{title}</h3>
+                    <h3 className="text-xl font-black text-[#304b5d]">{title}</h3>
                     <p className="mt-4 max-w-sm leading-7 text-slate-600">{text}</p>
                   </div>
                 </article>
@@ -886,7 +889,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <div className="grid lg:grid-cols-[1.05fr_.95fr]">
               <div className="p-8 sm:p-12 lg:p-14">
                 <Eyebrow>{t.sourcingEyebrow}</Eyebrow>
-                <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.sourcingTitle}</h2>
+                <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.sourcingTitle}</h2>
                 <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">{t.sourcingText}</p>
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   {t.sourcingPoints.map((point) => (
@@ -897,14 +900,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col justify-between bg-slate-950 p-8 text-white sm:p-12 lg:p-14">
+              <div className="flex flex-col justify-between bg-gradient-to-br from-[#e7f7fb] to-[#e8f7f3] p-8 text-[#304b5d] sm:p-12 lg:p-14">
                 <div>
-                  <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-300">Shanghai · China · Direct Factory Access</div>
-                  <div className="mt-7 text-5xl font-black tracking-tight text-white sm:text-6xl">20+ <span className="text-cyan-300">Years</span></div>
-                  <div className="mt-3 text-lg font-bold text-slate-300">Engineering + Procurement + Logistics</div>
-                  <p className="mt-8 text-base leading-7 text-slate-300">{t.sourcingNote}</p>
+                  <div className="text-xs font-black uppercase tracking-[.18em] text-[#168fb4]">Shanghai · China · Direct Factory Access</div>
+                  <div className="mt-7 text-5xl font-black tracking-tight text-[#304b5d] sm:text-6xl">20+ <span className="text-[#20a8cf]">Years</span></div>
+                  <div className="mt-3 text-lg font-bold text-[#557080]">Engineering + Procurement + Logistics</div>
+                  <p className="mt-8 text-base leading-7 text-[#607684]">{t.sourcingNote}</p>
                 </div>
-                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 py-4 text-center font-black text-slate-950 transition hover:bg-cyan-300">
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 text-center font-black text-white shadow-sm transition hover:bg-[#159dc5]">
                   {t.sourcingButton}<ArrowIcon />
                 </a>
               </div>
@@ -913,17 +916,17 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
 
         <section className="bg-white px-6 py-24">
-          <div className="mx-auto max-w-7xl rounded-3xl bg-slate-950 p-8 text-white sm:p-12 lg:p-14">
+          <div className="mx-auto max-w-7xl rounded-3xl border border-[#d7e8ed] bg-gradient-to-br from-[#eef8fb] via-white to-[#eef8f5] p-8 text-[#304b5d] shadow-sm sm:p-12 lg:p-14">
             <div className="max-w-4xl">
-              <Eyebrow light>{t.whyEyebrow}</Eyebrow>
+              <Eyebrow>{t.whyEyebrow}</Eyebrow>
               <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.whyTitle}</h2>
             </div>
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
               {t.why.map(([title, text], index) => (
-                <div key={title} className="border-l border-cyan-400/40 pl-5">
-                  <div className="text-xs font-black text-cyan-300">0{index + 1}</div>
-                  <h3 className="mt-4 text-xl font-black">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">{text}</p>
+                <div key={title} className="border-l border-[#71d8e9] pl-5">
+                  <div className="text-xs font-black text-[#159dc5]">0{index + 1}</div>
+                  <h3 className="mt-4 text-xl font-black text-[#304b5d]">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-[#607684]">{text}</p>
                 </div>
               ))}
             </div>
@@ -934,13 +937,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.85fr_1.15fr]">
             <div>
               <Eyebrow>Project Contact</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.contactTitle}</h2>
+              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.contactTitle}</h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">{t.contactText}</p>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 font-black text-white transition hover:bg-emerald-700">
                 {t.whatsapp}<ArrowIcon />
               </a>
               <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 text-sm leading-7 text-slate-600 shadow-sm">
-                <div className="font-black text-slate-950">SISTEA S.A. de C.V.</div>
+                <div className="font-black text-[#304b5d]">SISTEA S.A. de C.V.</div>
                 <div>www.sisteasv.com</div>
                 <div>info@sisteasv.com</div>
                 <div>WhatsApp +503 7728-2624</div>
@@ -953,13 +956,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
       </main>
 
-      <footer className="border-t border-slate-800 bg-slate-950 px-6 py-8 text-slate-300">
+      <footer className="border-t border-[#d7e8ed] bg-[#f7fbfc] px-6 py-8 text-[#607684]">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <div><span className="font-black text-white">SISTEA S.A. de C.V.</span> · Engineering for efficient systems</div>
-          <div className="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-[.13em] text-slate-500">
-            <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="hover:text-cyan-300">Engineering Series</a>
-            <a href={APP_URL} target="_blank" rel="noreferrer" className="hover:text-cyan-300">Engineering Tools</a>
-            <a href="#contact" className="hover:text-cyan-300">Contact</a>
+          <div><span className="font-black text-[#304b5d]">SISTEA S.A. de C.V.</span> · Engineering for efficient systems</div>
+          <div className="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-[.13em] text-[#718692]">
+            <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="hover:text-[#159dc5]">Engineering Series</a>
+            <a href={APP_URL} target="_blank" rel="noreferrer" className="hover:text-[#159dc5]">Engineering Tools</a>
+            <a href="#contact" className="hover:text-[#159dc5]">Contact</a>
           </div>
         </div>
       </footer>
