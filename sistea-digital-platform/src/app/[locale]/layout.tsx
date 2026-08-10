@@ -1,6 +1,4 @@
-from pathlib import Path
-
-code = r'''import Link from "next/link";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 
@@ -177,14 +175,3 @@ export default async function LocaleLayout({
     </>
   );
 }
-'''
-
-out = Path("/mnt/data/SISTEA_layout_V15_FULL_LOGO_FIX.tsx")
-out.write_text(code, encoding="utf-8")
-
-# Basic sanity checks
-assert code.count("{") == code.count("}")
-assert code.count("(") == code.count(")")
-assert 'src="/images/sistea-logo-header.png"' in code
-
-print(f"Erstellt: {out}")
