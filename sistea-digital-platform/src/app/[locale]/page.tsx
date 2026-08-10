@@ -79,7 +79,9 @@ const translations = {
     ],
     reviewTitle: "Cálculo gratuito de costos energéticos y gestión de demanda",
     reviewText:
-      "Envíanos 1–3 facturas eléctricas. Revisamos consumo, costo, demanda, tarifa y operación para crear una primera línea base e identificar medidas de reducción de consumo, peak shaving y gestión de carga.",
+      "Para una evaluación energética con valor informativo, envíanos preferentemente 6–12 meses consecutivos de facturas eléctricas. Así podemos evaluar consumo, costos, demanda máxima, estacionalidad, estructura tarifaria y comportamiento operativo, y construir una línea base más sólida para identificar medidas de reducción de consumo, peak shaving y gestión de carga.",
+    reviewPrivacy:
+      "Confidencialidad: SISTEA trata toda la información recibida de forma estrictamente confidencial y la utiliza únicamente para la evaluación técnica y energética. Si lo deseas, podemos enviar y firmar un NDA antes de recibir la documentación.",
     reviewButton: "Solicitar primera revisión",
     refrigerationEyebrow: "Cooling Engineering",
     refrigerationTitle: "Chillers, refrigeración industrial y cadena de frío con enfoque de sistema",
@@ -233,7 +235,9 @@ const translations = {
     ],
     reviewTitle: "Free energy-cost and demand-management screening",
     reviewText:
-      "Send us 1–3 electricity bills. We review consumption, cost, demand, tariff and operating data to establish an initial baseline and identify consumption reduction, peak-shaving and load-management measures.",
+      "For a meaningful energy assessment, please send preferably 6–12 consecutive months of electricity bills. This allows us to evaluate consumption, cost, maximum demand, seasonality, tariff structure and operating behavior, and to build a more robust baseline for identifying consumption reduction, peak-shaving and load-management measures.",
+    reviewPrivacy:
+      "Confidentiality: SISTEA treats all information received as strictly confidential and uses it solely for the technical and energy assessment. If requested, we can provide and sign an NDA before any documentation is shared.",
     reviewButton: "Request initial review",
     refrigerationEyebrow: "Cooling Engineering",
     refrigerationTitle: "Chillers, industrial refrigeration and cold chain with a systems approach",
@@ -381,7 +385,9 @@ const translations = {
     ],
     reviewTitle: "Kostenlose Stromkosten- und Lastmanagement-Erstprüfung",
     reviewText:
-      "Sende uns 1–3 Stromrechnungen. Wir prüfen Verbrauch, Kosten, Leistungsspitzen, Tarif und Betriebsdaten, bilden eine erste Baseline und identifizieren Ansätze für Verbrauchsreduzierung, Peak Shaving und Lastmanagement.",
+      "Für eine aussagekräftige Energieanalyse sende uns vorzugsweise 6–12 aufeinanderfolgende Monate deiner Stromrechnungen. Damit können wir Verbrauch, Kosten, Leistungsspitzen, saisonale Schwankungen, Tarifstruktur und Betriebsverhalten bewerten, eine belastbarere Baseline bilden und Ansätze für Verbrauchsreduzierung, Peak Shaving und Lastmanagement identifizieren.",
+    reviewPrivacy:
+      "Vertraulichkeit: SISTEA behandelt alle übermittelten Informationen streng vertraulich und verwendet sie ausschließlich für die technische und energetische Auswertung. Auf Wunsch senden und unterzeichnen wir vor der Datenübermittlung ein NDA.",
     reviewButton: "Erstprüfung anfragen",
     refrigerationEyebrow: "Cooling Engineering",
     refrigerationTitle: "Chiller, Industriekälte und Kühlkette mit Systemansatz",
@@ -711,6 +717,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   </div>
                 </div>
                 <p className="mt-4 leading-7 text-slate-700">{t.reviewText}</p>
+                <div className="mt-4 rounded-xl border border-[#b9d7de] bg-[#e8f2f4] px-4 py-3 text-sm leading-6 text-[#516b79]">{t.reviewPrivacy}</div>
                 <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25b4dc] px-5 py-3 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
                   {t.reviewButton}<ArrowIcon />
                 </a>
