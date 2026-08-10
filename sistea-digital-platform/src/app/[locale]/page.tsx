@@ -9,6 +9,11 @@ export const runtime = "edge";
 const APP_URL = "https://jolly-wood-2bda.andreas-reith.workers.dev";
 const AMAZON_URL = "https://www.amazon.com/author/andreasreith";
 const WHATSAPP_URL = "https://wa.me/50377282624";
+const BASE_ESI_URL = "https://energy-base.org/projects/energy-savings-insurance-europe/";
+const BASE_CAAS_URL = "https://energy-base.org/projects/cooling-as-a-service-initiative/";
+const SET_ALLIANCE_URL = "https://set-alliance.org/";
+const UNEP_CAAS_URL = "https://www.unep.org/index.php/events/webinar/cooling-service-catalyzing-innovation-and-efficiency";
+const UNEP_COOLING_FINANCE_URL = "https://www.unep.org/resources/publication/cooler-finance-mobilizing-investment-developing-worlds-sustainable-cooling";
 
 const translations = {
   es: {
@@ -121,18 +126,25 @@ const translations = {
     ],
     booksButton: "Ver la serie en Amazon",
     booksLinkText: "Disponible en alemán, inglés y español según edición.",
-    financeEyebrow: "ESI Financing",
-    financeTitle: "Una buena medida de eficiencia también debe ser ejecutable financieramente",
+    financeEyebrow: "Financiamiento & Servitización",
+    financeTitle: "La eficiencia no debe fracasar por falta de inversión",
     financeText:
-      "SISTEA combina análisis técnico, ahorro esperado, inversión, riesgo, desempeño y estructura financiera. Así una oportunidad de ahorro puede convertirse en un proyecto bancable y medible.",
-    financePoints: [
-      "Evaluación técnica y línea base",
-      "Estimación de ahorro y desempeño",
-      "CAPEX, OPEX, ROI y sensibilidad",
-      "Estructuración ESI y modelos de servicio",
-      "Seguimiento técnico durante la implementación",
+      "SISTEA conecta ingeniería, línea base, ahorro esperado, riesgo, desempeño y estructura financiera. El objetivo es convertir una buena medida técnica en un proyecto ejecutable, medible y financieramente estructurado.",
+    financeModels: [
+      ["ESI · Energy Savings Insurance", "Estructura el proyecto alrededor de ahorro, contrato, validación técnica y reducción del riesgo. Según el programa y el proyecto, puede incorporar seguro de ahorro y una estructura de financiamiento."],
+      ["Cooling-as-a-Service", "El cliente no necesariamente compra el chiller o la planta de refrigeración. Contrata la capacidad o el servicio de enfriamiento definido, mientras inversión, operación, mantenimiento, monitoreo y eficiencia pueden integrarse en un modelo de largo plazo."],
+      ["SISTEA Project-as-a-Service", "Para proyectos adecuados, SISTEA puede estructurar análisis, ingeniería, financiamiento, compra, instalación, puesta en marcha, monitoreo y optimización como una solución integrada orientada al desempeño."],
     ],
-    financeButton: "Conocer financiamiento ESI",
+    financePoints: [
+      "01 · Análisis y línea base",
+      "02 · Ingeniería, CAPEX/OPEX y ahorro",
+      "03 · Selección del modelo financiero o de servicio",
+      "04 · Implementación, medición y optimización",
+    ],
+    financeMembership: "SISTEA participa en el ecosistema BASE / ESI y es miembro de la SET Alliance. Utilizamos estos marcos como referencia para estructurar proyectos adecuados en Centroamérica.",
+    financeDetailButton: "Ver modelos de financiamiento en detalle",
+    financeButton: "Solicitar evaluación de financiamiento",
+    financeSourcesLabel: "Referencias internacionales",
     industriesEyebrow: "Aplicaciones",
     industriesTitle: "Ingeniería adaptada a la operación real de cada sector",
     industries: [
@@ -277,12 +289,25 @@ const translations = {
     ],
     booksButton: "View the series on Amazon",
     booksLinkText: "Available in German, English and Spanish depending on edition.",
-    financeEyebrow: "ESI Financing",
-    financeTitle: "A strong efficiency measure must also be financially executable",
+    financeEyebrow: "Financing & Servitization",
+    financeTitle: "Efficiency should not fail because of the investment barrier",
     financeText:
-      "SISTEA combines technical analysis, expected savings, investment, risk, performance and financing structure. This turns a savings opportunity into a measurable, bankable project.",
-    financePoints: ["Technical assessment and baseline", "Savings and performance estimate", "CAPEX, OPEX, ROI and sensitivity", "ESI structure and service models", "Technical follow-up during implementation"],
-    financeButton: "Explore ESI financing",
+      "SISTEA connects engineering, baseline, expected savings, risk, performance and financing structure. The objective is to turn a sound technical measure into an executable, measurable and financeable project.",
+    financeModels: [
+      ["ESI · Energy Savings Insurance", "Structures the project around savings, contracts, technical validation and risk reduction. Depending on the program and project, it may include energy-savings insurance and a financing structure."],
+      ["Cooling-as-a-Service", "The customer does not necessarily purchase the chiller or refrigeration plant. Instead, the required cooling capacity or defined service is contracted while investment, operation, maintenance, monitoring and efficiency can be integrated into a long-term model."],
+      ["SISTEA Project-as-a-Service", "For suitable projects, SISTEA can structure analysis, engineering, financing, procurement, installation, commissioning, monitoring and optimization as an integrated performance-oriented solution."],
+    ],
+    financePoints: [
+      "01 · Analysis and baseline",
+      "02 · Engineering, CAPEX/OPEX and savings",
+      "03 · Select financing or service model",
+      "04 · Implementation, measurement and optimization",
+    ],
+    financeMembership: "SISTEA participates in the BASE / ESI ecosystem and is a member of the SET Alliance. We use these frameworks as references when structuring suitable projects in Central America.",
+    financeDetailButton: "Explore financing models in detail",
+    financeButton: "Request financing assessment",
+    financeSourcesLabel: "International references",
     industriesEyebrow: "Applications",
     industriesTitle: "Engineering adapted to each sector's real operating conditions",
     industries: [
@@ -427,12 +452,25 @@ const translations = {
     ],
     booksButton: "Serie bei Amazon ansehen",
     booksLinkText: "Je nach Ausgabe auf Deutsch, Englisch und Spanisch verfügbar.",
-    financeEyebrow: "ESI-Finanzierung",
-    financeTitle: "Eine gute Effizienzmaßnahme muss auch finanziell umsetzbar sein",
+    financeEyebrow: "Finanzierung & Servitisation",
+    financeTitle: "Effizienz darf nicht an der Investition scheitern",
     financeText:
-      "SISTEA verbindet technische Analyse, erwartete Einsparung, Investition, Risiko, Performance und Finanzierungsstruktur. So wird aus einem Einsparpotenzial ein messbares, finanzierbares Projekt.",
-    financePoints: ["Technische Bewertung und Baseline", "Einspar- und Performanceprognose", "CAPEX, OPEX, ROI und Sensitivität", "ESI-Struktur und Servicemodelle", "Technische Begleitung der Umsetzung"],
-    financeButton: "ESI-Finanzierung ansehen",
+      "SISTEA verbindet Engineering, Baseline, erwartete Einsparung, Risiko, Performance und Finanzierungsstruktur. Ziel ist, aus einer technisch sinnvollen Maßnahme ein umsetzbares, messbares und finanzierbares Projekt zu machen.",
+    financeModels: [
+      ["ESI · Energy Savings Insurance", "Strukturiert das Projekt rund um Einsparung, Vertrag, technische Validierung und Risikoreduzierung. Je nach Programm und Projekt können eine Absicherung der Energieeinsparung und eine Finanzierungsstruktur Bestandteil sein."],
+      ["Cooling-as-a-Service", "Der Kunde muss Chiller oder Kälteanlage nicht zwingend kaufen. Stattdessen bezieht er die definierte Kühlleistung oder den vereinbarten Service. Investition, Betrieb, Wartung, Monitoring und Effizienz können in einem langfristigen Modell zusammengeführt werden."],
+      ["SISTEA Project-as-a-Service", "Für geeignete Projekte kann SISTEA Analyse, Engineering, Finanzierung, Beschaffung, Installation, Inbetriebnahme, Monitoring und Optimierung als integriertes, leistungsorientiertes Projektmodell strukturieren."],
+    ],
+    financePoints: [
+      "01 · Analyse und Baseline",
+      "02 · Engineering, CAPEX/OPEX und Einsparung",
+      "03 · Finanzierungs- oder Servicemodell auswählen",
+      "04 · Umsetzung, Messung und Optimierung",
+    ],
+    financeMembership: "SISTEA ist im BASE-/ESI-Umfeld aktiv und Mitglied der SET Alliance. Diese internationalen Ansätze nutzen wir als Referenz, um geeignete Projekte in Zentralamerika professionell zu strukturieren.",
+    financeDetailButton: "Finanzierungsmodelle im Detail ansehen",
+    financeButton: "Finanzierungsprüfung anfragen",
+    financeSourcesLabel: "Internationale Referenzen",
     industriesEyebrow: "Anwendungen",
     industriesTitle: "Engineering passend zum realen Betrieb jeder Branche",
     industries: [
@@ -1097,24 +1135,56 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
 
         <section id="esi" className="bg-[#e4edef] px-6 py-24">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.85fr] lg:items-center">
-            <div>
-              <Eyebrow>{t.financeEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">{t.financeText}</p>
-              <Link href={`/${currentLocale}/esi`} className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
-                {t.financeButton}<ArrowIcon />
-              </Link>
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:items-end">
+              <div>
+                <Eyebrow>{t.financeEyebrow}</Eyebrow>
+                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
+              </div>
+              <div>
+                <p className="text-lg leading-8 text-slate-600">{t.financeText}</p>
+                <p className="mt-4 rounded-2xl border border-[#bcd8d2] bg-[#dfece8] p-5 text-sm font-semibold leading-6 text-[#496172]">{t.financeMembership}</p>
+              </div>
             </div>
-            <div className="rounded-3xl border border-[#bfd9d2] bg-[#dfece8] p-7 sm:p-9">
-              <div className="text-xs font-black uppercase tracking-[.18em] text-emerald-800">Technical → Economic → Financeable</div>
-              <div className="mt-7 space-y-4">
-                {t.financePoints.map((point) => (
-                  <div key={point} className="flex items-start gap-3 rounded-xl bg-[#eef4f2] p-4 text-slate-800 shadow-sm">
-                    <span className="mt-0.5 text-emerald-700"><CheckIcon /></span>
-                    <span className="font-semibold leading-6">{point}</span>
+
+            <div className="mt-12 grid gap-5 lg:grid-cols-3">
+              {t.financeModels.map(([title, body], index) => (
+                <article key={title} className="group relative overflow-hidden rounded-3xl border border-[#bfd3d8] bg-[#edf3f4] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="absolute right-5 top-2 text-7xl font-black text-[#dfeaec]">0{index + 1}</div>
+                  <div className="relative">
+                    <div className="inline-flex rounded-full bg-[#d8edf1] px-3 py-1 text-[10px] font-black uppercase tracking-[.16em] text-[#159dc5]">
+                      {index === 0 ? "Risk & Savings" : index === 1 ? "Cooling Service" : "Integrated Project"}
+                    </div>
+                    <h3 className="mt-5 text-2xl font-black tracking-tight text-[#304b5d]">{title}</h3>
+                    <p className="mt-4 leading-7 text-slate-600">{body}</p>
                   </div>
-                ))}
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
+              <div className="rounded-3xl border border-[#bfd9d2] bg-[#dfece8] p-7 sm:p-9">
+                <div className="text-xs font-black uppercase tracking-[.18em] text-emerald-800">Technical → Economic → Financeable</div>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {t.financePoints.map((point) => (
+                    <div key={point} className="rounded-xl bg-[#eef4f2] p-4 font-semibold leading-6 text-slate-800 shadow-sm">{point}</div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-[#bdd3da] bg-[#31596a] p-7 text-white shadow-[0_18px_50px_rgba(48,75,93,.12)] sm:p-9">
+                <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">{t.financeSourcesLabel}</div>
+                <p className="mt-4 max-w-3xl leading-7 text-white/75">
+                  BASE · Energy Savings Insurance · Cooling-as-a-Service · SET Alliance · UNEP sustainable cooling and finance.
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <Link href={`/${currentLocale}/financing`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white transition hover:bg-[#159dc5]">
+                    {t.financeDetailButton}<ArrowIcon />
+                  </Link>
+                  <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-6 py-4 font-black text-white backdrop-blur transition hover:bg-white/20">
+                    {t.financeButton}<ArrowIcon />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
