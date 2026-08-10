@@ -1,84 +1,169 @@
 import type { Metadata } from "next";
+
 export const runtime = "edge";
+
 const content = {
   es: {
     title: "SISTEA | HVAC, Refrigeración Industrial y Eficiencia Energética",
     description:
       "SISTEA desarrolla soluciones integrales de HVAC, refrigeración industrial, energía solar, baterías, agua, automatización y financiamiento ESI en El Salvador y Centroamérica.",
+
     eyebrow: "Ingeniería técnica para Centroamérica",
+
     headline:
       "Soluciones integrales para eficiencia energética, climatización e infraestructura industrial.",
+
     lead:
       "Desarrollamos proyectos desde la idea inicial hasta la implementación técnica: análisis, planificación, visualización, suministro, instalación, automatización, monitoreo y operación.",
+
     primary: "Solicitar proyecto",
     secondary: "Iniciar asistente de ingeniería",
+
     solutionsTitle: "Soluciones técnicas",
+
+    solutionDescription:
+      "Planificación, dimensionamiento, integración y operación con enfoque en eficiencia energética, confiabilidad y sostenibilidad.",
+
+    solutions: [
+      "HVAC",
+      "Refrigeración industrial",
+      "Ventilación",
+      "Energía fotovoltaica",
+      "Almacenamiento con baterías",
+      "Tratamiento de agua",
+      "Automatización de edificios",
+      "Financiamiento ESI",
+    ],
+
     industriesTitle: "Sectores",
+
+    industries: [
+      "Alimentos y bebidas",
+      "Farmacéutica",
+      "Hoteles",
+      "Hospitales",
+      "Industria",
+      "Centros comerciales",
+      "Centros de datos",
+    ],
+
     ctaTitle: "¿Está planificando un proyecto técnico?",
+
     ctaText:
       "SISTEA revisa sus requerimientos y desarrolla una solución eficiente, financiable y adecuada para su operación.",
+
+    contactTitle: "Contacto",
   },
+
   en: {
     title: "SISTEA | HVAC, Industrial Refrigeration and Energy Efficiency",
     description:
       "SISTEA develops integrated HVAC, industrial refrigeration, solar energy, battery storage, water treatment, automation and ESI financing solutions in El Salvador and Central America.",
+
     eyebrow: "Engineering for Central America",
+
     headline:
       "Integrated solutions for energy efficiency, climate control and industrial infrastructure.",
+
     lead:
-      "We develop projects from the first idea to technical implementation: analysis, planning, visualization, supply, installation, automation, monitoring and operation.",
+      "We develop projects from the initial concept through technical implementation: analysis, planning, visualization, procurement, installation, automation, monitoring and operation.",
+
     primary: "Request a project",
     secondary: "Start engineering assistant",
+
     solutionsTitle: "Technical solutions",
+
+    solutionDescription:
+      "Planning, sizing, integration and operation focused on energy efficiency, reliability and sustainability.",
+
+    solutions: [
+      "HVAC",
+      "Industrial refrigeration",
+      "Ventilation",
+      "Photovoltaic systems",
+      "Battery storage",
+      "Water treatment",
+      "Building automation",
+      "ESI financing",
+    ],
+
     industriesTitle: "Industries",
+
+    industries: [
+      "Food and beverage",
+      "Pharmaceutical",
+      "Hotels",
+      "Hospitals",
+      "Industry",
+      "Shopping centers",
+      "Data centers",
+    ],
+
     ctaTitle: "Planning a technical project?",
+
     ctaText:
-      "SISTEA reviews your requirements and develops an efficient, financeable and operationally suitable solution.",
+      "SISTEA reviews your requirements and develops an efficient, financeable solution tailored to your operation.",
+
+    contactTitle: "Contact",
   },
+
   de: {
     title: "SISTEA | HVAC, Industriekälte und Energieeffizienz",
     description:
       "SISTEA entwickelt integrierte Lösungen für HVAC, Industriekälte, Photovoltaik, Batteriespeicher, Wasseraufbereitung, Automation und ESI-Finanzierung in El Salvador und Zentralamerika.",
+
     eyebrow: "Ingenieurtechnik für Zentralamerika",
+
     headline:
       "Ganzheitliche Lösungen für Energieeffizienz, Klimatisierung und industrielle Infrastruktur.",
+
     lead:
       "Wir entwickeln Projekte von der ersten Idee bis zur technischen Umsetzung: Analyse, Planung, Visualisierung, Beschaffung, Installation, Automation, Monitoring und Betrieb.",
+
     primary: "Projekt anfragen",
     secondary: "Engineering Assistant starten",
+
     solutionsTitle: "Technische Lösungen",
+
+    solutionDescription:
+      "Planung, Auslegung, Integration und Betrieb mit Fokus auf Energieeffizienz, Zuverlässigkeit und Nachhaltigkeit.",
+
+    solutions: [
+      "HVAC",
+      "Industriekälte",
+      "Lüftung",
+      "Photovoltaik",
+      "Batteriespeicher",
+      "Wasseraufbereitung",
+      "Gebäudeautomation",
+      "ESI-Finanzierung",
+    ],
+
     industriesTitle: "Branchen",
+
+    industries: [
+      "Lebensmittel und Getränke",
+      "Pharma",
+      "Hotels",
+      "Krankenhäuser",
+      "Industrie",
+      "Einkaufszentren",
+      "Rechenzentren",
+    ],
+
     ctaTitle: "Planst du ein technisches Projekt?",
+
     ctaText:
       "SISTEA prüft deine Anforderungen und entwickelt eine effiziente, finanzierbare und betrieblich passende Lösung.",
+
+    contactTitle: "Kontakt",
   },
 } as const;
-
-const solutions = [
-  "HVAC",
-  "Industriekälte",
-  "Lüftung",
-  "Photovoltaik",
-  "Batteriespeicher",
-  "Wasseraufbereitung",
-  "Gebäudeautomation",
-  "ESI-Finanzierung",
-];
-
-const industries = [
-  "Lebensmittel",
-  "Pharma",
-  "Hotels",
-  "Krankenhäuser",
-  "Industrie",
-  "Einkaufszentren",
-  "Rechenzentren",
-];
 
 type Locale = keyof typeof content;
 
 function getLocale(value: string): Locale {
-  if (value === "en" || value === "de" || value === "es") {
+  if (value === "es" || value === "en" || value === "de") {
     return value;
   }
 
@@ -105,34 +190,82 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const page = content[getLocale(locale)];
+  const currentLocale = getLocale(locale);
+  const page = content[currentLocale];
 
   return (
     <>
-      <section className="bg-slate-950 px-6 py-24 text-white lg:py-32">
+      {/* HERO */}
+      <section
+        className="relative min-h-[680px] bg-slate-950 bg-cover bg-center px-6 py-24 text-white"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(2, 6, 23, 0.78), rgba(2, 6, 23, 0.88)), url('/images/hero/san-salvador-skyline.jpg')",
+        }}
+      >
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
+          <div className="mb-10 flex flex-wrap gap-3 text-sm">
+            <a
+              href="/es"
+              className={
+                currentLocale === "es"
+                  ? "font-bold text-cyan-400"
+                  : "text-white hover:text-cyan-400"
+              }
+            >
+              Español
+            </a>
+
+            <span className="text-slate-500">|</span>
+
+            <a
+              href="/en"
+              className={
+                currentLocale === "en"
+                  ? "font-bold text-cyan-400"
+                  : "text-white hover:text-cyan-400"
+              }
+            >
+              English
+            </a>
+
+            <span className="text-slate-500">|</span>
+
+            <a
+              href="/de"
+              className={
+                currentLocale === "de"
+                  ? "font-bold text-cyan-400"
+                  : "text-white hover:text-cyan-400"
+              }
+            >
+              Deutsch
+            </a>
+          </div>
+
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-400">
             {page.eyebrow}
           </p>
 
-          <h1 className="mt-6 max-w-5xl text-4xl font-bold tracking-tight lg:text-6xl">
+          <h1 className="mt-6 max-w-5xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             {page.headline}
           </h1>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-200">
             {page.lead}
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a
               href="#contact"
-              className="rounded-lg bg-cyan-600 px-6 py-3 text-center font-semibold text-white"
+              className="rounded-lg bg-cyan-600 px-6 py-3 text-center font-semibold text-white transition hover:bg-cyan-500"
             >
               {page.primary}
             </a>
+
             <a
               href="#assistant"
-              className="rounded-lg border border-white/30 px-6 py-3 text-center font-semibold text-white"
+              className="rounded-lg border border-white/40 bg-black/20 px-6 py-3 text-center font-semibold text-white transition hover:bg-white/10"
             >
               {page.secondary}
             </a>
@@ -140,6 +273,7 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* SOLUTIONS */}
       <section id="solutions" className="bg-white px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-slate-900">
@@ -147,11 +281,15 @@ export default async function HomePage({
           </h2>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {solutions.map((item) => (
-              <div key={item} className="rounded-xl border border-slate-200 bg-slate-50 p-6">
+            {page.solutions.map((item) => (
+              <div
+                key={item}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-6 transition hover:-translate-y-1 hover:shadow-lg"
+              >
                 <h3 className="font-semibold text-slate-900">{item}</h3>
+
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Planung, Auslegung, Integration und Betrieb mit Fokus auf Effizienz und Zuverlässigkeit.
+                  {page.solutionDescription}
                 </p>
               </div>
             ))}
@@ -159,6 +297,7 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* INDUSTRIES */}
       <section id="industries" className="bg-slate-50 px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-slate-900">
@@ -166,8 +305,11 @@ export default async function HomePage({
           </h2>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {industries.map((item) => (
-              <div key={item} className="rounded-xl bg-white p-6 shadow-sm">
+            {page.industries.map((item) => (
+              <div
+                key={item}
+                className="rounded-xl bg-white p-6 shadow-sm"
+              >
                 <h3 className="font-semibold text-slate-900">{item}</h3>
               </div>
             ))}
@@ -175,18 +317,34 @@ export default async function HomePage({
         </div>
       </section>
 
+      {/* ENGINEERING ASSISTANT */}
       <section id="assistant" className="bg-white px-6 py-20">
         <div className="mx-auto max-w-7xl rounded-2xl bg-slate-950 p-10 text-white">
           <h2 className="text-3xl font-bold">{page.ctaTitle}</h2>
-          <p className="mt-4 max-w-3xl text-slate-300">{page.ctaText}</p>
+
+          <p className="mt-4 max-w-3xl text-slate-300">
+            {page.ctaText}
+          </p>
         </div>
       </section>
 
+      {/* CONTACT */}
       <section id="contact" className="bg-slate-50 px-6 py-20">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-3xl font-bold text-slate-900">Kontakt</h2>
+          <h2 className="text-3xl font-bold text-slate-900">
+            {page.contactTitle}
+          </h2>
+
           <p className="mt-4 text-slate-600">
-            info@sisteasv.com · www.sisteasv.com
+            SISTEA S.A. de C.V.
+          </p>
+
+          <p className="mt-2 text-slate-600">
+            info@sisteasv.com
+          </p>
+
+          <p className="mt-2 text-slate-600">
+            www.sisteasv.com
           </p>
         </div>
       </section>
