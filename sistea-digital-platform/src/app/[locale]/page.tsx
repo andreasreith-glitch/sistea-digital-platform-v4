@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import ContactForm from "./components/ContactForm";
+import EnergyCostCalculator from "./components/EnergyCostCalculator";
 
 export const runtime = "edge";
 
@@ -14,7 +15,7 @@ const translations = {
     title: "SISTEA | Ingeniería, HVAC, Refrigeración, Energía y ESI",
     description:
       "Ingeniería integral para HVAC, refrigeración industrial, chillers, eficiencia energética, fotovoltaica, baterías, automatización y financiamiento ESI en Centroamérica.",
-    nav: ["Sistema", "Soluciones", "Energía", "App", "Libros", "Financiamiento", "Contacto"],
+    nav: ["Sistema", "Soluciones", "Energía & Demanda", "App", "Libros", "Financiamiento", "Contacto"],
     heroEyebrow: "Ingeniería alemana · ejecución local · Centroamérica",
     heroTitle: "Ingeniería que conecta eficiencia, refrigeración, energía y financiamiento.",
     heroText:
@@ -65,9 +66,9 @@ const translations = {
       ["Consulting", "Factibilidad, ingeniería, CAPEX/OPEX, ROI, proyecto y commissioning."],
     ],
     energyEyebrow: "Energy & Engineering Consulting",
-    energyTitle: "Primero reducimos la demanda. Después producimos, almacenamos y controlamos mejor la energía.",
+    energyTitle: "Reducimos costos de energía y picos de demanda con Consulting, análisis y gestión inteligente de cargas.",
     energyText:
-      "La factura eléctrica es el punto de partida, no el diagnóstico. Analizamos perfiles de carga, simultaneidades, equipos, horarios, temperaturas, caudales y estrategia de control para localizar el costo real de la ineficiencia.",
+      "Partimos de las facturas eléctricas y avanzamos hacia perfiles de carga, simultaneidad, demanda máxima, chillers, HVAC, bombas, ventiladores, procesos, fotovoltaica, baterías y estrategia de control. En proyectos adecuados, el análisis integral puede identificar potenciales de ahorro del orden de 40 %, sujetos a validación técnica.",
     energyFlow: [
       ["Medir", "Facturas, demanda, submedición y perfiles"],
       ["Reducir", "Chillers, HVAC, bombas, ventiladores y procesos"],
@@ -76,9 +77,9 @@ const translations = {
       ["Almacenar", "Baterías y desplazamiento de demanda"],
       ["Controlar", "BMS, PLC, IA y gestión de cargas"],
     ],
-    reviewTitle: "Evaluación energética inicial gratuita",
+    reviewTitle: "Cálculo gratuito de costos energéticos y gestión de demanda",
     reviewText:
-      "Envíanos una factura eléctrica reciente y datos básicos de operación. Identificamos dónde vale la pena profundizar antes de que inviertas en un estudio completo.",
+      "Envíanos 1–3 facturas eléctricas. Revisamos consumo, costo, demanda, tarifa y operación para crear una primera línea base e identificar medidas de reducción de consumo, peak shaving y gestión de carga.",
     reviewButton: "Solicitar primera revisión",
     refrigerationEyebrow: "Cooling Engineering",
     refrigerationTitle: "Chillers, refrigeración industrial y cadena de frío con enfoque de sistema",
@@ -140,6 +141,20 @@ const translations = {
       ["Logística", "Cold chain, almacenes, ventilación, energía y monitoreo."],
       ["Data Centers", "Alta densidad térmica, redundancia, energía, baterías y control."],
     ],
+    sourcingEyebrow: "Compras técnicas & suministro directo",
+    sourcingTitle: "Más de 20 años de experiencia propia en compras y comercio mayorista en Shanghái / China",
+    sourcingText:
+      "Desde hace más de 20 años trabajamos directamente con fabricantes y proveedores en China. Esto incluye relaciones consolidadas con fabricantes alemanes que producen en China y con fabricantes asiáticos técnicamente seleccionados. SISTEA combina ingeniería, especificación técnica y compra directa para reducir intermediarios y conseguir condiciones de fábrica competitivas.",
+    sourcingPoints: [
+      "Contacto directo con fabricantes y plantas de producción",
+      "Relaciones con fabricantes alemanes con producción en China",
+      "Evaluación técnica antes de comparar precios",
+      "Compra directa y menos niveles de intermediación",
+      "Apoyo en especificación, oferta, negociación y logística",
+      "Precios de fábrica o condiciones directas de planta cuando la estructura de suministro lo permite",
+    ],
+    sourcingButton: "Pónganos a prueba con su próxima solicitud",
+    sourcingNote: "Envíenos su lista de equipos, ficha técnica o especificación. Comparamos solución, calidad y precio directamente para su proyecto.",
     whyEyebrow: "Por qué SISTEA",
     whyTitle: "Conocimiento, herramientas y ejecución en una sola cadena",
     why: [
@@ -147,6 +162,7 @@ const translations = {
       ["Visión de sistema", "Analizamos interacciones y no solo componentes individuales."],
       ["Tecnología abierta", "Seleccionamos la solución adecuada al proyecto, no una marca fija."],
       ["Implementación", "Del estudio y cálculo hasta la puesta en marcha y optimización."],
+      ["Suministro directo", "Más de 20 años de experiencia de compra en China y acceso directo a fabricantes."],
     ],
     contactTitle: "Cuéntanos dónde está el problema técnico o energético",
     contactText:
@@ -157,7 +173,7 @@ const translations = {
     title: "SISTEA | Engineering, HVAC, Refrigeration, Energy and ESI",
     description:
       "Integrated engineering for HVAC, industrial refrigeration, chillers, energy efficiency, solar PV, batteries, automation and ESI financing in Central America.",
-    nav: ["System", "Solutions", "Energy", "App", "Books", "Financing", "Contact"],
+    nav: ["System", "Solutions", "Energy & Demand", "App", "Books", "Financing", "Contact"],
     heroEyebrow: "German engineering · local execution · Central America",
     heroTitle: "Engineering that connects efficiency, refrigeration, energy and financing.",
     heroText:
@@ -204,9 +220,9 @@ const translations = {
       ["Consulting", "Feasibility, engineering, CAPEX/OPEX, ROI, project and commissioning."],
     ],
     energyEyebrow: "Energy & Engineering Consulting",
-    energyTitle: "First reduce demand. Then generate, store and control energy better.",
+    energyTitle: "Reduce energy costs and demand peaks through consulting, analysis and intelligent load management.",
     energyText:
-      "The electric bill is the starting point, not the diagnosis. We analyze load profiles, simultaneity, equipment, schedules, temperatures, flows and control strategy to locate the real cost of inefficiency.",
+      "We start with electricity bills and then analyze load profiles, simultaneity, maximum demand, chillers, HVAC, pumps, fans, processes, solar PV, batteries and control strategy. In suitable projects, integrated analysis can identify savings potential on the order of 40%, subject to engineering validation.",
     energyFlow: [
       ["Measure", "Bills, demand, submetering and profiles"],
       ["Reduce", "Chillers, HVAC, pumps, fans and processes"],
@@ -215,9 +231,9 @@ const translations = {
       ["Store", "Batteries and demand shifting"],
       ["Control", "BMS, PLC, AI and load management"],
     ],
-    reviewTitle: "Free initial energy review",
+    reviewTitle: "Free energy-cost and demand-management screening",
     reviewText:
-      "Send us a recent utility bill and basic operating data. We identify where deeper analysis is worthwhile before you invest in a full study.",
+      "Send us 1–3 electricity bills. We review consumption, cost, demand, tariff and operating data to establish an initial baseline and identify consumption reduction, peak-shaving and load-management measures.",
     reviewButton: "Request initial review",
     refrigerationEyebrow: "Cooling Engineering",
     refrigerationTitle: "Chillers, industrial refrigeration and cold chain with a systems approach",
@@ -273,6 +289,20 @@ const translations = {
       ["Logistics", "Cold chain, warehouses, ventilation, energy and monitoring."],
       ["Data Centers", "High heat density, redundancy, energy, batteries and controls."],
     ],
+    sourcingEyebrow: "Technical Procurement & Direct Sourcing",
+    sourcingTitle: "More than 20 years of our own sourcing and wholesale experience in Shanghai / China",
+    sourcingText:
+      "For more than 20 years we have worked directly with manufacturers and suppliers in China. This includes established relationships with German manufacturers producing in China as well as technically selected Asian manufacturers. SISTEA combines engineering, technical specification and direct sourcing to reduce unnecessary intermediaries and obtain competitive factory-level terms.",
+    sourcingPoints: [
+      "Direct access to manufacturers and production plants",
+      "Relationships with German manufacturers producing in China",
+      "Technical evaluation before price comparison",
+      "Direct purchasing with fewer intermediary margins",
+      "Support with specification, quotation, negotiation and logistics",
+      "Factory pricing or direct plant terms whenever the supply structure allows it",
+    ],
+    sourcingButton: "Test us with your next RFQ",
+    sourcingNote: "Send us your equipment list, datasheet or specification. We compare solution, quality and price directly for your project.",
     whyEyebrow: "Why SISTEA",
     whyTitle: "Knowledge, tools and execution in one chain",
     why: [
@@ -280,6 +310,7 @@ const translations = {
       ["Systems view", "We analyze interactions instead of isolated components."],
       ["Open technology", "We select what fits the project rather than forcing one brand."],
       ["Implementation", "From study and calculation through commissioning and optimization."],
+      ["Direct sourcing", "More than 20 years of China sourcing experience and direct manufacturer access."],
     ],
     contactTitle: "Tell us where the technical or energy problem is",
     contactText:
@@ -290,7 +321,7 @@ const translations = {
     title: "SISTEA | Engineering, HVAC, Kälte, Energie und ESI",
     description:
       "Integriertes Engineering für HVAC, Industriekälte, Chiller, Energieeffizienz, Photovoltaik, Batteriespeicher, Automation und ESI-Finanzierung in Zentralamerika.",
-    nav: ["System", "Lösungen", "Energie", "App", "Bücher", "Finanzierung", "Kontakt"],
+    nav: ["System", "Lösungen", "Energie & Last", "App", "Bücher", "Finanzierung", "Kontakt"],
     heroEyebrow: "Deutsches Engineering · lokale Umsetzung · Zentralamerika",
     heroTitle: "Engineering, das Effizienz, Kälte, Energie und Finanzierung verbindet.",
     heroText:
@@ -337,9 +368,9 @@ const translations = {
       ["Consulting", "Machbarkeit, Engineering, CAPEX/OPEX, ROI, Projekt und Commissioning."],
     ],
     energyEyebrow: "Energy & Engineering Consulting",
-    energyTitle: "Zuerst den Bedarf senken. Danach Energie besser erzeugen, speichern und regeln.",
+    energyTitle: "Energiekosten und Lastspitzen mit Consulting, Analyse und intelligentem Lastmanagement reduzieren.",
     energyText:
-      "Die Stromrechnung ist der Ausgangspunkt, nicht die Diagnose. Wir analysieren Lastprofile, Gleichzeitigkeit, Anlagen, Betriebszeiten, Temperaturen, Volumenströme und Regelstrategien, um die tatsächlichen Kosten der Ineffizienz zu finden.",
+      "Wir starten mit den Stromrechnungen und analysieren danach Lastprofile, Gleichzeitigkeit, maximale Leistung, Chiller, HVAC, Pumpen, Ventilatoren, Prozesse, PV, Batteriespeicher und Regelstrategien. Bei geeigneten Projekten kann eine ganzheitliche Analyse Einsparpotenziale in der Größenordnung von rund 40 % identifizieren – vorbehaltlich technischer Prüfung.",
     energyFlow: [
       ["Messen", "Rechnungen, Leistung, Unterzähler und Profile"],
       ["Reduzieren", "Chiller, HVAC, Pumpen, Ventilatoren und Prozesse"],
@@ -348,9 +379,9 @@ const translations = {
       ["Speichern", "Batterien und Lastverschiebung"],
       ["Regeln", "BMS, PLC, KI und Lastmanagement"],
     ],
-    reviewTitle: "Kostenlose energetische Erstprüfung",
+    reviewTitle: "Kostenlose Stromkosten- und Lastmanagement-Erstprüfung",
     reviewText:
-      "Sende uns eine aktuelle Stromrechnung und grundlegende Betriebsdaten. Wir zeigen, wo eine vertiefte Analyse sinnvoll ist, bevor du in eine vollständige Studie investierst.",
+      "Sende uns 1–3 Stromrechnungen. Wir prüfen Verbrauch, Kosten, Leistungsspitzen, Tarif und Betriebsdaten, bilden eine erste Baseline und identifizieren Ansätze für Verbrauchsreduzierung, Peak Shaving und Lastmanagement.",
     reviewButton: "Erstprüfung anfragen",
     refrigerationEyebrow: "Cooling Engineering",
     refrigerationTitle: "Chiller, Industriekälte und Kühlkette mit Systemansatz",
@@ -406,6 +437,20 @@ const translations = {
       ["Logistik", "Cold Chain, Lager, Lüftung, Energie und Monitoring."],
       ["Data Center", "Hohe Wärmedichte, Redundanz, Energie, Batterien und Regelung."],
     ],
+    sourcingEyebrow: "Technische Beschaffung & Direktbezug",
+    sourcingTitle: "Seit über 20 Jahren eigener Großhandel und Beschaffung in Shanghai / China",
+    sourcingText:
+      "Seit mehr als 20 Jahren arbeiten wir direkt mit Herstellern und Lieferanten in China. Dazu gehören gewachsene Kontakte zu deutschen Herstellern mit Produktion in China sowie zu technisch ausgewählten asiatischen Produzenten. SISTEA verbindet Engineering, technische Spezifikation und Direktbeschaffung. So reduzieren wir unnötige Handelsstufen und können wettbewerbsfähige Werkskonditionen anbieten.",
+    sourcingPoints: [
+      "Direkter Kontakt zu Herstellern und Produktionswerken",
+      "Bestehende Kontakte zu deutschen Herstellern mit Fertigung in China",
+      "Technische Prüfung vor dem Preisvergleich",
+      "Direktbeschaffung mit weniger Zwischenhandelsmargen",
+      "Unterstützung bei Spezifikation, Angebot, Verhandlung und Logistik",
+      "Werkspreise oder direkte Werkskonditionen, soweit die Lieferstruktur dies ermöglicht",
+    ],
+    sourcingButton: "Testen Sie uns mit Ihrer nächsten Anfrage",
+    sourcingNote: "Senden Sie uns Ihre Geräteliste, Datenblätter oder Spezifikation. Wir vergleichen Lösung, Qualität und Preis direkt für Ihr Projekt.",
     whyEyebrow: "Warum SISTEA",
     whyTitle: "Wissen, Werkzeuge und Umsetzung in einer Kette",
     why: [
@@ -413,6 +458,7 @@ const translations = {
       ["Systemblick", "Wir analysieren Wechselwirkungen statt isolierter Komponenten."],
       ["Technologieoffen", "Wir wählen die passende Lösung statt eine feste Marke vorzugeben."],
       ["Umsetzung", "Von Studie und Berechnung bis Inbetriebnahme und Optimierung."],
+      ["Direktbeschaffung", "Über 20 Jahre China-Einkaufserfahrung und direkter Zugang zu Herstellern."],
     ],
     contactTitle: "Sag uns, wo das technische oder energetische Problem liegt",
     contactText:
@@ -654,7 +700,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <p className="mt-6 text-lg leading-8 text-slate-600">{t.energyText}</p>
 
               <div className="mt-9 rounded-2xl border border-cyan-200 bg-cyan-50 p-7">
-                <h3 className="text-xl font-black text-slate-950">{t.reviewTitle}</h3>
+                <div className="flex items-start justify-between gap-5">
+                  <h3 className="text-xl font-black text-slate-950">{t.reviewTitle}</h3>
+                  <div className="flex-none rounded-xl bg-slate-950 px-4 py-3 text-center text-white">
+                    <div className="text-2xl font-black text-cyan-300">~40%</div>
+                    <div className="mt-1 text-[10px] font-black uppercase tracking-[.12em] text-slate-300">Potential</div>
+                  </div>
+                </div>
                 <p className="mt-4 leading-7 text-slate-700">{t.reviewText}</p>
                 <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-3 font-black text-white transition hover:bg-cyan-700">
                   {t.reviewButton}<ArrowIcon />
@@ -674,6 +726,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 ))}
               </div>
             </div>
+          </div>
+
+          <div className="mx-auto mt-14 max-w-7xl">
+            <EnergyCostCalculator locale={currentLocale} />
           </div>
         </section>
 
@@ -826,12 +882,43 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
 
         <section className="bg-white px-6 py-24">
+          <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
+            <div className="grid lg:grid-cols-[1.05fr_.95fr]">
+              <div className="p-8 sm:p-12 lg:p-14">
+                <Eyebrow>{t.sourcingEyebrow}</Eyebrow>
+                <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">{t.sourcingTitle}</h2>
+                <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">{t.sourcingText}</p>
+                <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  {t.sourcingPoints.map((point) => (
+                    <div key={point} className="flex items-start gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+                      <span className="mt-0.5 text-emerald-700"><CheckIcon /></span>
+                      <span className="font-semibold">{point}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col justify-between bg-slate-950 p-8 text-white sm:p-12 lg:p-14">
+                <div>
+                  <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-300">Shanghai · China · Direct Factory Access</div>
+                  <div className="mt-7 text-5xl font-black tracking-tight text-white sm:text-6xl">20+ <span className="text-cyan-300">Years</span></div>
+                  <div className="mt-3 text-lg font-bold text-slate-300">Engineering + Procurement + Logistics</div>
+                  <p className="mt-8 text-base leading-7 text-slate-300">{t.sourcingNote}</p>
+                </div>
+                <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-10 inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-400 px-6 py-4 text-center font-black text-slate-950 transition hover:bg-cyan-300">
+                  {t.sourcingButton}<ArrowIcon />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white px-6 py-24">
           <div className="mx-auto max-w-7xl rounded-3xl bg-slate-950 p-8 text-white sm:p-12 lg:p-14">
             <div className="max-w-4xl">
               <Eyebrow light>{t.whyEyebrow}</Eyebrow>
               <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.whyTitle}</h2>
             </div>
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
               {t.why.map(([title, text], index) => (
                 <div key={title} className="border-l border-cyan-400/40 pl-5">
                   <div className="text-xs font-black text-cyan-300">0{index + 1}</div>
