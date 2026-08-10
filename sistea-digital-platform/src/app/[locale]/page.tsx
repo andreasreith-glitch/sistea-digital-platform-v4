@@ -100,10 +100,10 @@ const translations = {
     ],
     visualSolutions: [
       ["Chillers", "Plantas enfriadoras de aire o agua, hidráulica, VFD, redundancia y control integral."],
+      ["Refrigeración industrial", "Skids, salas de máquinas, NH₃/R717, CO₂/R744, procesos, recuperación de calor y automatización."],
       ["VRF / VRV", "Sistemas de volumen de refrigerante variable para edificios, oficinas, hoteles y retrofit."],
       ["Climatización adiabática de 2 etapas", "Preenfriamiento indirecto/adiabático para reducir la temperatura de impulsión con muy bajo consumo eléctrico."],
       ["Cámaras frigoríficas + BITZER", "Cámaras de conservación y congelación con selección profesional de evaporadores, condensación y compresores."],
-      ["Refrigeración industrial", "Skids, salas de máquinas, NH₃/R717, CO₂/R744, procesos, recuperación de calor y automatización."],
       ["Sistemas adiabáticos reales", "Integración de equipos adiabáticos en instalaciones industriales, comerciales y de proceso."],
     ],
     brandsLabel: "Fabricantes considerados según aplicación y proyecto",
@@ -271,10 +271,10 @@ const translations = {
     ],
     visualSolutions: [
       ["Chillers", "Air- or water-cooled chiller plants, hydraulics, VFD, redundancy and integrated controls."],
+      ["Industrial refrigeration", "Skids, machine rooms, NH₃/R717, CO₂/R744, processes, heat recovery and automation."],
       ["VRF / VRV", "Variable refrigerant flow systems for buildings, offices, hotels and retrofit projects."],
       ["Two-stage adiabatic cooling", "Indirect/adiabatic pre-cooling to reduce supply-air temperature with very low electrical consumption."],
       ["Cold rooms + BITZER", "Chilled and frozen rooms with professional evaporator, condensing-unit and compressor selection."],
-      ["Industrial refrigeration", "Skids, machine rooms, NH₃/R717, CO₂/R744, processes, heat recovery and automation."],
       ["Real adiabatic systems", "Integration of adiabatic equipment in industrial, commercial and process applications."],
     ],
     brandsLabel: "Manufacturers considered according to application and project",
@@ -442,10 +442,10 @@ const translations = {
     ],
     visualSolutions: [
       ["Chilleranlagen", "Luft- oder wassergekühlte Chillerzentralen, Hydraulik, VFD, Redundanz und integrierte Regelung."],
+      ["Industriekälte", "Skids, Maschinenräume, NH₃/R717, CO₂/R744, Prozesse, Wärmerückgewinnung und Automation."],
       ["VRF / VRV", "Variable-Kältemittelstrom-Systeme für Gebäude, Büros, Hotels und Retrofit-Projekte."],
       ["Zweistufige adiabate Kühlung", "Indirekte/adiabate Vorkühlung zur Absenkung der Zulufttemperatur bei sehr geringem Strombedarf."],
       ["Kühlzellen + BITZER", "Kühl- und Tiefkühlzellen mit professioneller Auswahl von Verdampfern, Verflüssigung und Verdichtern."],
-      ["Industriekälte", "Skids, Maschinenräume, NH₃/R717, CO₂/R744, Prozesse, Wärmerückgewinnung und Automation."],
       ["Reale adiabate Systeme", "Integration adiabater Geräte in Industrie-, Gewerbe- und Prozessanwendungen."],
     ],
     brandsLabel: "Hersteller je nach Anwendung und Projekt",
@@ -802,11 +802,11 @@ function BookCard({ code, title, color }: { code: string; title: string; color: 
 
 
 const visualSolutionImages = [
-  "/images/solutions/water-cooled-chiller-arkref.webp",
+  "/images/solutions/york-yvaa-official.jpg",
+  "/images/solutions/industrial-refrigeration-plant.webp",
   "/images/solutions/vrf-outdoor-unit.webp",
   "/images/solutions/two-stage-adiabatic-system-diagram.webp",
   "/images/solutions/bitzer-cold-room-condensing-unit.webp",
-  "/images/solutions/industrial-refrigeration-plant.webp",
   "/images/solutions/adiabatic-cooling-installation.webp",
 ] as const;
 
@@ -1039,12 +1039,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {t.visualSolutions.map(([title, body], index) => (
                 <article key={title} className="group overflow-hidden rounded-3xl border border-[#c2d6dc] bg-[#edf3f4] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
                   <div className="relative h-56 overflow-hidden bg-white">
-                    <img
-                      src={visualSolutionImages[index]}
-                      alt={title}
-                      loading="lazy"
-                      className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${index === 1 || index === 2 || index === 3 ? "object-contain p-4" : "object-cover"}`}
-                    />
+                    <a
+                      href={visualSolutionImages[index]}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${title} – Bild vergrößern`}
+                      className="block h-full w-full"
+                    >
+                      <img
+                        src={visualSolutionImages[index]}
+                        alt={title}
+                        loading="lazy"
+                        className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${index === 0 || index === 2 || index === 3 || index === 4 ? "object-contain p-4" : "object-cover"}`}
+                      />
+                    </a>
                     <div className="absolute left-4 top-4 rounded-full bg-[#31596a]/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[.16em] text-white backdrop-blur">
                       Engineering 0{index + 1}
                     </div>
