@@ -173,6 +173,28 @@ const translations = {
       ["Energía & Demanda", "Facturas, línea base, perfil de carga y primera identificación del potencial de ahorro.", "Analizar energía", "#energy"],
       ["Financiamiento", "ESI, Cooling-as-a-Service y modelos de servicio para convertir medidas viables en proyectos ejecutables.", "Ver modelos", "/financing"],
     ],
+    procurementEyebrow: "Compra directa & sourcing técnico",
+    procurementTitle: "Más de 20 años de experiencia de compra y comercio mayorista en China",
+    procurementText:
+      "SISTEA combina ingeniería en Centroamérica con relaciones de suministro desarrolladas durante más de dos décadas en toda China. Para proyectos adecuados buscamos acceso directo a fabricantes en las principales regiones industriales del país, incluyendo proveedores europeos y alemanes con producción en China.",
+    procurementPromise:
+      "No buscamos simplemente el precio más bajo. Buscamos la solución técnica y económicamente correcta, con especificación clara, documentación verificable y un precio de fábrica competitivo cuando la estructura del proyecto lo permite.",
+    procurementStats: [
+      ["20+", "años de experiencia en compra y comercio mayorista en China"],
+      ["Directo", "contacto con fabricantes y fábricas"],
+      ["Técnico", "selección basada en especificación y desempeño"],
+      ["Integrado", "compra, logística y proyecto coordinados por SISTEA"],
+    ],
+    procurementSteps: [
+      ["01", "Especificación", "SISTEA define capacidad, materiales, controles, normas, documentación y condiciones de servicio."],
+      ["02", "Selección de fabricante", "Comparamos fábricas y proveedores según capacidad técnica, referencias, calidad, plazos y costo total."],
+      ["03", "Oferta de fábrica", "Solicitamos precios de fabricante o proyecto y revisamos exactamente qué está incluido."],
+      ["04", "Revisión técnica", "Validamos fichas, certificados, planos, componentes, comunicación BMS y compatibilidad con el proyecto."],
+      ["05", "Logística", "Coordinamos embalaje, consolidación, transporte, documentación y entrega según el alcance acordado."],
+      ["06", "Integración", "La compra termina en un sistema instalado, comisionado y operable, no en una caja entregada."],
+    ],
+    procurementCta: "Compare nuestra propuesta. Pónganos a prueba.",
+    procurementButton: "Solicitar comparación técnica y comercial",
     sourcingEyebrow: "Compras técnicas & suministro directo",
     sourcingTitle: "Más de 20 años de experiencia propia en compras y comercio mayorista en Shanghái / China",
     sourcingText:
@@ -354,8 +376,30 @@ const translations = {
       ["Energy & Demand", "Bills, baseline, load profile and initial identification of savings potential.", "Analyze energy", "#energy"],
       ["Financing", "ESI, Cooling-as-a-Service and service models to turn viable measures into executable projects.", "View models", "/financing"],
     ],
+    procurementEyebrow: "Direct Procurement & Technical Sourcing",
+    procurementTitle: "More than 20 years of procurement and wholesale experience in China",
+    procurementText:
+      "SISTEA combines engineering in Central America with supplier relationships developed over more than two decades across China. For suitable projects, we seek direct manufacturer access in China's major industrial regions, including European and German suppliers with production in China.",
+    procurementPromise:
+      "We do not simply search for the lowest price. We select the technically and economically right solution, with clear specifications, verifiable documentation and competitive factory-level pricing when the project structure allows it.",
+    procurementStats: [
+      ["20+", "years of procurement and wholesale experience in China"],
+      ["Direct", "manufacturer and factory contacts"],
+      ["Technical", "selection based on specification and performance"],
+      ["Integrated", "procurement, logistics and project coordinated by SISTEA"],
+    ],
+    procurementSteps: [
+      ["01", "Specification", "SISTEA defines capacity, materials, controls, standards, documentation and service conditions."],
+      ["02", "Manufacturer selection", "We compare factories and suppliers by technical capability, references, quality, lead time and total cost."],
+      ["03", "Factory quotation", "We request manufacturer or project pricing and verify exactly what is included."],
+      ["04", "Technical review", "We validate datasheets, certificates, drawings, components, BMS communication and project compatibility."],
+      ["05", "Logistics", "We coordinate packing, consolidation, transport, documentation and delivery according to the agreed scope."],
+      ["06", "Integration", "Procurement ends with an installed, commissioned and operable system—not simply a delivered box."],
+    ],
+    procurementCta: "Compare our proposal. Put us to the test.",
+    procurementButton: "Request technical and commercial comparison",
     sourcingEyebrow: "Technical Procurement & Direct Sourcing",
-    sourcingTitle: "More than 20 years of our own sourcing and wholesale experience in Shanghai / China",
+    sourcingTitle: "More than 20 years of our own sourcing and wholesale experience across China",
     sourcingText:
       "For more than 20 years we have worked directly with manufacturers and suppliers in China. This includes established relationships with German manufacturers producing in China as well as technically selected Asian manufacturers. SISTEA combines engineering, technical specification and direct sourcing to reduce unnecessary intermediaries and obtain competitive factory-level terms.",
     sourcingPoints: [
@@ -535,8 +579,30 @@ const translations = {
       ["Energie & Last", "Stromrechnungen, Baseline, Lastprofil und erste Identifikation von Einsparpotenzial.", "Energie analysieren", "#energy"],
       ["Finanzierung", "ESI, Cooling-as-a-Service und Servicemodelle für technisch tragfähige Projekte.", "Modelle ansehen", "/financing"],
     ],
+    procurementEyebrow: "Direktbeschaffung & technisches Sourcing",
+    procurementTitle: "Über 20 Jahre Einkaufs- und Großhandelserfahrung in China",
+    procurementText:
+      "SISTEA verbindet Engineering in Zentralamerika mit Lieferantenbeziehungen, die über mehr als zwei Jahrzehnte in ganz China aufgebaut wurden. Für geeignete Projekte suchen wir direkten Herstellerzugang in den wichtigsten chinesischen Industrieregionen – auch zu europäischen und deutschen Anbietern mit Produktion in China.",
+    procurementPromise:
+      "Wir suchen nicht einfach den niedrigsten Preis. Wir wählen die technisch und wirtschaftlich richtige Lösung – mit klarer Spezifikation, prüfbarer Dokumentation und wettbewerbsfähigem Hersteller- beziehungsweise Werkspreis, wenn die Projektstruktur dies ermöglicht.",
+    procurementStats: [
+      ["20+", "Jahre Einkaufs- und Großhandelserfahrung in China"],
+      ["Direkt", "Kontakte zu Herstellern und Fabriken"],
+      ["Technisch", "Auswahl nach Spezifikation und Performance"],
+      ["Integriert", "Beschaffung, Logistik und Projekt durch SISTEA koordiniert"],
+    ],
+    procurementSteps: [
+      ["01", "Spezifikation", "SISTEA definiert Leistung, Materialien, Regelung, Normen, Dokumentation und Servicebedingungen."],
+      ["02", "Herstellerauswahl", "Wir vergleichen Fabriken und Lieferanten nach technischer Fähigkeit, Referenzen, Qualität, Lieferzeit und Gesamtkosten."],
+      ["03", "Werksangebot", "Wir holen Hersteller- oder Projektpreise ein und prüfen exakt, welche Leistungen und Komponenten enthalten sind."],
+      ["04", "Technische Prüfung", "Wir validieren Datenblätter, Zertifikate, Zeichnungen, Komponenten, BMS-Kommunikation und Projektkompatibilität."],
+      ["05", "Logistik", "Wir koordinieren Verpackung, Konsolidierung, Transport, Dokumentation und Lieferung entsprechend dem vereinbarten Umfang."],
+      ["06", "Integration", "Beschaffung endet für uns bei einem installierten, in Betrieb genommenen und nutzbaren System – nicht bei einer gelieferten Kiste."],
+    ],
+    procurementCta: "Vergleichen Sie unser Angebot. Testen Sie uns.",
+    procurementButton: "Technischen und kaufmännischen Vergleich anfragen",
     sourcingEyebrow: "Technische Beschaffung & Direktbezug",
-    sourcingTitle: "Seit über 20 Jahren eigener Großhandel und Beschaffung in Shanghai / China",
+    sourcingTitle: "Seit über 20 Jahren eigener Großhandel und Beschaffung in ganz China",
     sourcingText:
       "Seit mehr als 20 Jahren arbeiten wir direkt mit Herstellern und Lieferanten in China. Dazu gehören gewachsene Kontakte zu deutschen Herstellern mit Produktion in China sowie zu technisch ausgewählten asiatischen Produzenten. SISTEA verbindet Engineering, technische Spezifikation und Direktbeschaffung. So reduzieren wir unnötige Handelsstufen und können wettbewerbsfähige Werkskonditionen anbieten.",
     sourcingPoints: [
@@ -806,7 +872,7 @@ function SourcingFlowVisual({ steps, title, yearsLabel, countryCards }: { steps:
       <div className="relative">
         <div className="flex items-center justify-between gap-4">
           <div>
-            <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">Shanghai · China</div>
+            <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">China · Direct Sourcing</div>
             <div className="mt-2 text-2xl font-black text-white">{title}</div>
           </div>
           <div className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-right">
@@ -1323,6 +1389,65 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
+        <section id="procurement" className="scroll-mt-24 bg-[#d9e4e8] px-6 py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
+              <div>
+                <Eyebrow>{t.procurementEyebrow}</Eyebrow>
+                <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">
+                  {t.procurementTitle}
+                </h2>
+              </div>
+              <div>
+                <p className="text-lg leading-8 text-[#607684]">{t.procurementText}</p>
+                <div className="mt-5 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-5 text-sm font-semibold leading-6 text-[#526b78]">
+                  {t.procurementPromise}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {t.procurementStats.map(([value, label]) => (
+                <div key={label} className="rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-6 shadow-sm">
+                  <div className="text-3xl font-black tracking-tight text-[#159dc5]">{value}</div>
+                  <p className="mt-2 text-sm font-bold leading-6 text-[#4f6675]">{label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 overflow-hidden rounded-3xl border border-[#bdd3da] bg-[#31596a] p-7 text-white shadow-[0_20px_55px_rgba(48,75,93,.14)] sm:p-9">
+              <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">
+                Engineering → Manufacturer → Factory Price → Verification → Logistics → Integration
+              </div>
+
+              <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                {t.procurementSteps.map(([n, title, body]) => (
+                  <article key={n} className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur">
+                    <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-200">{n}</div>
+                    <h3 className="mt-3 text-lg font-black">{title}</h3>
+                    <p className="mt-3 text-sm leading-6 text-white/72">{body}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
+              <div className="rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-6">
+                <div className="text-2xl font-black tracking-tight text-[#304b5d]">{t.procurementCta}</div>
+                <p className="mt-2 text-sm leading-6 text-[#607684]">
+                  SISTEA verbindet technische Auslegung, Lieferantenauswahl und Beschaffung zu einem Projektprozess.
+                </p>
+              </div>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white shadow-sm transition hover:bg-[#159dc5]"
+              >
+                {t.procurementButton}<ArrowIcon />
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section id="esi" className="bg-[#e4edef] px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:items-end">
@@ -1417,7 +1542,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_15%,rgba(103,216,230,.18),transparent_28%),linear-gradient(145deg,#234455,#31596a_50%,#4d7f89)]" />
                 <div className="relative flex h-full min-h-[540px] flex-col justify-between p-8 sm:p-12 lg:p-14">
                   <div>
-                    <div className="inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[.17em] text-cyan-100 backdrop-blur">Shanghai · China · Direct Factory Access</div>
+                    <div className="inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[.17em] text-cyan-100 backdrop-blur">China · Direct Factory Access</div>
                     <div className="mt-7"><SourcingFlowVisual steps={sales.sourcingSteps} title={sales.sourcingFlowTitle} yearsLabel={sales.sourcingYearsLabel} countryCards={sales.sourcingCountryCards} /></div>
                     <div className="mt-6 rounded-2xl border border-white/20 bg-[#244858]/70 p-5 backdrop-blur-md">
                       <div className="text-xs font-black uppercase tracking-[.17em] text-cyan-200">{sales.sourcingVisualLabel}</div>
