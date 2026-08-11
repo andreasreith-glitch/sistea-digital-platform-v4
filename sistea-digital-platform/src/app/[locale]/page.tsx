@@ -202,7 +202,7 @@ const translations = {
     brandEvaluationText: "YORK · Carrier · Trane se evalúan según el proyecto, considerando perfil de carga, eficiencia, hidráulica, ruido, redundancia, servicio y costo total de propiedad.",
     contactEyebrow: "Contacto de proyecto",
     sourcingEyebrow: "Compras técnicas & suministro directo",
-    sourcingTitle: "Más de 20 años de experiencia propia en compras y comercio mayorista en Shanghái / China",
+    sourcingTitle: "Más de 20 años de experiencia propia en compras y comercio mayorista en toda China",
     sourcingText:
       "Desde hace más de 20 años trabajamos directamente con fabricantes y proveedores en China. Esto incluye relaciones consolidadas con fabricantes alemanes que producen en China y con fabricantes asiáticos técnicamente seleccionados. SISTEA combina ingeniería, especificación técnica y compra directa para reducir intermediarios y conseguir condiciones de fábrica competitivas.",
     sourcingPoints: [
@@ -986,73 +986,78 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section className="bg-[#e5edef] px-6 py-20 lg:py-24">
+                <section id="solutions" className="scroll-mt-24 bg-[#dce6ea] px-6 py-20 lg:py-24">
           <div className="mx-auto max-w-7xl">
-            <div className="max-w-4xl">
-              <Eyebrow>{t.storyEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.storyTitle}</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">{t.storyText}</p>
+            <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
+              <div>
+                <Eyebrow>{t.solutionsEyebrow}</Eyebrow>
+                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.solutionsTitle}</h2>
+              </div>
+              <p className="text-lg leading-8 text-slate-600">{t.solutionsText}</p>
             </div>
-            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
-              {t.storySteps.map(([number, title, text]) => (
-                <div key={number} className="group rounded-2xl border border-[#c9dade] bg-[#edf3f4] p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:bg-[#f0f5f6] hover:shadow-xl">
-                  <div className="text-sm font-black text-cyan-700">{number}</div>
-                  <h3 className="mt-5 text-lg font-black text-[#304b5d]">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
+
+            <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {t.competences.map(([title, body], index) => (
+                <div key={title} className="flex items-start gap-3 rounded-2xl border border-[#c5d6db] bg-[#edf3f4] p-4">
+                  <div className="grid h-9 w-9 flex-none place-items-center rounded-lg bg-[#dff4f8] text-[#159dc5]"><TechIcon index={index} /></div>
+                  <div>
+                    <div className="font-black text-[#304b5d]">{title}</div>
+                    <div className="mt-1 text-xs leading-5 text-[#607684]">{body}</div>
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        <section id="system" className="relative overflow-hidden bg-gradient-to-br from-[#dce9ed] via-[#e8f0f1] to-[#dfecea] px-6 py-24 text-[#304b5d]">
-          <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-[#25b4dc]/12 blur-3xl" />
-          <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-[#70d8cf]/14 blur-3xl" />
-          <div className="relative mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.systemEyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.systemTitle}</h2>
-              </div>
-              <p className="text-lg leading-8 text-[#5d7180]">{t.systemText}</p>
+            <div className="mt-10">
+              <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
+              <h3 className="mt-3 max-w-5xl text-2xl font-black tracking-tight text-[#304b5d] sm:text-3xl">{t.refrigerationTitle}</h3>
+              <p className="mt-4 max-w-4xl leading-7 text-[#607684]">{t.refrigerationText}</p>
             </div>
 
-            <div className="mt-14 grid gap-4 lg:grid-cols-5">
-              {t.modules.map(([number, title, text], index) => (
-                <article key={number} className="group rounded-2xl border border-[#c6d8dd] bg-[#eef4f4]/95 p-6 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-[#7fd7e9] hover:shadow-xl">
-                  <div className="flex items-center justify-between">
-                    <div className="grid h-12 w-12 place-items-center rounded-xl bg-[#e2f6fb] text-[#159dc5]"><TechIcon index={index} /></div>
-                    <span className="text-sm font-black text-[#8ca0ab]">{number}</span>
+            <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {t.visualSolutions.map(([title, body], index) => (
+                <article key={title} className="group overflow-hidden rounded-3xl border border-[#c2d6dc] bg-[#edf3f4] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="relative h-52 overflow-hidden bg-white">
+                    <a href={visualSolutionImages[index]} target="_blank" rel="noreferrer" aria-label={`${title} – image`} className="block h-full w-full">
+                      <img
+                        src={visualSolutionImages[index]}
+                        alt={title}
+                        loading="lazy"
+                        className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${index === 0 || index === 2 || index === 3 || index === 4 ? "object-contain p-4" : "object-cover"}`}
+                      />
+                    </a>
+                    <div className="absolute left-4 top-4 rounded-full bg-[#31596a]/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[.16em] text-white backdrop-blur">
+                      Engineering 0{index + 1}
+                    </div>
                   </div>
-                  <h3 className="mt-8 text-xl font-black">{title}</h3>
-                  <p className="mt-4 text-sm leading-6 text-[#637783]">{text}</p>
+                  <div className="p-5">
+                    <h3 className="text-lg font-black text-[#304b5d]">{title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-[#607684]">{body}</p>
+                  </div>
                 </article>
               ))}
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-[#c6d8dd] bg-[#e6eef0] p-5 sm:p-6">
+              <div className="grid gap-5 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[.18em] text-[#718692]">{t.brandsLabel}</p>
+                  <p className="mt-2 text-sm leading-6 text-[#607684]">{t.brandEvaluationText}</p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {chillerManufacturerLinks.map(([brand, href]) => (
+                    <a key={brand} href={href} target="_blank" rel="noreferrer" className="rounded-xl border border-[#c4d7dc] bg-[#f2f7f8] px-4 py-4 text-center transition hover:border-[#7fd7e9] hover:shadow-md">
+                      <div className="text-lg font-black text-[#405d70]">{brand}</div>
+                      <div className="mt-1 text-[9px] font-black uppercase tracking-[.12em] text-[#159dc5]">{t.brandPortfolioLabel}</div>
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="solutions" className="bg-[#dce6ea] px-6 py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="max-w-4xl">
-              <Eyebrow>{t.solutionsEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.solutionsTitle}</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">{t.solutionsText}</p>
-            </div>
-
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {t.competences.map(([title, text], index) => (
-                <article key={title} className={`rounded-2xl border p-6 transition duration-300 hover:-translate-y-1 hover:shadow-xl ${index === 0 || index === 3 ? 'border-[#a9d6df] bg-[#e5f1f3]' : 'border-[#c5d6db] bg-[#edf3f4]'}`}>
-                  <div className="grid h-11 w-11 place-items-center rounded-xl bg-[#e3f6fb] text-[#159dc5]"><TechIcon index={index} /></div>
-                  <h3 className="mt-6 text-lg font-black text-[#304b5d]">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{text}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="energy" className="bg-[#e6eef0] px-6 py-24">
+<section id="energy" className="bg-[#e6eef0] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
             <div className="lg:sticky lg:top-28">
               <Eyebrow>{t.energyEyebrow}</Eyebrow>
@@ -1108,361 +1113,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section className="bg-[#f2f8fa] px-6 py-24 text-[#304b5d]">
-          <div className="mx-auto max-w-7xl">
-            <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
-            <h2 className="mt-4 max-w-5xl text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.refrigerationTitle}</h2>
-            <p className="mt-6 max-w-4xl text-lg leading-8 text-[#607684]">{t.refrigerationText}</p>
-
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {t.visualSolutions.map(([title, body], index) => (
-                <article key={title} className="group overflow-hidden rounded-3xl border border-[#c2d6dc] bg-[#edf3f4] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                  <div className="relative h-56 overflow-hidden bg-white">
-                    <a
-                      href={visualSolutionImages[index]}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={`${title} – Bild vergrößern`}
-                      className="block h-full w-full"
-                    >
-                      <img
-                        src={visualSolutionImages[index]}
-                        alt={title}
-                        loading="lazy"
-                        className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${index === 0 || index === 2 || index === 3 || index === 4 ? "object-contain p-4" : "object-cover"}`}
-                      />
-                    </a>
-                    <div className="absolute left-4 top-4 rounded-full bg-[#31596a]/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[.16em] text-white backdrop-blur">
-                      Engineering 0{index + 1}
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-black text-[#304b5d]">{title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-[#607684]">{body}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-10 rounded-3xl border border-[#c6d8dd] bg-[#e6eef0] p-6 shadow-sm sm:p-8">
-              <div className="grid gap-6 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[.18em] text-[#718692]">{t.brandsLabel}</p>
-                  <p className="mt-3 text-sm leading-6 text-[#607684]">
-                    {t.brandEvaluationText}
-                  </p>
-                </div>
-                <div className="grid gap-3 sm:grid-cols-3">
-                  {chillerManufacturerLinks.map(([brand, href]) => (
-                    <a
-                      key={brand}
-                      href={href}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="group rounded-2xl border border-[#c4d7dc] bg-[#f2f7f8] px-5 py-5 text-center transition hover:-translate-y-0.5 hover:border-[#7fd7e9] hover:shadow-lg"
-                    >
-                      <div className="text-xl font-black text-[#405d70]">{brand}</div>
-                      <div className="mt-2 text-[10px] font-black uppercase tracking-[.14em] text-[#159dc5]">{t.brandPortfolioLabel}</div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="knowledge" className="scroll-mt-24 bg-[#edf3f4] px-6 py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.knowledgeEyebrow}</Eyebrow>
-                <h2 className="mt-4 max-w-3xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">
-                  {t.knowledgeTitle}
-                </h2>
-              </div>
-              <p className="max-w-3xl text-lg leading-8 text-[#607684]">
-                {t.knowledgeText}
-              </p>
-            </div>
-
-            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-              {t.knowledgeItems.map(([title, body, button, href], index) => {
-                const target = href === "/financing" ? `/${currentLocale}/financing` : href;
-                return (
-                  <article
-                    key={title}
-                    className="group flex min-h-[285px] flex-col rounded-3xl border border-[#c5d7dc] bg-[#e4ecef] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#7fd7e9] hover:shadow-xl"
-                  >
-                    <div className="text-xs font-black uppercase tracking-[.16em] text-[#159dc5]">
-                      Knowledge 0{index + 1}
-                    </div>
-                    <h3 className="mt-5 text-xl font-black text-[#304b5d]">{title}</h3>
-                    <p className="mt-4 flex-1 text-sm leading-6 text-[#607684]">{body}</p>
-                    <Link
-                      href={target}
-                      className="mt-6 inline-flex items-center gap-2 text-sm font-black text-[#159dc5] transition group-hover:text-[#0d7e9d]"
-                    >
-                      {button}<ArrowIcon />
-                    </Link>
-                  </article>
-                );
-              })}
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-6">
-              <div className="flex flex-wrap items-center gap-2 text-[11px] font-black uppercase tracking-[.12em] text-[#496172]">
-                {t.knowledgeFlow.map((label, index) => (
-                  <div key={label} className="contents">
-                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">{label}</span>
-                    {index < t.knowledgeFlow.length - 1 && <span>→</span>}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="tools" className="scroll-mt-24 relative overflow-hidden bg-gradient-to-br from-[#dbeaec] via-[#e8f0f2] to-[#d7e3e7] px-6 py-24">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.9fr] lg:items-center">
-            <div>
-              <Eyebrow>{t.toolsEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.toolsTitle}</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">{t.toolsText}</p>
-              <div className="mt-9 grid gap-4 sm:grid-cols-2">
-                {t.tools.map(([title, text], index) => (
-                  <div key={title} className="rounded-2xl border border-[#c6d7dc] bg-[#edf3f4] p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                    <div className="flex items-center gap-3">
-                      <div className="grid h-9 w-9 place-items-center rounded-lg bg-[#dff4f8] text-xs font-black text-[#159dc5]">0{index + 1}</div>
-                      <h3 className="font-black text-[#304b5d]">{title}</h3>
-                    </div>
-                    <p className="mt-4 text-sm leading-6 text-slate-600">{text}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-cyan-600 px-6 py-4 font-black text-white transition hover:bg-cyan-700">
-                  {t.toolsButton}<ArrowIcon />
-                </a>
-                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-6 py-4 font-black text-[#304b5d] transition hover:border-[#7fd7e9] hover:bg-white">
-                  {sales.appProjectButton}<ArrowIcon />
-                </a>
-              </div>
-              <p className="mt-3 text-sm text-slate-500">{t.toolsNote}</p>
-              <div className="mt-6 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-5">
-                <div className="text-xs font-black uppercase tracking-[.16em] text-emerald-800">{sales.appBoundaryTitle}</div>
-                <p className="mt-2 text-sm leading-6 text-[#526b78]">{sales.appBoundaryText}</p>
-              </div>
-            </div>
-
-            <div className="relative mx-auto w-full max-w-2xl pb-12 lg:pb-16">
-              <div className="overflow-hidden rounded-3xl border border-[#b8cfd6] bg-[#304b5d] p-2 shadow-[0_28px_70px_rgba(48,75,93,.20)]">
-                <div className="flex items-center gap-2 rounded-t-2xl bg-[#3b596b] px-4 py-3">
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#70d8cf]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-[#6fcce3]" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-white/50" />
-                  <span className="ml-3 text-[10px] font-black uppercase tracking-[.16em] text-white/70">{sales.appVisualLabel}</span>
-                </div>
-                <a href={APP_URL} target="_blank" rel="noreferrer" aria-label={t.toolsButton} className="block">
-                  <img src="/images/marketing/engineering-tools-desktop.webp" alt={sales.appVisualLabel} className="block w-full rounded-b-2xl transition duration-500 hover:scale-[1.008]" />
-                </a>
-              </div>
-              {currentLocale !== 'en' && (
-                <a
-                  href={APP_URL}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="absolute -bottom-1 right-2 w-[30%] min-w-[145px] max-w-[205px] overflow-hidden rounded-[2rem] border-[7px] border-[#304b5d] bg-[#304b5d] shadow-2xl transition hover:-translate-y-1 sm:right-8"
-                  aria-label={t.toolsButton}
-                >
-                  <img
-                    src={currentLocale === 'de' ? '/images/marketing/engineering-tools-mobile-de.webp' : '/images/marketing/engineering-tools-mobile-es.webp'}
-                    alt="SISTEA Engineering Tools mobile"
-                    className="block w-full"
-                  />
-                </a>
-              )}
-              <div className="mt-5 max-w-md rounded-2xl border border-[#c3d5da] bg-[#eaf1f2] p-5 text-sm leading-6 text-[#607684] shadow-sm">
-                <div className="font-black text-[#304b5d]">{sales.appVisualLabel}</div>
-                <p className="mt-2">{sales.appVisualText}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="books" className="scroll-mt-24 bg-gradient-to-br from-[#dfe9ec] via-[#e8f0f1] to-[#dbe9eb] px-6 py-24 text-[#304b5d]">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.booksEyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.booksTitle}</h2>
-              </div>
-              <div>
-                <p className="text-lg leading-8 text-[#607684]">{t.booksText}</p>
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-3.5 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
-                    {t.booksButton}<ArrowIcon />
-                  </a>
-                  <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-6 py-3.5 font-black text-[#304b5d] transition hover:border-[#7fd7e9] hover:bg-white">
-                    {sales.booksProjectButton}<ArrowIcon />
-                  </a>
-                </div>
-                <p className="mt-3 text-sm text-[#718692]">{t.booksLinkText}</p>
-              </div>
-            </div>
-
-            <div className="mt-14 grid gap-8 lg:grid-cols-[1.15fr_.85fr] lg:items-center">
-              <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="group overflow-hidden rounded-3xl border border-[#b9ced5] bg-[#304b5d] p-2 shadow-[0_25px_65px_rgba(48,75,93,.16)]">
-                <img src="/images/marketing/engineering-series-amazon.webp" alt="SISTEA Engineering Series on Amazon" className="w-full rounded-[1.25rem] transition duration-500 group-hover:scale-[1.015]" />
-              </a>
-              <div>
-                <div className="rounded-2xl border border-[#bcd1d7] bg-[#e6eff1] p-6">
-                  <div className="text-xs font-black uppercase tracking-[.18em] text-[#159dc5]">{sales.booksVisualLabel}</div>
-                  <p className="mt-3 leading-7 text-[#607684]">{sales.booksVisualText}</p>
-                </div>
-                <div className="mt-4 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-6">
-                  <div className="text-xs font-black uppercase tracking-[.18em] text-emerald-800">{sales.knowledgeBridgeTitle}</div>
-                  <p className="mt-3 text-sm leading-6 text-[#526b78]">{sales.knowledgeBridgeText}</p>
-                  <div className="mt-5 flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-[.12em] text-[#496172]">
-                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Books</span>
-                    <span>→</span>
-                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Tools</span>
-                    <span>→</span>
-                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Engineering</span>
-                    <span>→</span>
-                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Project</span>
-                  </div>
-                </div>
-                <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-                  {t.books.map(([code, title, color]) => (
-                    <div key={code} className="flex items-center gap-4 rounded-xl border border-[#c4d5da] bg-[#edf3f4] p-4">
-                      <div className="grid h-11 min-w-14 place-items-center rounded-lg px-2 text-xs font-black text-white" style={{backgroundColor: color}}>{code}</div>
-                      <div className="font-black leading-5 text-[#304b5d]">{title}</div>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-5 grid grid-cols-2 gap-2 text-center text-[10px] font-black uppercase tracking-[.13em] text-[#607684] sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-                  {sales.bookActions.map((label) => <div key={label} className="rounded-lg border border-[#c5d7dc] bg-[#e8eff1] px-3 py-3">{label}</div>)}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="procurement" className="scroll-mt-24 bg-[#d9e4e8] px-6 py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.procurementEyebrow}</Eyebrow>
-                <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">
-                  {t.procurementTitle}
-                </h2>
-              </div>
-              <div>
-                <p className="text-lg leading-8 text-[#607684]">{t.procurementText}</p>
-                <div className="mt-5 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-5 text-sm font-semibold leading-6 text-[#526b78]">
-                  {t.procurementPromise}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {t.procurementStats.map(([value, label]) => (
-                <div key={label} className="rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-6 shadow-sm">
-                  <div className="text-3xl font-black tracking-tight text-[#159dc5]">{value}</div>
-                  <p className="mt-2 text-sm font-bold leading-6 text-[#4f6675]">{label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-10 overflow-hidden rounded-3xl border border-[#bdd3da] bg-[#31596a] p-7 text-white shadow-[0_20px_55px_rgba(48,75,93,.14)] sm:p-9">
-              <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">
-                {t.procurementFlowLabel}
-              </div>
-
-              <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {t.procurementSteps.map(([n, title, body]) => (
-                  <article key={n} className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur">
-                    <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-200">{n}</div>
-                    <h3 className="mt-3 text-lg font-black">{title}</h3>
-                    <p className="mt-3 text-sm leading-6 text-white/72">{body}</p>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-8 grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
-              <div className="rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-6">
-                <div className="text-2xl font-black tracking-tight text-[#304b5d]">{t.procurementCta}</div>
-                <p className="mt-2 text-sm leading-6 text-[#607684]">
-                  {t.procurementIntegrationText}
-                </p>
-              </div>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white shadow-sm transition hover:bg-[#159dc5]"
-              >
-                {t.procurementButton}<ArrowIcon />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section id="esi" className="bg-[#e4edef] px-6 py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.financeEyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
-              </div>
-              <div>
-                <p className="text-lg leading-8 text-slate-600">{t.financeText}</p>
-                <p className="mt-4 rounded-2xl border border-[#bcd8d2] bg-[#dfece8] p-5 text-sm font-semibold leading-6 text-[#496172]">{t.financeMembership}</p>
-              </div>
-            </div>
-
-            <div className="mt-12 grid gap-5 lg:grid-cols-3">
-              {t.financeModels.map(([title, body], index) => (
-                <article key={title} className="group relative overflow-hidden rounded-3xl border border-[#bfd3d8] bg-[#edf3f4] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                  <div className="absolute right-5 top-2 text-7xl font-black text-[#dfeaec]">0{index + 1}</div>
-                  <div className="relative">
-                    <div className="inline-flex rounded-full bg-[#d8edf1] px-3 py-1 text-[10px] font-black uppercase tracking-[.16em] text-[#159dc5]">
-                      {index === 0 ? "Risk & Savings" : index === 1 ? "Cooling Service" : "Integrated Project"}
-                    </div>
-                    <h3 className="mt-5 text-2xl font-black tracking-tight text-[#304b5d]">{title}</h3>
-                    <p className="mt-4 leading-7 text-slate-600">{body}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-8 grid gap-5 lg:grid-cols-[.9fr_1.1fr]">
-              <div className="rounded-3xl border border-[#bfd9d2] bg-[#dfece8] p-7 sm:p-9">
-                <div className="text-xs font-black uppercase tracking-[.18em] text-emerald-800">Technical → Economic → Financeable</div>
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  {t.financePoints.map((point) => (
-                    <div key={point} className="rounded-xl bg-[#eef4f2] p-4 font-semibold leading-6 text-slate-800 shadow-sm">{point}</div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="rounded-3xl border border-[#bdd3da] bg-[#31596a] p-7 text-white shadow-[0_18px_50px_rgba(48,75,93,.12)] sm:p-9">
-                <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">{t.financeSourcesLabel}</div>
-                <p className="mt-4 max-w-3xl leading-7 text-white/75">
-                  BASE · Energy Savings Insurance · Cooling-as-a-Service · SET Alliance · UNEP sustainable cooling and finance.
-                </p>
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <Link href={`/${currentLocale}/financing`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white transition hover:bg-[#159dc5]">
-                    {t.financeDetailButton}<ArrowIcon />
-                  </Link>
-                  <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-6 py-4 font-black text-white backdrop-blur transition hover:bg-white/20">
-                    {t.financeButton}<ArrowIcon />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="industries" className="scroll-mt-24 bg-[#d9e4e8] px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <Eyebrow>{t.industriesEyebrow}</Eyebrow>
@@ -1481,7 +1131,161 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section className="bg-[#e5edef] px-6 py-24">
+                <section id="knowledge" className="scroll-mt-24 bg-[#edf3f4] px-6 py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
+              <div>
+                <Eyebrow>{t.knowledgeEyebrow}</Eyebrow>
+                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.knowledgeTitle}</h2>
+              </div>
+              <p className="text-lg leading-8 text-[#607684]">{t.knowledgeText}</p>
+            </div>
+
+            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+              <article id="tools" className="scroll-mt-24 overflow-hidden rounded-3xl border border-[#bfd3d8] bg-[#e4ecef] shadow-sm">
+                <div className="p-6 sm:p-8">
+                  <Eyebrow>{t.toolsEyebrow}</Eyebrow>
+                  <h3 className="mt-3 text-2xl font-black tracking-tight text-[#304b5d]">{t.toolsTitle}</h3>
+                  <p className="mt-4 leading-7 text-[#607684]">{t.toolsText}</p>
+                  <div className="mt-5 grid gap-2 sm:grid-cols-2">
+                    {t.tools.map(([title], index) => (
+                      <div key={title} className="flex items-center gap-3 rounded-xl border border-[#c6d7dc] bg-[#edf3f4] p-3">
+                        <span className="grid h-7 w-7 flex-none place-items-center rounded-lg bg-[#dff4f8] text-[10px] font-black text-[#159dc5]">0{index + 1}</span>
+                        <span className="text-sm font-black text-[#304b5d]">{title}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-5 rounded-xl border border-[#b9d6d0] bg-[#dfece8] p-4">
+                    <div className="text-xs font-black uppercase tracking-[.14em] text-emerald-800">{sales.appBoundaryTitle}</div>
+                    <p className="mt-2 text-sm leading-6 text-[#526b78]">{sales.appBoundaryText}</p>
+                  </div>
+                  <div className="mt-5 flex flex-col gap-2 sm:flex-row">
+                    <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-5 py-3 font-black text-white hover:bg-[#159dc5]">{t.toolsButton}<ArrowIcon /></a>
+                    <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-5 py-3 font-black text-[#304b5d]">{sales.appProjectButton}<ArrowIcon /></a>
+                  </div>
+                </div>
+                <a href={APP_URL} target="_blank" rel="noreferrer" className="block border-t border-[#bfd3d8] bg-[#304b5d] p-2">
+                  <img src="/images/marketing/engineering-tools-desktop.webp" alt={sales.appVisualLabel} className="w-full rounded-2xl" />
+                </a>
+              </article>
+
+              <article id="books" className="scroll-mt-24 overflow-hidden rounded-3xl border border-[#bfd3d8] bg-[#e4ecef] shadow-sm">
+                <div className="p-6 sm:p-8">
+                  <Eyebrow>{t.booksEyebrow}</Eyebrow>
+                  <h3 className="mt-3 text-2xl font-black tracking-tight text-[#304b5d]">{t.booksTitle}</h3>
+                  <p className="mt-4 leading-7 text-[#607684]">{t.booksText}</p>
+                  <div className="mt-5 grid gap-2 sm:grid-cols-2">
+                    {t.books.map(([code, title, color]) => (
+                      <div key={code} className="flex items-center gap-3 rounded-xl border border-[#c4d5da] bg-[#edf3f4] p-3">
+                        <div className="grid h-8 min-w-12 place-items-center rounded-lg px-2 text-[10px] font-black text-white" style={{backgroundColor: color}}>{code}</div>
+                        <div className="text-sm font-black leading-5 text-[#304b5d]">{title}</div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="mt-5 rounded-xl border border-[#b9d6d0] bg-[#dfece8] p-4">
+                    <div className="text-xs font-black uppercase tracking-[.14em] text-emerald-800">{sales.knowledgeBridgeTitle}</div>
+                    <p className="mt-2 text-sm leading-6 text-[#526b78]">{sales.knowledgeBridgeText}</p>
+                  </div>
+                  <div className="mt-5 flex flex-col gap-2 sm:flex-row">
+                    <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-5 py-3 font-black text-white hover:bg-[#159dc5]">{t.booksButton}<ArrowIcon /></a>
+                    <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-5 py-3 font-black text-[#304b5d]">{sales.booksProjectButton}<ArrowIcon /></a>
+                  </div>
+                </div>
+                <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="block border-t border-[#bfd3d8] bg-[#304b5d] p-2">
+                  <img src="/images/marketing/engineering-series-amazon.webp" alt="SISTEA Engineering Series on Amazon" className="w-full rounded-2xl" />
+                </a>
+              </article>
+            </div>
+
+            <div className="mt-6 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-5">
+              <div className="flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-[.12em] text-[#496172]">
+                {t.knowledgeFlow.map((label, index) => (
+                  <div key={label} className="contents">
+                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">{label}</span>
+                    {index < t.knowledgeFlow.length - 1 && <span>→</span>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="procurement" className="scroll-mt-24 bg-[#d9e4e8] px-6 py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
+              <div>
+                <Eyebrow>{t.procurementEyebrow}</Eyebrow>
+                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.procurementTitle}</h2>
+              </div>
+              <div>
+                <p className="text-lg leading-8 text-[#607684]">{t.procurementText}</p>
+                <p className="mt-4 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-4 text-sm font-semibold leading-6 text-[#526b78]">{t.procurementPromise}</p>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {t.procurementStats.map(([value, label]) => (
+                <div key={label} className="rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-5">
+                  <div className="text-2xl font-black text-[#159dc5]">{value}</div>
+                  <p className="mt-1 text-sm font-bold leading-5 text-[#4f6675]">{label}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 rounded-3xl border border-[#bdd3da] bg-[#31596a] p-6 text-white sm:p-8">
+              <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-200">{t.procurementFlowLabel}</div>
+              <div className="mt-5 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
+                {t.procurementSteps.map(([n, title, body]) => (
+                  <div key={n} className="rounded-xl border border-white/15 bg-white/10 p-4">
+                    <div className="text-[10px] font-black text-cyan-200">{n}</div>
+                    <div className="mt-2 font-black">{title}</div>
+                    <p className="mt-2 text-xs leading-5 text-white/70">{body}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-6 flex flex-col gap-4 rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-6 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <div className="text-xl font-black text-[#304b5d]">{t.procurementCta}</div>
+                <p className="mt-1 text-sm leading-6 text-[#607684]">{t.procurementIntegrationText}</p>
+              </div>
+              <a href="#contact" className="inline-flex flex-none items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white hover:bg-[#159dc5]">{t.procurementButton}<ArrowIcon /></a>
+            </div>
+          </div>
+        </section>
+
+        <section id="esi" className="scroll-mt-24 bg-[#e4edef] px-6 py-20 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
+              <div>
+                <Eyebrow>{t.financeEyebrow}</Eyebrow>
+                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
+              </div>
+              <div>
+                <p className="text-lg leading-8 text-slate-600">{t.financeText}</p>
+                <p className="mt-4 rounded-2xl border border-[#bcd8d2] bg-[#dfece8] p-4 text-sm font-semibold leading-6 text-[#496172]">{t.financeMembership}</p>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-4 lg:grid-cols-3">
+              {t.financeModels.map(([title, body], index) => (
+                <article key={title} className="rounded-2xl border border-[#bfd3d8] bg-[#edf3f4] p-6">
+                  <div className="text-xs font-black uppercase tracking-[.15em] text-[#159dc5]">0{index + 1}</div>
+                  <h3 className="mt-3 text-xl font-black text-[#304b5d]">{title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-600">{body}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link href={`/${currentLocale}/financing`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white hover:bg-[#159dc5]">{t.financeDetailButton}<ArrowIcon /></Link>
+              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-6 py-4 font-black text-[#304b5d]">{t.financeButton}<ArrowIcon /></a>
+            </div>
+          </div>
+        </section>
+
+<section className="bg-[#e5edef] px-6 py-24">
           <div className="mx-auto max-w-7xl rounded-3xl border border-[#d7e8ed] bg-gradient-to-br from-[#d9e8eb] via-[#e6eef0] to-[#dce9e5] p-8 text-[#304b5d] shadow-sm sm:p-12 lg:p-14">
             <div className="max-w-4xl">
               <Eyebrow>{t.whyEyebrow}</Eyebrow>
@@ -1495,22 +1299,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   <p className="mt-3 text-sm leading-6 text-[#607684]">{text}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-[#d7e5e8] px-6 py-16 lg:py-20">
-          <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-[#b9d1d7] bg-gradient-to-br from-[#31596a] via-[#3f6f7a] to-[#568791] p-8 text-white shadow-[0_24px_70px_rgba(48,75,93,.18)] sm:p-12 lg:p-14">
-            <div className="grid gap-9 lg:grid-cols-[1fr_auto] lg:items-end">
-              <div className="max-w-4xl">
-                <Eyebrow light>{sales.finalEyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{sales.finalTitle}</h2>
-                <p className="mt-5 max-w-3xl text-lg leading-8 text-white/75">{sales.finalText}</p>
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-                <a href="#energy" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white shadow-lg transition hover:bg-[#159dc5]">{sales.finalEnergy}<ArrowIcon /></a>
-                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-6 py-4 font-black text-white backdrop-blur transition hover:bg-white/20">{sales.finalProject}<ArrowIcon /></a>
-              </div>
             </div>
           </div>
         </section>
