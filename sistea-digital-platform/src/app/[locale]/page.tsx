@@ -195,6 +195,12 @@ const translations = {
     ],
     procurementCta: "Compare nuestra propuesta. Pónganos a prueba.",
     procurementButton: "Solicitar comparación técnica y comercial",
+    procurementIntegrationText: "SISTEA integra diseño técnico, selección de proveedores y compras en un solo proceso de proyecto.",
+    procurementFlowLabel: "Ingeniería → Fabricante → Precio de fábrica → Verificación → Logística → Integración",
+    knowledgeFlow: ["Conocimiento", "Cálculo", "Validación", "Ingeniería", "Proyecto"],
+    brandPortfolioLabel: "Portafolio oficial de productos ↗",
+    brandEvaluationText: "YORK · Carrier · Trane se evalúan según el proyecto, considerando perfil de carga, eficiencia, hidráulica, ruido, redundancia, servicio y costo total de propiedad.",
+    contactEyebrow: "Contacto de proyecto",
     sourcingEyebrow: "Compras técnicas & suministro directo",
     sourcingTitle: "Más de 20 años de experiencia propia en compras y comercio mayorista en Shanghái / China",
     sourcingText:
@@ -398,6 +404,12 @@ const translations = {
     ],
     procurementCta: "Compare our proposal. Put us to the test.",
     procurementButton: "Request technical and commercial comparison",
+    procurementIntegrationText: "SISTEA integrates technical design, supplier selection and procurement into one project process.",
+    procurementFlowLabel: "Engineering → Manufacturer → Factory Price → Verification → Logistics → Integration",
+    knowledgeFlow: ["Knowledge", "Calculation", "Validation", "Engineering", "Project"],
+    brandPortfolioLabel: "Official product portfolio ↗",
+    brandEvaluationText: "YORK · Carrier · Trane are evaluated project by project based on load profile, efficiency, hydraulics, noise, redundancy, service and total cost of ownership.",
+    contactEyebrow: "Project Contact",
     sourcingEyebrow: "Technical Procurement & Direct Sourcing",
     sourcingTitle: "More than 20 years of our own sourcing and wholesale experience across China",
     sourcingText:
@@ -601,6 +613,12 @@ const translations = {
     ],
     procurementCta: "Vergleichen Sie unser Angebot. Testen Sie uns.",
     procurementButton: "Technischen und kaufmännischen Vergleich anfragen",
+    procurementIntegrationText: "SISTEA verbindet technische Auslegung, Lieferantenauswahl und Beschaffung zu einem durchgängigen Projektprozess.",
+    procurementFlowLabel: "Engineering → Hersteller → Werkspreis → Prüfung → Logistik → Integration",
+    knowledgeFlow: ["Wissen", "Berechnung", "Validierung", "Engineering", "Projekt"],
+    brandPortfolioLabel: "Offizielles Produktportfolio ↗",
+    brandEvaluationText: "YORK · Carrier · Trane werden projektbezogen nach Lastprofil, Effizienz, Hydraulik, Schall, Redundanz, Service und Total Cost of Ownership bewertet.",
+    contactEyebrow: "Projektkontakt",
     sourcingEyebrow: "Technische Beschaffung & Direktbezug",
     sourcingTitle: "Seit über 20 Jahren eigener Großhandel und Beschaffung in ganz China",
     sourcingText:
@@ -655,10 +673,6 @@ const salesCopy = {
     energyProfileLabel: "Perfil de carga · demanda · estacionalidad",
     potentialLabel: "potencial*",
     visualFootnote: "*Escenario ilustrativo de preevaluación. El ahorro real requiere validación de ingeniería.",
-    sourcingSteps: ["Especificar", "Comparar", "Verificar", "Transportar", "Integrar"],
-    sourcingFlowTitle: "Flujo de compra directa",
-    sourcingYearsLabel: "años",
-    sourcingCountryCards: [["DE", "Especificación"], ["CN", "Fábrica + QC"], ["SV", "Entrega del proyecto"]],
     appVisualLabel: "Interfaz real de SISTEA Engineering Tools",
     appVisualText: "Instalable en iPhone y Android. Los cálculos estructuran la conversación técnica y pasan a revisión de SISTEA.",
     appBoundaryTitle: "La app calcula. SISTEA valida.",
@@ -670,8 +684,6 @@ const salesCopy = {
     bookActions: ["Comprender", "Calcular", "Diseñar", "Optimizar"],
     booksVisualLabel: "Competencia visible, no solo afirmada",
     booksVisualText: "La serie conecta refrigeración, HVAC, energía, automatización y data centers con metodología de ingeniería práctica.",
-    sourcingVisualLabel: "Especificación → fábrica → verificación → logística",
-    sourcingVisualText: "La compra empieza con una especificación técnica clara. Luego comparamos fabricante, solución, calidad y condiciones de suministro.",
     finalEyebrow: "Siguiente paso",
     finalTitle: "No empiece comprando equipos. Empiece comprobando dónde está el potencial.",
     finalText: "SISTEA puede comenzar con una revisión energética, una consulta técnica o una especificación de compra. Después definimos ingeniería, inversión y financiamiento.",
@@ -700,10 +712,6 @@ const salesCopy = {
     energyProfileLabel: "Load profile · demand · seasonality",
     potentialLabel: "potential*",
     visualFootnote: "*Illustrative screening scenario. Actual savings require engineering validation.",
-    sourcingSteps: ["Specify", "Compare", "Verify", "Ship", "Integrate"],
-    sourcingFlowTitle: "Direct sourcing workflow",
-    sourcingYearsLabel: "years",
-    sourcingCountryCards: [["DE", "Specification"], ["CN", "Factory + QC"], ["SV", "Project delivery"]],
     appVisualLabel: "Actual SISTEA Engineering Tools interface",
     appVisualText: "Installable on iPhone and Android. Calculations structure the technical discussion and move to SISTEA engineering review.",
     appBoundaryTitle: "The app calculates. SISTEA validates.",
@@ -715,8 +723,6 @@ const salesCopy = {
     bookActions: ["Understand", "Calculate", "Design", "Optimize"],
     booksVisualLabel: "Visible competence, not just a claim",
     booksVisualText: "The series connects refrigeration, HVAC, energy, automation and data centers through practical engineering methodology.",
-    sourcingVisualLabel: "Specification → factory → verification → logistics",
-    sourcingVisualText: "Procurement starts with a clear technical specification. We then compare manufacturer, solution, quality and supply conditions.",
     finalEyebrow: "Next step",
     finalTitle: "Do not start by buying equipment. Start by proving where the opportunity is.",
     finalText: "SISTEA can begin with an energy screening, technical consultation or procurement specification. Then we define engineering, investment and financing.",
@@ -745,10 +751,6 @@ const salesCopy = {
     energyProfileLabel: "Lastprofil · Leistung · Saisonalität",
     potentialLabel: "Potenzial*",
     visualFootnote: "*Illustratives Erstprüfungsszenario. Tatsächliche Einsparungen erfordern eine technische Validierung.",
-    sourcingSteps: ["Spezifizieren", "Vergleichen", "Prüfen", "Transportieren", "Integrieren"],
-    sourcingFlowTitle: "Direktbeschaffung – Prozess",
-    sourcingYearsLabel: "Jahre",
-    sourcingCountryCards: [["DE", "Spezifikation"], ["CN", "Werk + QC"], ["SV", "Projektlieferung"]],
     appVisualLabel: "Echte Oberfläche der SISTEA Engineering Tools",
     appVisualText: "Installierbar auf iPhone und Android. Die Berechnungen strukturieren das Projekt und führen anschließend zur technischen Prüfung durch SISTEA.",
     appBoundaryTitle: "Die App rechnet. SISTEA validiert.",
@@ -760,8 +762,6 @@ const salesCopy = {
     bookActions: ["Verstehen", "Berechnen", "Planen", "Optimieren"],
     booksVisualLabel: "Kompetenz sichtbar belegen",
     booksVisualText: "Die Reihe verbindet Kälte, HVAC, Energie, Automation und Data Center mit praxisorientierter Engineering-Methodik.",
-    sourcingVisualLabel: "Spezifikation → Werk → Prüfung → Logistik",
-    sourcingVisualText: "Beschaffung beginnt mit einer klaren technischen Spezifikation. Danach vergleichen wir Hersteller, Lösung, Qualität und Lieferkonditionen.",
     finalEyebrow: "Nächster Schritt",
     finalTitle: "Nicht mit dem Gerätekauf beginnen. Zuerst prüfen, wo das Potenzial liegt.",
     finalText: "SISTEA kann mit einer Energie-Erstprüfung, einer technischen Anfrage oder einer Beschaffungsspezifikation starten. Danach definieren wir Engineering, Investition und Finanzierung.",
@@ -835,7 +835,7 @@ function LoadProfileVisual({
             <span className="inline-flex items-center gap-2"><span className="h-1 w-7 rounded-full bg-emerald-300" />{optimizedLabel}</span>
           </div>
         </div>
-        <p className="mt-4 text-xs leading-5 text-white/60">*Illustrative screening scenario. Actual savings require engineering validation.</p>
+        <p className="mt-4 text-xs leading-5 text-white/60">{footnote}</p>
       </div>
     </div>
   );
@@ -861,44 +861,6 @@ function Eyebrow({ children, light = false }: { children: ReactNode; light?: boo
     <p className={`text-xs font-black uppercase tracking-[.22em] ${light ? "text-[#2aaed1]" : "text-[#168fb4]"}`}>
       {children}
     </p>
-  );
-}
-
-function SourcingFlowVisual({ steps, title, yearsLabel, countryCards }: { steps: readonly string[]; title: string; yearsLabel: string; countryCards: readonly (readonly [string, string])[] }) {
-  const icons = ["01", "02", "03", "04", "05"];
-  return (
-    <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-[#244858]/78 p-6 shadow-2xl backdrop-blur-md sm:p-8">
-      <div className="absolute -right-12 -top-12 h-44 w-44 rounded-full bg-cyan-300/15 blur-3xl" />
-      <div className="relative">
-        <div className="flex items-center justify-between gap-4">
-          <div>
-            <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">China · Direct Sourcing</div>
-            <div className="mt-2 text-2xl font-black text-white">{title}</div>
-          </div>
-          <div className="rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-right">
-            <div className="text-2xl font-black text-cyan-200">20+</div>
-            <div className="text-[9px] font-black uppercase tracking-[.15em] text-white/60">{yearsLabel}</div>
-          </div>
-        </div>
-        <div className="mt-8 grid grid-cols-5 gap-2">
-          {steps.map((step, index) => (
-            <div key={step} className="relative min-w-0">
-              {index < steps.length - 1 && <div className="absolute left-[65%] top-5 h-px w-[75%] bg-cyan-200/35" />}
-              <div className="relative mx-auto grid h-10 w-10 place-items-center rounded-full border border-cyan-200/40 bg-[#31596a] text-[10px] font-black text-cyan-100">{icons[index]}</div>
-              <div className="mt-3 break-words text-center text-[9px] font-black uppercase leading-4 tracking-[.08em] text-white/75 sm:text-[10px]">{step}</div>
-            </div>
-          ))}
-        </div>
-        <div className="mt-8 grid grid-cols-3 gap-3 text-center">
-          {countryCards.map(([code, label]) => (
-            <div key={code} className="rounded-xl border border-white/15 bg-white/10 px-2 py-3">
-              <div className="text-base font-black text-cyan-200">{code}</div>
-              <div className="mt-1 text-[9px] font-bold uppercase tracking-[.08em] text-white/55">{label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -1187,7 +1149,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 <div>
                   <p className="text-xs font-black uppercase tracking-[.18em] text-[#718692]">{t.brandsLabel}</p>
                   <p className="mt-3 text-sm leading-6 text-[#607684]">
-                    YORK · Carrier · Trane werden projektbezogen nach Lastprofil, Effizienz, Hydraulik, Schall, Redundanz, Service und Total Cost of Ownership bewertet.
+                    {t.brandEvaluationText}
                   </p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-3">
@@ -1200,7 +1162,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                       className="group rounded-2xl border border-[#c4d7dc] bg-[#f2f7f8] px-5 py-5 text-center transition hover:-translate-y-0.5 hover:border-[#7fd7e9] hover:shadow-lg"
                     >
                       <div className="text-xl font-black text-[#405d70]">{brand}</div>
-                      <div className="mt-2 text-[10px] font-black uppercase tracking-[.14em] text-[#159dc5]">Official product portfolio ↗</div>
+                      <div className="mt-2 text-[10px] font-black uppercase tracking-[.14em] text-[#159dc5]">{t.brandPortfolioLabel}</div>
                     </a>
                   ))}
                 </div>
@@ -1249,15 +1211,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
             <div className="mt-8 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-6">
               <div className="flex flex-wrap items-center gap-2 text-[11px] font-black uppercase tracking-[.12em] text-[#496172]">
-                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Knowledge</span>
-                <span>→</span>
-                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Calculation</span>
-                <span>→</span>
-                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Validation</span>
-                <span>→</span>
-                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Engineering</span>
-                <span>→</span>
-                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Project</span>
+                {t.knowledgeFlow.map((label, index) => (
+                  <div key={label} className="contents">
+                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">{label}</span>
+                    {index < t.knowledgeFlow.length - 1 && <span>→</span>}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -1417,7 +1376,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
             <div className="mt-10 overflow-hidden rounded-3xl border border-[#bdd3da] bg-[#31596a] p-7 text-white shadow-[0_20px_55px_rgba(48,75,93,.14)] sm:p-9">
               <div className="text-xs font-black uppercase tracking-[.18em] text-cyan-200">
-                Engineering → Manufacturer → Factory Price → Verification → Logistics → Integration
+                {t.procurementFlowLabel}
               </div>
 
               <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -1435,7 +1394,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <div className="rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-6">
                 <div className="text-2xl font-black tracking-tight text-[#304b5d]">{t.procurementCta}</div>
                 <p className="mt-2 text-sm leading-6 text-[#607684]">
-                  SISTEA verbindet technische Auslegung, Lieferantenauswahl und Beschaffung zu einem Projektprozess.
+                  {t.procurementIntegrationText}
                 </p>
               </div>
               <a
@@ -1523,45 +1482,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
 
         <section className="bg-[#e5edef] px-6 py-24">
-          <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-[#c3d4d9] bg-[#edf3f4] shadow-[0_18px_50px_rgba(48,75,93,.10)]">
-            <div className="grid lg:grid-cols-[1.05fr_.95fr]">
-              <div className="p-8 sm:p-12 lg:p-14">
-                <Eyebrow>{t.sourcingEyebrow}</Eyebrow>
-                <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.sourcingTitle}</h2>
-                <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-600">{t.sourcingText}</p>
-                <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                  {t.sourcingPoints.map((point) => (
-                    <div key={point} className="flex items-start gap-3 rounded-xl border border-[#c8d8dd] bg-[#e4ecef] p-4 text-sm leading-6 text-slate-700">
-                      <span className="mt-0.5 text-emerald-700"><CheckIcon /></span>
-                      <span className="font-semibold">{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative min-h-[540px] overflow-hidden bg-[#31596a] text-white">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_15%,rgba(103,216,230,.18),transparent_28%),linear-gradient(145deg,#234455,#31596a_50%,#4d7f89)]" />
-                <div className="relative flex h-full min-h-[540px] flex-col justify-between p-8 sm:p-12 lg:p-14">
-                  <div>
-                    <div className="inline-flex rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[.17em] text-cyan-100 backdrop-blur">China · Direct Factory Access</div>
-                    <div className="mt-7"><SourcingFlowVisual steps={sales.sourcingSteps} title={sales.sourcingFlowTitle} yearsLabel={sales.sourcingYearsLabel} countryCards={sales.sourcingCountryCards} /></div>
-                    <div className="mt-6 rounded-2xl border border-white/20 bg-[#244858]/70 p-5 backdrop-blur-md">
-                      <div className="text-xs font-black uppercase tracking-[.17em] text-cyan-200">{sales.sourcingVisualLabel}</div>
-                      <p className="mt-3 text-sm leading-6 text-white/75">{sales.sourcingVisualText}</p>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-sm leading-6 text-white/75">{t.sourcingNote}</p>
-                    <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 text-center font-black text-white shadow-lg transition hover:bg-[#159dc5]">
-                      {t.sourcingButton}<ArrowIcon />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-[#e5edef] px-6 py-24">
           <div className="mx-auto max-w-7xl rounded-3xl border border-[#d7e8ed] bg-gradient-to-br from-[#d9e8eb] via-[#e6eef0] to-[#dce9e5] p-8 text-[#304b5d] shadow-sm sm:p-12 lg:p-14">
             <div className="max-w-4xl">
               <Eyebrow>{t.whyEyebrow}</Eyebrow>
@@ -1598,7 +1518,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <section id="contact" className="bg-gradient-to-b from-[#e2ebee] to-[#d8e8eb] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.85fr_1.15fr]">
             <div>
-              <Eyebrow>Project Contact</Eyebrow>
+              <Eyebrow>{t.contactEyebrow}</Eyebrow>
               <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.contactTitle}</h2>
               <p className="mt-6 text-lg leading-8 text-slate-600">{t.contactText}</p>
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 font-black text-white transition hover:bg-emerald-700">
