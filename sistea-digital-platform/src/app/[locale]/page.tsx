@@ -163,6 +163,16 @@ const translations = {
       ["Logística", "Cold chain, almacenes, ventilación, energía y monitoreo."],
       ["Data Centers", "Alta densidad térmica, redundancia, energía, baterías y control."],
     ],
+    knowledgeEyebrow: "Conocimiento técnico SISTEA",
+    knowledgeTitle: "Conocimiento que se convierte en decisiones de ingeniería",
+    knowledgeText:
+      "SISTEA conecta documentación técnica, herramientas de cálculo, análisis energético y modelos de financiamiento. El objetivo no es acumular información, sino convertirla en una decisión técnica y económica aplicable al proyecto.",
+    knowledgeItems: [
+      ["Engineering Tools", "Cálculos iniciales para estructurar datos, carga, capacidad, unidades y primera selección.", "Abrir herramientas", "#tools"],
+      ["Engineering Series", "Metodología documentada para refrigeración, HVAC, energía, automatización y data centers.", "Ver libros", "#books"],
+      ["Energía & Demanda", "Facturas, línea base, perfil de carga y primera identificación del potencial de ahorro.", "Analizar energía", "#energy"],
+      ["Financiamiento", "ESI, Cooling-as-a-Service y modelos de servicio para convertir medidas viables en proyectos ejecutables.", "Ver modelos", "/financing"],
+    ],
     sourcingEyebrow: "Compras técnicas & suministro directo",
     sourcingTitle: "Más de 20 años de experiencia propia en compras y comercio mayorista en Shanghái / China",
     sourcingText:
@@ -334,6 +344,16 @@ const translations = {
       ["Logistics", "Cold chain, warehouses, ventilation, energy and monitoring."],
       ["Data Centers", "High heat density, redundancy, energy, batteries and controls."],
     ],
+    knowledgeEyebrow: "SISTEA Technical Knowledge",
+    knowledgeTitle: "Knowledge that turns into engineering decisions",
+    knowledgeText:
+      "SISTEA connects technical documentation, calculation tools, energy analysis and financing models. The objective is not to accumulate information, but to convert it into a technical and economic decision that can be applied to the project.",
+    knowledgeItems: [
+      ["Engineering Tools", "Initial calculations to structure data, load, capacity, units and preliminary selection.", "Open tools", "#tools"],
+      ["Engineering Series", "Documented methodology for refrigeration, HVAC, energy, automation and data centers.", "View books", "#books"],
+      ["Energy & Demand", "Bills, baseline, load profile and initial identification of savings potential.", "Analyze energy", "#energy"],
+      ["Financing", "ESI, Cooling-as-a-Service and service models to turn viable measures into executable projects.", "View models", "/financing"],
+    ],
     sourcingEyebrow: "Technical Procurement & Direct Sourcing",
     sourcingTitle: "More than 20 years of our own sourcing and wholesale experience in Shanghai / China",
     sourcingText:
@@ -504,6 +524,16 @@ const translations = {
       ["Hotels & Krankenhäuser", "Komfort, Warmwasser, Chiller, Luftqualität und Backup."],
       ["Logistik", "Cold Chain, Lager, Lüftung, Energie und Monitoring."],
       ["Data Center", "Hohe Wärmedichte, Redundanz, Energie, Batterien und Regelung."],
+    ],
+    knowledgeEyebrow: "SISTEA Fachwissen",
+    knowledgeTitle: "Wissen, das zu Engineering-Entscheidungen führt",
+    knowledgeText:
+      "SISTEA verbindet technische Dokumentation, Berechnungstools, Energieanalyse und Finanzierungsmodelle. Das Ziel ist nicht, Informationen zu sammeln, sondern daraus eine technisch und wirtschaftlich umsetzbare Projektentscheidung zu machen.",
+    knowledgeItems: [
+      ["Engineering Tools", "Erste Berechnungen für Projektdaten, Last, Leistung, Einheiten und Vorbemessung.", "Tools öffnen", "#tools"],
+      ["Engineering Series", "Dokumentierte Methodik für Kälte, HVAC, Energie, Automation und Rechenzentren.", "Bücher ansehen", "#books"],
+      ["Energie & Last", "Stromrechnungen, Baseline, Lastprofil und erste Identifikation von Einsparpotenzial.", "Energie analysieren", "#energy"],
+      ["Finanzierung", "ESI, Cooling-as-a-Service und Servicemodelle für technisch tragfähige Projekte.", "Modelle ansehen", "/financing"],
     ],
     sourcingEyebrow: "Technische Beschaffung & Direktbezug",
     sourcingTitle: "Seit über 20 Jahren eigener Großhandel und Beschaffung in Shanghai / China",
@@ -1113,7 +1143,61 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section id="tools" className="relative overflow-hidden bg-gradient-to-br from-[#dbeaec] via-[#e8f0f2] to-[#d7e3e7] px-6 py-24">
+        <section id="knowledge" className="scroll-mt-24 bg-[#edf3f4] px-6 py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-10 lg:grid-cols-[.82fr_1.18fr] lg:items-end">
+              <div>
+                <Eyebrow>{t.knowledgeEyebrow}</Eyebrow>
+                <h2 className="mt-4 max-w-3xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">
+                  {t.knowledgeTitle}
+                </h2>
+              </div>
+              <p className="max-w-3xl text-lg leading-8 text-[#607684]">
+                {t.knowledgeText}
+              </p>
+            </div>
+
+            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+              {t.knowledgeItems.map(([title, body, button, href], index) => {
+                const target = href === "/financing" ? `/${currentLocale}/financing` : href;
+                return (
+                  <article
+                    key={title}
+                    className="group flex min-h-[285px] flex-col rounded-3xl border border-[#c5d7dc] bg-[#e4ecef] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#7fd7e9] hover:shadow-xl"
+                  >
+                    <div className="text-xs font-black uppercase tracking-[.16em] text-[#159dc5]">
+                      Knowledge 0{index + 1}
+                    </div>
+                    <h3 className="mt-5 text-xl font-black text-[#304b5d]">{title}</h3>
+                    <p className="mt-4 flex-1 text-sm leading-6 text-[#607684]">{body}</p>
+                    <Link
+                      href={target}
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-black text-[#159dc5] transition group-hover:text-[#0d7e9d]"
+                    >
+                      {button}<ArrowIcon />
+                    </Link>
+                  </article>
+                );
+              })}
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-6">
+              <div className="flex flex-wrap items-center gap-2 text-[11px] font-black uppercase tracking-[.12em] text-[#496172]">
+                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Knowledge</span>
+                <span>→</span>
+                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Calculation</span>
+                <span>→</span>
+                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Validation</span>
+                <span>→</span>
+                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Engineering</span>
+                <span>→</span>
+                <span className="rounded-lg bg-[#eef4f2] px-3 py-2">Project</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tools" className="scroll-mt-24 relative overflow-hidden bg-gradient-to-br from-[#dbeaec] via-[#e8f0f2] to-[#d7e3e7] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_.9fr] lg:items-center">
             <div>
               <Eyebrow>{t.toolsEyebrow}</Eyebrow>
@@ -1180,7 +1264,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section id="books" className="bg-gradient-to-br from-[#dfe9ec] via-[#e8f0f1] to-[#dbe9eb] px-6 py-24 text-[#304b5d]">
+        <section id="books" className="scroll-mt-24 bg-gradient-to-br from-[#dfe9ec] via-[#e8f0f1] to-[#dbe9eb] px-6 py-24 text-[#304b5d]">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
               <div>
@@ -1295,7 +1379,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
         </section>
 
-        <section className="bg-[#d9e4e8] px-6 py-24">
+        <section id="industries" className="scroll-mt-24 bg-[#d9e4e8] px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <Eyebrow>{t.industriesEyebrow}</Eyebrow>
             <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.industriesTitle}</h2>
