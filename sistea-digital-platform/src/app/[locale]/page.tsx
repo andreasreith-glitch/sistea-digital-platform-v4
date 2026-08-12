@@ -126,7 +126,7 @@ const translations = {
     booksText:
       "Los libros no son un catálogo. Son evidencia técnica. Explican planificación, cálculo, operación, mantenimiento, seguridad, eficiencia energética y automatización en los mismos campos donde SISTEA desarrolla proyectos reales.",
     books: [
-      ["R744", "CO₂ Refrigeration", "#0f5d8f"],
+      ["R744", "CO₂ Refrigeration", "#0A4F8A"],
       ["R717", "Ammonia Refrigeration", "#9a5b2f"],
       ["HEAT", "Heat Pumps & Recovery", "#187b7a"],
       ["ENERGY", "Industrial Efficiency", "#3b7d44"],
@@ -335,7 +335,7 @@ const translations = {
     booksText:
       "The books are not a catalog. They are technical evidence. They cover planning, calculation, operation, maintenance, safety, energy efficiency and automation in the same fields where SISTEA develops real projects.",
     books: [
-      ["R744", "CO₂ Refrigeration", "#0f5d8f"],
+      ["R744", "CO₂ Refrigeration", "#0A4F8A"],
       ["R717", "Ammonia Refrigeration", "#9a5b2f"],
       ["HEAT", "Heat Pumps & Recovery", "#187b7a"],
       ["ENERGY", "Industrial Efficiency", "#3b7d44"],
@@ -544,7 +544,7 @@ const translations = {
     booksText:
       "Die Fachbücher sind kein Katalog. Sie sind ein technischer Kompetenznachweis. Sie behandeln Planung, Berechnung, Betrieb, Wartung, Sicherheit, Energieeffizienz und Automation in denselben Bereichen, in denen SISTEA Projekte realisiert.",
     books: [
-      ["R744", "CO₂-Kältetechnik", "#0f5d8f"],
+      ["R744", "CO₂-Kältetechnik", "#0A4F8A"],
       ["R717", "Ammoniak-Kältetechnik", "#9a5b2f"],
       ["HEAT", "Wärmepumpen & Rückgewinnung", "#187b7a"],
       ["ENERGY", "Industrielle Energieeffizienz", "#3b7d44"],
@@ -801,7 +801,7 @@ function LoadProfileVisual({
   peakLabel: string; optimizedLabel: string; viewLabel: string; profileLabel: string; potentialLabel: string; footnote: string;
 }) {
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-[#b9d5dc] bg-gradient-to-br from-[#31596a] via-[#3e6f7b] to-[#5b8890] p-6 text-white shadow-[0_20px_55px_rgba(48,75,93,.18)] sm:p-8">
+    <div className="relative overflow-hidden rounded-3xl border border-[#B3D1E4] bg-gradient-to-br from-[#174F73] via-[#285D7C] to-[#3E728F] p-6 text-white shadow-[0_20px_55px_rgba(48,75,93,.18)] sm:p-8">
       <div className="absolute -right-16 -top-20 h-64 w-64 rounded-full bg-cyan-300/15 blur-3xl" />
       <div className="relative">
         <div className="flex items-start justify-between gap-5">
@@ -814,7 +814,7 @@ function LoadProfileVisual({
             <div className="text-[9px] font-black uppercase tracking-[.16em] text-white/65">{potentialLabel}</div>
           </div>
         </div>
-        <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-[#264957]/55 p-4">
+        <div className="mt-8 overflow-hidden rounded-2xl border border-white/15 bg-[#143F5B]/55 p-4">
           <svg viewBox="0 0 720 300" className="h-auto w-full" role="img" aria-label="Illustrative load profile">
             <defs>
               <linearGradient id="loadFill" x1="0" y1="0" x2="0" y2="1">
@@ -859,7 +859,7 @@ function TechIcon({ index }: { index: number }) {
 
 function Eyebrow({ children, light = false }: { children: ReactNode; light?: boolean }) {
   return (
-    <p className={`text-xs font-black uppercase tracking-[.22em] ${light ? "text-[#2aaed1]" : "text-[#168fb4]"}`}>
+    <p className={`text-xs font-black uppercase tracking-[.22em] ${light ? "text-[#188FC1]" : "text-[#117FB5]"}`}>
       {children}
     </p>
   );
@@ -867,13 +867,13 @@ function Eyebrow({ children, light = false }: { children: ReactNode; light?: boo
 
 function BookCard({ code, title, color }: { code: string; title: string; color: string }) {
   return (
-    <div className="group relative min-h-[230px] overflow-hidden rounded-2xl border border-[#c6d7dc] bg-[#edf3f4] p-5 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-cyan-300 hover:shadow-xl">
+    <div className="group relative min-h-[230px] overflow-hidden rounded-2xl border border-[#C0D9E9] bg-[#E7F1F9] p-5 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-cyan-300 hover:shadow-xl">
       <div className="absolute inset-x-0 top-0 h-2" style={{ backgroundColor: color }} />
       <div className="absolute -right-8 top-10 h-28 w-28 rounded-full opacity-10 blur-2xl" style={{ backgroundColor: color }} />
       <div className="relative flex h-full flex-col">
         <span className="text-[10px] font-bold uppercase tracking-[.18em] text-slate-400">SISTEA Engineering Series</span>
         <div className="mt-8 text-3xl font-black" style={{ color }}>{code}</div>
-        <h3 className="mt-3 text-lg font-black leading-tight text-[#304b5d]">{title}</h3>
+        <h3 className="mt-3 text-lg font-black leading-tight text-[#183F5B]">{title}</h3>
         <div className="mt-auto pt-8 text-xs uppercase tracking-[.16em] text-slate-400">Planning · Design · Operation</div>
       </div>
     </div>
@@ -1084,7 +1084,7 @@ function PrimaryButton({ href, children, external = false }: { href: string; chi
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className="inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#159dc5] px-6 py-3.5 text-center font-black text-white shadow-sm transition hover:bg-[#1185a8]"
+      className="inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#0E78B7] px-6 py-3.5 text-center font-black text-white shadow-sm transition hover:bg-[#0E6BA8]"
     >
       {children}<ArrowIcon />
     </a>
@@ -1092,7 +1092,7 @@ function PrimaryButton({ href, children, external = false }: { href: string; chi
 }
 
 function SectionDivider() {
-  return <div className="mx-auto h-px w-20 bg-[#a8cbd3]" />;
+  return <div className="mx-auto h-px w-20 bg-[#A7C9DE]" />;
 }
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -1103,8 +1103,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const r = relaxedCopy[currentLocale];
 
   return (
-    <main className="overflow-hidden bg-[#f5f9fa] text-[#304b5d]">
-      <section className="relative min-h-[720px] overflow-hidden bg-[#244957] text-white">
+    <main className="overflow-hidden bg-[#F4F9FD] text-[#183F5B]">
+      <section className="relative min-h-[720px] overflow-hidden bg-[#123F5D] text-white">
         <video
           autoPlay
           muted
@@ -1116,7 +1116,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         >
           <source src="/videos/sistea-hero-web.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#244957]/45 via-[#244957]/58 to-[#244957]/82" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#123F5D]/45 via-[#123F5D]/58 to-[#123F5D]/82" />
         <div className="relative z-10 mx-auto flex min-h-[720px] max-w-4xl flex-col justify-center px-6 py-24 text-center">
           <Eyebrow light>{t.heroEyebrow}</Eyebrow>
           <h1 className="mt-6 text-4xl font-black tracking-[-.035em] sm:text-5xl lg:text-6xl lg:leading-[1.05]">{t.heroTitle}</h1>
@@ -1134,7 +1134,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>{r.introEyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{r.introTitle}</h2>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{r.introText}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{r.introText}</p>
         </div>
       </section>
 
@@ -1142,28 +1142,28 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>{r.processEyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{r.processTitle}</h2>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{r.processText}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{r.processText}</p>
         </div>
         <div className="mx-auto mt-14 max-w-3xl">
           {r.processSteps.map(([number, title, body], index) => (
             <article key={number} className="relative py-8 text-center">
               {index > 0 && <SectionDivider />}
               <div className={index > 0 ? "pt-8" : ""}>
-                <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[#dff2f6] text-sm font-black text-[#159dc5]">{number}</div>
+                <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[#DDEFFA] text-sm font-black text-[#0E78B7]">{number}</div>
                 <h3 className="mt-5 text-2xl font-black">{title}</h3>
-                <p className="mt-4 leading-8 text-[#607684]">{body}</p>
+                <p className="mt-4 leading-8 text-[#426B86]">{body}</p>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="energy" className="scroll-mt-24 bg-[#e6eff1] px-6 py-24 sm:py-28">
+      <section id="energy" className="scroll-mt-24 bg-[#E4F0F8] px-6 py-24 sm:py-28">
         <div className="mx-auto max-w-4xl text-center">
           <Eyebrow>{t.energyEyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.energyTitle}</h2>
-          <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.energyLead}</p>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.energyText}</p>
+          <p className="mt-5 text-xl font-bold leading-8 text-[#345F7A]">{r.energyLead}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{t.energyText}</p>
         </div>
         <div className="mx-auto mt-12 max-w-5xl">
           <LoadProfileVisual
@@ -1175,13 +1175,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             footnote={sales.visualFootnote}
           />
         </div>
-        <div className="mx-auto mt-14 max-w-5xl rounded-3xl border border-[#bdd3d8] bg-white p-6 shadow-sm sm:p-9">
+        <div className="mx-auto mt-14 max-w-5xl rounded-3xl border border-[#B6D1E3] bg-white p-6 shadow-sm sm:p-9">
           <h3 className="text-center text-2xl font-black sm:text-3xl">{t.reviewTitle}</h3>
-          <p className="mx-auto mt-5 max-w-3xl text-center leading-8 text-[#607684]">{t.reviewText}</p>
-          <p className="mx-auto mt-4 max-w-3xl rounded-2xl bg-[#edf5f6] p-4 text-center text-sm leading-6 text-[#58717e]">{t.reviewPrivacy}</p>
+          <p className="mx-auto mt-5 max-w-3xl text-center leading-8 text-[#426B86]">{t.reviewText}</p>
+          <p className="mx-auto mt-4 max-w-3xl rounded-2xl bg-[#EAF4FB] p-4 text-center text-sm leading-6 text-[#41647B]">{t.reviewPrivacy}</p>
         </div>
         <div className="mx-auto mt-12 max-w-5xl">
-          <p className="mb-5 text-center text-sm font-bold text-[#58717e]">
+          <p className="mb-5 text-center text-sm font-bold text-[#41647B]">
             {currentLocale === "de" ? "Voreinstellung El Salvador: 0,160 USD/kWh · frei anpassbar" : currentLocale === "en" ? "El Salvador default: USD 0.160/kWh · fully adjustable" : "Valor inicial El Salvador: USD 0.160/kWh · totalmente ajustable"}
           </p>
           <EnergyCostCalculator locale={currentLocale} />
@@ -1192,36 +1192,36 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>{t.financeEyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
-          <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.financeLead}</p>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.financeText}</p>
+          <p className="mt-5 text-xl font-bold leading-8 text-[#345F7A]">{r.financeLead}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{t.financeText}</p>
         </div>
         <div className="mx-auto mt-14 max-w-3xl space-y-12">
           {t.financeModels.map(([title, body], index) => (
             <article key={title} className="text-center">
-              <div className="mx-auto mb-5 grid h-10 w-10 place-items-center rounded-full bg-[#dff2f6] text-sm font-black text-[#159dc5]">0{index + 1}</div>
+              <div className="mx-auto mb-5 grid h-10 w-10 place-items-center rounded-full bg-[#DDEFFA] text-sm font-black text-[#0E78B7]">0{index + 1}</div>
               <h3 className="text-2xl font-black">{title}</h3>
-              <p className="mt-4 leading-8 text-[#607684]">{body}</p>
+              <p className="mt-4 leading-8 text-[#426B86]">{body}</p>
             </article>
           ))}
         </div>
         <div className="mx-auto mt-14 max-w-sm">
-          <Link href={`/${currentLocale}/financing`} className="inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#159dc5] px-6 py-3.5 text-center font-black text-white shadow-sm transition hover:bg-[#1185a8]">{t.financeDetailButton}<ArrowIcon /></Link>
+          <Link href={`/${currentLocale}/financing`} className="inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#0E78B7] px-6 py-3.5 text-center font-black text-white shadow-sm transition hover:bg-[#0E6BA8]">{t.financeDetailButton}<ArrowIcon /></Link>
         </div>
       </section>
 
       {t.visualSolutions.map(([title, body], index) => (
-        <section key={title} id={index === 0 ? "solutions" : undefined} className={`scroll-mt-24 px-6 py-24 sm:py-28 ${index % 2 === 0 ? "bg-white" : "bg-[#edf4f5]"}`}>
+        <section key={title} id={index === 0 ? "solutions" : undefined} className={`scroll-mt-24 px-6 py-24 sm:py-28 ${index % 2 === 0 ? "bg-white" : "bg-[#E8F2FA]"}`}>
           <div className="mx-auto max-w-5xl text-center">
             <img
               src={visualSolutionImages[index]}
               alt={title}
               loading="lazy"
-              className="mx-auto max-h-[620px] w-full rounded-3xl border border-[#c8dadd] bg-white object-contain p-3 shadow-[0_20px_60px_rgba(48,75,93,.10)]"
+              className="mx-auto max-h-[620px] w-full rounded-3xl border border-[#C5DCEB] bg-white object-contain p-3 shadow-[0_20px_60px_rgba(48,75,93,.10)]"
             />
             <div className="mx-auto mt-12 max-w-3xl">
               <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
               <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">{title}</h2>
-              <p className="mt-5 text-lg leading-8 text-[#607684]">{body}</p>
+              <p className="mt-5 text-lg leading-8 text-[#426B86]">{body}</p>
               <div className="mx-auto mt-8 max-w-sm">
                 <PrimaryButton href="#contact">{r.solutionCta}</PrimaryButton>
               </div>
@@ -1230,18 +1230,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
       ))}
 
-      <section id="tools" className="scroll-mt-24 bg-[#edf4f5] px-6 py-24 sm:py-28">
+      <section id="tools" className="scroll-mt-24 bg-[#E8F2FA] px-6 py-24 sm:py-28">
         <div className="mx-auto max-w-5xl text-center">
-          <img src="/images/marketing/engineering-tools-desktop.webp" alt="SISTEA Engineering Tools" loading="lazy" className="mx-auto w-full rounded-3xl border border-[#c4d8dd] bg-white object-contain shadow-[0_20px_60px_rgba(48,75,93,.10)]" />
+          <img src="/images/marketing/engineering-tools-desktop.webp" alt="SISTEA Engineering Tools" loading="lazy" className="mx-auto w-full rounded-3xl border border-[#BED8E8] bg-white object-contain shadow-[0_20px_60px_rgba(48,75,93,.10)]" />
           <div className="mx-auto mt-12 max-w-3xl">
             <Eyebrow>{t.toolsEyebrow}</Eyebrow>
             <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.toolsTitle}</h2>
-            <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.toolsLead}</p>
-            <p className="mt-6 text-lg leading-8 text-[#607684]">{t.toolsText}</p>
+            <p className="mt-5 text-xl font-bold leading-8 text-[#345F7A]">{r.toolsLead}</p>
+            <p className="mt-6 text-lg leading-8 text-[#426B86]">{t.toolsText}</p>
             <div className="mx-auto mt-8 max-w-sm">
               <PrimaryButton href={APP_URL} external>{t.toolsButton}</PrimaryButton>
             </div>
-            <p className="mt-4 text-sm text-[#6f8490]">{t.toolsNote}</p>
+            <p className="mt-4 text-sm text-[#54748A]">{t.toolsNote}</p>
           </div>
         </div>
       </section>
@@ -1250,8 +1250,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>{t.booksEyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.booksTitle}</h2>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.booksText}</p>
-          <p className="mt-5 rounded-2xl bg-[#edf5f6] p-5 leading-7 text-[#526f7d]">{r.booksIntro}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{t.booksText}</p>
+          <p className="mt-5 rounded-2xl bg-[#EAF4FB] p-5 leading-7 text-[#3C6078]">{r.booksIntro}</p>
         </div>
 
         <div className="mx-auto mt-20 max-w-3xl">
@@ -1264,11 +1264,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     src={book.cover}
                     alt={book.title}
                     loading="lazy"
-                    className="mx-auto max-h-[560px] w-auto max-w-full rounded-xl border border-[#c8d9dd] bg-white object-contain shadow-[0_24px_60px_rgba(48,75,93,.16)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(48,75,93,.22)]"
+                    className="mx-auto max-h-[560px] w-auto max-w-full rounded-xl border border-[#C3DBEA] bg-white object-contain shadow-[0_24px_60px_rgba(48,75,93,.16)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(48,75,93,.22)]"
                   />
                 </a>
-                <div className="mt-8 text-xs font-black uppercase tracking-[.2em] text-[#159dc5]">{book.topic}</div>
-                <div className="mt-3 text-sm font-bold text-[#6b808c]">{book.language} · {book.format}</div>
+                <div className="mt-8 text-xs font-black uppercase tracking-[.2em] text-[#0E78B7]">{book.topic}</div>
+                <div className="mt-3 text-sm font-bold text-[#506F85]">{book.language} · {book.format}</div>
                 <h3 className="mx-auto mt-4 max-w-2xl text-2xl font-black leading-tight sm:text-3xl">{book.title}</h3>
                 <div className="mx-auto mt-7 max-w-sm">
                   <PrimaryButton href={book.href} external>{r.amazonDirect}</PrimaryButton>
@@ -1278,19 +1278,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           ))}
         </div>
         <div className="mx-auto mt-20 max-w-sm text-center">
-          <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#8fbfc9] bg-white px-6 py-3.5 font-black text-[#31596a] transition hover:bg-[#edf5f6]">
+          <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#8DB9D4] bg-white px-6 py-3.5 font-black text-[#174F73] transition hover:bg-[#EAF4FB]">
             {r.amazonAll}<ArrowIcon />
           </a>
         </div>
       </section>
 
-      <section className="bg-[#edf4f5] px-6 py-24 sm:py-28">
+      <section className="bg-[#E8F2FA] px-6 py-24 sm:py-28">
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>{t.procurementEyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.procurementTitle}</h2>
-          <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.sourcingLead}</p>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.procurementText}</p>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.procurementPromise}</p>
+          <p className="mt-5 text-xl font-bold leading-8 text-[#345F7A]">{r.sourcingLead}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{t.procurementText}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{t.procurementPromise}</p>
           <div className="mx-auto mt-8 max-w-sm">
             <PrimaryButton href="#contact">{t.procurementButton}</PrimaryButton>
           </div>
@@ -1301,28 +1301,28 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>{t.whyEyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{r.experienceTitle}</h2>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{r.experienceText}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{r.experienceText}</p>
         </div>
       </section>
 
-      <section id="contact" className="scroll-mt-24 bg-[#e4eef0] px-6 py-24 pb-32 sm:py-28 sm:pb-32">
+      <section id="contact" className="scroll-mt-24 bg-[#E1EEF7] px-6 py-24 pb-32 sm:py-28 sm:pb-32">
         <div className="mx-auto max-w-3xl text-center">
           <Eyebrow>{t.contactEyebrow}</Eyebrow>
           <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.contactTitle}</h2>
-          <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.contactLead}</p>
-          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.contactText}</p>
+          <p className="mt-5 text-xl font-bold leading-8 text-[#345F7A]">{r.contactLead}</p>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{t.contactText}</p>
         </div>
-        <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-[#bed3d8] bg-white p-5 shadow-sm sm:p-8">
+        <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-[#B7D2E4] bg-white p-5 shadow-sm sm:p-8">
           <ContactForm locale={currentLocale} />
         </div>
         <div className="mx-auto mt-8 max-w-sm text-center">
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#8fbfc9] bg-white px-6 py-3.5 font-black text-[#31596a] transition hover:bg-[#edf5f6]">
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#8DB9D4] bg-white px-6 py-3.5 font-black text-[#174F73] transition hover:bg-[#EAF4FB]">
             {t.whatsapp}<ArrowIcon />
           </a>
         </div>
       </section>
 
-      <footer className="bg-[#2e5262] px-6 py-10 text-center text-sm text-white/70">
+      <footer className="bg-[#163F5B] px-6 py-10 text-center text-sm text-white/70">
         <p>SISTEA S.A. de C.V. · www.sisteasv.com · info@sisteasv.com</p>
         <a href={ADMIN_URL} target="_blank" rel="noreferrer" className="mt-4 inline-block text-xs font-bold text-white/45 transition hover:text-white/80">SISTEA Admin</a>
       </footer>
