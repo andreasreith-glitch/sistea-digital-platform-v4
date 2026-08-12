@@ -18,15 +18,15 @@ const UNEP_COOLING_FINANCE_URL = "https://www.unep.org/resources/publication/coo
 
 const translations = {
   es: {
-    title: "SISTEA | Ingeniería, HVAC, Refrigeración, Energía y ESI",
+    title: "SISTEA | Ingeniería alemana para eficiencia energética, diseño e instalación",
     description:
-      "Ingeniería integral para HVAC, refrigeración industrial, chillers, eficiencia energética, fotovoltaica, baterías, automatización y financiamiento ESI en Centroamérica.",
-    nav: ["Sistema", "Soluciones", "Energía & Demanda", "App", "Libros", "Financiamiento", "Contacto"],
-    heroEyebrow: "Ingeniería alemana · ejecución local · Centroamérica",
-    heroTitle: "Ingeniería que conecta eficiencia, refrigeración, energía y financiamiento.",
+      "Empresa alemana de ingeniería, consultoría, diseño e instalación para ahorro energético sostenible, gestión de demanda y sistemas técnicos integrados en Centroamérica.",
+    nav: ["Consultoría", "Energía & Demanda", "Diseño", "Instalación", "Soluciones", "Libros", "Contacto"],
+    heroEyebrow: "Empresa de ingeniería alemana · Consultoría · Diseño · Instalación",
+    heroTitle: "Ahorrar energía de forma sostenible. Diseñar mejor. Ejecutar con ingeniería alemana.",
     heroText:
-      "SISTEA analiza, diseña, optimiza e integra HVAC, refrigeración industrial, chillers, ventilación, deshumidificación, fotovoltaica, baterías, automatización, agua y soluciones de eficiencia energética.",
-    heroPrimary: "Analizar mi proyecto",
+      "SISTEA es una empresa alemana de ingeniería, consultoría, diseño e instalación en Centroamérica. Analizamos consumo y picos de demanda, diseñamos medidas de ahorro económicamente viables y ejecutamos sistemas técnicos completos hasta la puesta en marcha y optimización.",
+    heroPrimary: "Analizar potencial de ahorro",
     heroSecondary: "Abrir Engineering Tools",
     heroThird: "Ver soluciones",
     stats: [
@@ -72,9 +72,9 @@ const translations = {
       ["Consulting", "Factibilidad, ingeniería, CAPEX/OPEX, ROI, proyecto y commissioning."],
     ],
     energyEyebrow: "Energy & Engineering Consulting",
-    energyTitle: "Reducimos costos de energía y picos de demanda con Consulting, análisis y gestión inteligente de cargas.",
+    energyTitle: "El ahorro energético sostenible comienza con el perfil de carga.",
     energyText:
-      "Partimos de las facturas eléctricas y avanzamos hacia perfiles de carga, simultaneidad, demanda máxima, chillers, HVAC, bombas, ventiladores, procesos, fotovoltaica, baterías y estrategia de control. En proyectos adecuados, el análisis integral puede identificar potenciales de ahorro del orden de 40 %, sujetos a validación técnica.",
+      "No empezamos vendiendo equipos. Empezamos con consumo, demanda y costo. El calculador energético permite una primera evaluación propia de costos, carga media y picos de demanda. Después SISTEA valida los datos y desarrolla medidas de reducción de consumo, peak shaving, desplazamiento de carga, recuperación de calor, generación propia y control inteligente.",
     energyFlow: [
       ["Medir", "Facturas, demanda, submedición y perfiles"],
       ["Reducir", "Chillers, HVAC, bombas, ventiladores y procesos"],
@@ -83,7 +83,7 @@ const translations = {
       ["Almacenar", "Baterías y desplazamiento de demanda"],
       ["Controlar", "BMS, PLC, IA y gestión de cargas"],
     ],
-    reviewTitle: "Cálculo gratuito de costos energéticos y gestión de demanda",
+    reviewTitle: "Autoevaluación inicial más análisis energético profesional",
     reviewText:
       "Para una evaluación energética con valor informativo, envíanos preferentemente 6–12 meses consecutivos de facturas eléctricas. Así podemos evaluar consumo, costos, demanda máxima, estacionalidad, estructura tarifaria y comportamiento operativo, y construir una línea base más sólida para identificar medidas de reducción de consumo, peak shaving y gestión de carga.",
     reviewPrivacy:
@@ -225,21 +225,21 @@ const translations = {
       ["Implementación", "Del estudio y cálculo hasta la puesta en marcha y optimización."],
       ["Suministro directo", "Más de 20 años de experiencia de compra en China y acceso directo a fabricantes."],
     ],
-    contactTitle: "Cuéntanos dónde está el problema técnico o energético",
+    contactTitle: "Del análisis energético hasta la instalación",
     contactText:
-      "Puede ser una factura elevada, un chiller ineficiente, humedad, falta de capacidad, picos de demanda, un proyecto fotovoltaico o una nueva instalación. Empezamos por los datos.",
+      "Costos altos de energía, picos de demanda, sistemas de suministro ineficientes o un nuevo proyecto: SISTEA integra consultoría, análisis, diseño, compras, instalación, puesta en marcha y optimización.",
     whatsapp: "Hablar por WhatsApp",
   },
   en: {
-    title: "SISTEA | Engineering, HVAC, Refrigeration, Energy and ESI",
+    title: "SISTEA | German engineering for energy efficiency, design and installation",
     description:
-      "Integrated engineering for HVAC, industrial refrigeration, chillers, energy efficiency, solar PV, batteries, automation and ESI financing in Central America.",
-    nav: ["System", "Solutions", "Energy & Demand", "App", "Books", "Financing", "Contact"],
-    heroEyebrow: "German engineering · local execution · Central America",
-    heroTitle: "Engineering that connects efficiency, refrigeration, energy and financing.",
+      "German engineering, consulting, design and installation company for sustainable energy savings, demand management and integrated technical systems in Central America.",
+    nav: ["Consulting", "Energy & Demand", "Design", "Installation", "Solutions", "Books", "Contact"],
+    heroEyebrow: "German engineering company · Consulting · Design · Installation",
+    heroTitle: "Save energy sustainably. Design better systems. Implement reliable projects.",
     heroText:
-      "SISTEA analyzes, designs, optimizes and integrates HVAC, industrial refrigeration, chillers, ventilation, dehumidification, solar PV, batteries, automation, water and energy-efficiency solutions.",
-    heroPrimary: "Analyze my project",
+      "SISTEA is a German engineering, consulting, design and installation company in Central America. We analyze energy use and demand peaks, design economically viable savings measures, and implement complete technical systems through commissioning and optimization.",
+    heroPrimary: "Analyze savings potential",
     heroSecondary: "Open Engineering Tools",
     heroThird: "View solutions",
     stats: [["40+", "years of technical experience"], ["3", "engineering languages"], ["360°", "technical and economic view"]],
@@ -281,9 +281,9 @@ const translations = {
       ["Consulting", "Feasibility, engineering, CAPEX/OPEX, ROI, project and commissioning."],
     ],
     energyEyebrow: "Energy & Engineering Consulting",
-    energyTitle: "Reduce energy costs and demand peaks through consulting, analysis and intelligent load management.",
+    energyTitle: "Sustainable energy savings start with the load profile.",
     energyText:
-      "We start with electricity bills and then analyze load profiles, simultaneity, maximum demand, chillers, HVAC, pumps, fans, processes, solar PV, batteries and control strategy. In suitable projects, integrated analysis can identify savings potential on the order of 40%, subject to engineering validation.",
+      "We do not start by selling equipment. We start with consumption, demand and cost. The energy calculator provides an initial self-check of electricity cost, average load and demand peaks. SISTEA then validates the data and develops measures for consumption reduction, peak shaving, load shifting, heat recovery, onsite generation and intelligent controls.",
     energyFlow: [
       ["Measure", "Bills, demand, submetering and profiles"],
       ["Reduce", "Chillers, HVAC, pumps, fans and processes"],
@@ -292,7 +292,7 @@ const translations = {
       ["Store", "Batteries and demand shifting"],
       ["Control", "BMS, PLC, AI and load management"],
     ],
-    reviewTitle: "Free energy-cost and demand-management screening",
+    reviewTitle: "Self-screening plus professional energy analysis",
     reviewText:
       "For a meaningful energy assessment, please send preferably 6–12 consecutive months of electricity bills. This allows us to evaluate consumption, cost, maximum demand, seasonality, tariff structure and operating behavior, and to build a more robust baseline for identifying consumption reduction, peak-shaving and load-management measures.",
     reviewPrivacy:
@@ -434,21 +434,21 @@ const translations = {
       ["Implementation", "From study and calculation through commissioning and optimization."],
       ["Direct sourcing", "More than 20 years of China sourcing experience and direct manufacturer access."],
     ],
-    contactTitle: "Tell us where the technical or energy problem is",
+    contactTitle: "From energy analysis through installation",
     contactText:
-      "It may be a high utility bill, an inefficient chiller, humidity, insufficient capacity, demand peaks, a solar project or a new installation. We start with the data.",
+      "High energy costs, demand peaks, inefficient utility systems or a new project: SISTEA provides consulting, analysis, design, procurement, installation, commissioning and optimization as one integrated engineering process.",
     whatsapp: "Talk on WhatsApp",
   },
   de: {
-    title: "SISTEA | Engineering, HVAC, Kälte, Energie und ESI",
+    title: "SISTEA | Deutsche Ingenieurkompetenz für Energieeffizienz, Planung und Installation",
     description:
-      "Integriertes Engineering für HVAC, Industriekälte, Chiller, Energieeffizienz, Photovoltaik, Batteriespeicher, Automation und ESI-Finanzierung in Zentralamerika.",
-    nav: ["System", "Lösungen", "Energie & Last", "App", "Bücher", "Finanzierung", "Kontakt"],
-    heroEyebrow: "Deutsches Engineering · lokale Umsetzung · Zentralamerika",
-    heroTitle: "Engineering, das Effizienz, Kälte, Energie und Finanzierung verbindet.",
+      "Deutscher Ingenieur-, Consulting-, Planungs- und Installationsbetrieb für nachhaltige Energieeinsparung, Lastmanagement und integrierte technische Systeme in Zentralamerika.",
+    nav: ["Consulting", "Energie & Last", "Planung", "Installation", "Lösungen", "Bücher", "Kontakt"],
+    heroEyebrow: "Deutscher Ingenieurbetrieb · Consulting · Planung · Installation",
+    heroTitle: "Energie nachhaltig einsparen. Systeme besser planen. Projekte zuverlässig umsetzen.",
     heroText:
-      "SISTEA analysiert, plant, optimiert und integriert HVAC, Industriekälte, Chiller, Lüftung, Entfeuchtung, Photovoltaik, Batteriespeicher, Automation, Wasser und Energieeffizienzlösungen.",
-    heroPrimary: "Projekt analysieren",
+      "SISTEA ist ein deutscher Ingenieur-, Consulting-, Planungs- und Installationsbetrieb in Zentralamerika. Wir analysieren Energieverbrauch und Lastspitzen, planen wirtschaftliche Einsparmaßnahmen und realisieren komplette technische Systeme bis zur Inbetriebnahme und Optimierung.",
+    heroPrimary: "Einsparpotenzial analysieren",
     heroSecondary: "Engineering Tools öffnen",
     heroThird: "Lösungen ansehen",
     stats: [["40+", "Jahre technische Erfahrung"], ["3", "Engineering-Sprachen"], ["360°", "technische und wirtschaftliche Sicht"]],
@@ -490,9 +490,9 @@ const translations = {
       ["Consulting", "Machbarkeit, Engineering, CAPEX/OPEX, ROI, Projekt und Commissioning."],
     ],
     energyEyebrow: "Energy & Engineering Consulting",
-    energyTitle: "Energiekosten und Lastspitzen mit Consulting, Analyse und intelligentem Lastmanagement reduzieren.",
+    energyTitle: "Umweltschonende Energieeinsparung beginnt mit dem Lastprofil.",
     energyText:
-      "Wir starten mit den Stromrechnungen und analysieren danach Lastprofile, Gleichzeitigkeit, maximale Leistung, Chiller, HVAC, Pumpen, Ventilatoren, Prozesse, PV, Batteriespeicher und Regelstrategien. Bei geeigneten Projekten kann eine ganzheitliche Analyse Einsparpotenziale in der Größenordnung von rund 40 % identifizieren – vorbehaltlich technischer Prüfung.",
+      "Wir beginnen nicht mit dem Verkauf einer Maschine, sondern mit Verbrauch, Leistung und Kosten. Der Energierechner ermöglicht eine erste eigene Bewertung von Stromkosten, mittlerer Last und Lastspitzen. Danach prüft SISTEA die Daten technisch und entwickelt Maßnahmen für Verbrauchsreduzierung, Peak Shaving, Lastverschiebung, Wärmerückgewinnung, Eigenerzeugung und intelligente Regelung.",
     energyFlow: [
       ["Messen", "Rechnungen, Leistung, Unterzähler und Profile"],
       ["Reduzieren", "Chiller, HVAC, Pumpen, Ventilatoren und Prozesse"],
@@ -501,7 +501,7 @@ const translations = {
       ["Speichern", "Batterien und Lastverschiebung"],
       ["Regeln", "BMS, PLC, KI und Lastmanagement"],
     ],
-    reviewTitle: "Kostenlose Stromkosten- und Lastmanagement-Erstprüfung",
+    reviewTitle: "Eigene Vorprüfung plus professionelle Energieanalyse",
     reviewText:
       "Für eine aussagekräftige Energieanalyse benötigen wir vorzugsweise 6–12 Monate Stromrechnungen. Damit können wir Verbrauch, Kosten, Leistungsspitzen, saisonale Schwankungen, Tarifstruktur und Betriebsverhalten bewerten, eine belastbarere Baseline bilden und Ansätze für Verbrauchsreduzierung, Peak Shaving und Lastmanagement identifizieren.",
     reviewPrivacy:
@@ -643,9 +643,9 @@ const translations = {
       ["Umsetzung", "Von Studie und Berechnung bis Inbetriebnahme und Optimierung."],
       ["Direktbeschaffung", "Über 20 Jahre China-Einkaufserfahrung und direkter Zugang zu Herstellern."],
     ],
-    contactTitle: "Sag uns, wo das technische oder energetische Problem liegt",
+    contactTitle: "Von der Energieanalyse bis zur Installation",
     contactText:
-      "Hohe Stromkosten, ineffizienter Chiller, Feuchte, fehlende Kapazität, Lastspitzen, PV-Projekt oder Neubau: Wir beginnen mit den Daten.",
+      "Hohe Stromkosten, Lastspitzen, ineffiziente Versorgungssysteme oder ein neues Projekt: SISTEA übernimmt Consulting, Analyse, Planung, Beschaffung, Installation, Inbetriebnahme und Optimierung aus einer Hand.",
     whatsapp: "Über WhatsApp sprechen",
   },
 } as const;
@@ -899,11 +899,23 @@ const chillerManufacturerLinks = [
 
 const relaxedCopy = {
   es: {
-    introEyebrow: "Ingeniería con claridad",
-    introTitle: "Menos ruido. Más espacio para entender cada solución.",
-    introText: "La nueva página presenta cada tema por separado: una solución, una imagen y una explicación breve. Los detalles técnicos siguen disponibles, pero ya no compiten entre sí en la misma pantalla.",
+    introEyebrow: "Ingeniería alemana de principio a fin",
+    introTitle: "Consultoría, diseño e instalación como un solo proceso.",
+    introText: "Nuestro trabajo comienza con los datos y termina con un sistema funcionando. La tecnología se selecciona después de entender el consumo, el proceso, el riesgo técnico y la economía del proyecto.",
+    processEyebrow: "Cómo trabaja SISTEA",
+    processTitle: "Del análisis a la optimización, sin separar responsabilidades.",
+    processText: "SISTEA acompaña el proyecto completo con una secuencia clara y verificable.",
+    processSteps: [
+      ["01", "Consultoría", "Definir objetivos, restricciones, datos disponibles y alcance técnico-económico."],
+      ["02", "Análisis", "Consumo, demanda, perfil de carga, proceso, capacidad instalada y oportunidades de ahorro."],
+      ["03", "Planificación y diseño", "Cálculos, especificaciones, CAPEX/OPEX, selección tecnológica, control y documentación."],
+      ["04", "Ahorro energético", "Reducir consumo y picos antes de dimensionar nueva capacidad o comprar equipos."],
+      ["05", "Financiamiento", "Estructurar medidas viables con ESI, servitización u otros modelos cuando corresponda."],
+      ["06", "Instalación y puesta en marcha", "Implementación, integración, pruebas, commissioning y entrega técnica."],
+      ["07", "Optimización", "Monitoreo, ajustes y mejora continua del rendimiento energético y operativo."],
+    ],
     solutionCta: "Hablar sobre esta solución",
-    energyLead: "Primero entendemos el consumo. Después definimos la medida.",
+    energyLead: "Primero hacemos visibles el consumo y los picos de demanda. Después diseñamos la medida correcta.",
     financeLead: "La ingeniería y el financiamiento deben formar parte de la misma decisión.",
     toolsLead: "Una primera estimación digital, seguida por validación técnica de SISTEA.",
     booksIntro: "Cada edición se muestra individualmente. La portada y el botón llevan directamente a la página exacta del libro en Amazon.",
@@ -916,11 +928,23 @@ const relaxedCopy = {
     contactLead: "Cuéntanos el problema. Nosotros comenzamos por los datos.",
   },
   en: {
-    introEyebrow: "Engineering with clarity",
-    introTitle: "Less noise. More room to understand each solution.",
-    introText: "The redesigned page presents each subject separately: one solution, one image, and one concise explanation. Technical depth remains available without forcing several topics to compete on the same screen.",
+    introEyebrow: "German engineering from start to finish",
+    introTitle: "Consulting, design and installation as one integrated process.",
+    introText: "Our work starts with data and ends with an operating system. Technology is selected only after understanding consumption, process requirements, technical risk and project economics.",
+    processEyebrow: "How SISTEA works",
+    processTitle: "From analysis to optimization without splitting responsibility.",
+    processText: "SISTEA supports the complete project through a clear and verifiable engineering sequence.",
+    processSteps: [
+      ["01", "Consulting", "Define objectives, constraints, available data and the technical-economic scope."],
+      ["02", "Analysis", "Consumption, demand, load profile, process, installed capacity and savings opportunities."],
+      ["03", "Planning and design", "Calculations, specifications, CAPEX/OPEX, technology selection, controls and documentation."],
+      ["04", "Energy savings", "Reduce consumption and peaks before sizing new capacity or purchasing equipment."],
+      ["05", "Financing", "Structure viable measures with ESI, servitization or other suitable models."],
+      ["06", "Installation and commissioning", "Implementation, integration, testing, commissioning and technical handover."],
+      ["07", "Optimization", "Monitoring, fine-tuning and continuous improvement of energy and operating performance."],
+    ],
     solutionCta: "Discuss this solution",
-    energyLead: "First understand the consumption. Then define the measure.",
+    energyLead: "First make consumption and demand peaks visible. Then design the right measure.",
     financeLead: "Engineering and financing should be part of the same decision.",
     toolsLead: "A digital first estimate followed by SISTEA engineering validation.",
     booksIntro: "Every edition is shown individually. The cover and button lead directly to that exact book on Amazon.",
@@ -933,11 +957,23 @@ const relaxedCopy = {
     contactLead: "Tell us the problem. We start with the data.",
   },
   de: {
-    introEyebrow: "Engineering mit Klarheit",
-    introTitle: "Weniger Unruhe. Mehr Raum, um jede Lösung zu verstehen.",
-    introText: "Die neue Seite zeigt jedes Thema einzeln: eine Lösung, ein Bild und eine kurze Erklärung. Die technische Tiefe bleibt erhalten, ohne dass mehrere Themen gleichzeitig um Aufmerksamkeit konkurrieren.",
+    introEyebrow: "Deutsches Engineering von Anfang bis Ende",
+    introTitle: "Consulting, Planung und Installation als durchgängiger Prozess.",
+    introText: "Unsere Arbeit beginnt mit den Daten und endet mit einem funktionierenden System. Die Technologie wird erst ausgewählt, nachdem Verbrauch, Prozessanforderungen, technisches Risiko und Wirtschaftlichkeit verstanden sind.",
+    processEyebrow: "So arbeitet SISTEA",
+    processTitle: "Von der Analyse bis zur Optimierung – ohne getrennte Verantwortlichkeiten.",
+    processText: "SISTEA begleitet das vollständige Projekt in einer klaren und nachvollziehbaren Engineering-Abfolge.",
+    processSteps: [
+      ["01", "Consulting", "Ziele, Randbedingungen, vorhandene Daten sowie den technischen und wirtschaftlichen Projektumfang definieren."],
+      ["02", "Analyse", "Verbrauch, Leistung, Lastprofil, Prozess, installierte Kapazität und Einsparpotenziale untersuchen."],
+      ["03", "Planung und Auslegung", "Berechnungen, Spezifikationen, CAPEX/OPEX, Technologieauswahl, Regelung und Dokumentation."],
+      ["04", "Energieeinsparung", "Verbrauch und Lastspitzen reduzieren, bevor neue Kapazität dimensioniert oder Technik gekauft wird."],
+      ["05", "Finanzierung", "Geeignete Maßnahmen bei Bedarf mit ESI, Servitisation oder anderen Modellen umsetzbar strukturieren."],
+      ["06", "Installation und Inbetriebnahme", "Umsetzung, Integration, Prüfungen, Commissioning und technische Übergabe."],
+      ["07", "Optimierung", "Monitoring, Nachregelung und kontinuierliche Verbesserung der energetischen und betrieblichen Performance."],
+    ],
     solutionCta: "Über diese Lösung sprechen",
-    energyLead: "Zuerst den Verbrauch verstehen. Danach die Maßnahme definieren.",
+    energyLead: "Zuerst Verbrauch und Lastspitzen selbst sichtbar machen. Danach die richtige Maßnahme planen.",
     financeLead: "Engineering und Finanzierung gehören in dieselbe Projektentscheidung.",
     toolsLead: "Eine digitale Erstabschätzung, anschließend die technische Validierung durch SISTEA.",
     booksIntro: "Jede Ausgabe wird einzeln gezeigt. Cover und Button führen direkt zur exakten Produktseite dieses Buches bei Amazon.",
@@ -1102,26 +1138,25 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      {t.visualSolutions.map(([title, body], index) => (
-        <section key={title} id={index === 0 ? "solutions" : undefined} className={`scroll-mt-24 px-6 py-24 sm:py-28 ${index % 2 === 0 ? "bg-white" : "bg-[#edf4f5]"}`}>
-          <div className="mx-auto max-w-5xl text-center">
-            <img
-              src={visualSolutionImages[index]}
-              alt={title}
-              loading="lazy"
-              className="mx-auto max-h-[620px] w-full rounded-3xl border border-[#c8dadd] bg-white object-contain p-3 shadow-[0_20px_60px_rgba(48,75,93,.10)]"
-            />
-            <div className="mx-auto mt-12 max-w-3xl">
-              <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">{title}</h2>
-              <p className="mt-5 text-lg leading-8 text-[#607684]">{body}</p>
-              <div className="mx-auto mt-8 max-w-sm">
-                <PrimaryButton href="#contact">{r.solutionCta}</PrimaryButton>
+      <section id="consulting" className="scroll-mt-24 bg-white px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <Eyebrow>{r.processEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{r.processTitle}</h2>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{r.processText}</p>
+        </div>
+        <div className="mx-auto mt-14 max-w-3xl">
+          {r.processSteps.map(([number, title, body], index) => (
+            <article key={number} className="relative py-8 text-center">
+              {index > 0 && <SectionDivider />}
+              <div className={index > 0 ? "pt-8" : ""}>
+                <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[#dff2f6] text-sm font-black text-[#159dc5]">{number}</div>
+                <h3 className="mt-5 text-2xl font-black">{title}</h3>
+                <p className="mt-4 leading-8 text-[#607684]">{body}</p>
               </div>
-            </div>
-          </div>
-        </section>
-      ))}
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section id="energy" className="scroll-mt-24 bg-[#e6eff1] px-6 py-24 sm:py-28">
         <div className="mx-auto max-w-4xl text-center">
@@ -1146,6 +1181,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="mx-auto mt-4 max-w-3xl rounded-2xl bg-[#edf5f6] p-4 text-center text-sm leading-6 text-[#58717e]">{t.reviewPrivacy}</p>
         </div>
         <div className="mx-auto mt-12 max-w-5xl">
+          <p className="mb-5 text-center text-sm font-bold text-[#58717e]">
+            {currentLocale === "de" ? "Voreinstellung El Salvador: 0,160 USD/kWh · frei anpassbar" : currentLocale === "en" ? "El Salvador default: USD 0.160/kWh · fully adjustable" : "Valor inicial El Salvador: USD 0.160/kWh · totalmente ajustable"}
+          </p>
           <EnergyCostCalculator locale={currentLocale} />
         </div>
       </section>
@@ -1170,6 +1208,27 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <Link href={`/${currentLocale}/financing`} className="inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#159dc5] px-6 py-3.5 text-center font-black text-white shadow-sm transition hover:bg-[#1185a8]">{t.financeDetailButton}<ArrowIcon /></Link>
         </div>
       </section>
+
+      {t.visualSolutions.map(([title, body], index) => (
+        <section key={title} id={index === 0 ? "solutions" : undefined} className={`scroll-mt-24 px-6 py-24 sm:py-28 ${index % 2 === 0 ? "bg-white" : "bg-[#edf4f5]"}`}>
+          <div className="mx-auto max-w-5xl text-center">
+            <img
+              src={visualSolutionImages[index]}
+              alt={title}
+              loading="lazy"
+              className="mx-auto max-h-[620px] w-full rounded-3xl border border-[#c8dadd] bg-white object-contain p-3 shadow-[0_20px_60px_rgba(48,75,93,.10)]"
+            />
+            <div className="mx-auto mt-12 max-w-3xl">
+              <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">{title}</h2>
+              <p className="mt-5 text-lg leading-8 text-[#607684]">{body}</p>
+              <div className="mx-auto mt-8 max-w-sm">
+                <PrimaryButton href="#contact">{r.solutionCta}</PrimaryButton>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
 
       <section id="tools" className="scroll-mt-24 bg-[#edf4f5] px-6 py-24 sm:py-28">
         <div className="mx-auto max-w-5xl text-center">
