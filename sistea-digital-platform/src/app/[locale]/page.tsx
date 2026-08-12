@@ -6,7 +6,8 @@ import EnergyCostCalculator from "./components/EnergyCostCalculator";
 
 export const runtime = "edge";
 
-const APP_URL = "https://jolly-wood-2bda.andreas-reith.workers.dev";
+const APP_URL = "https://sistea-engineering-tools-secure.andreas-reith.workers.dev";
+const ADMIN_URL = "https://sistea-engineering-tools-secure.andreas-reith.workers.dev/admin";
 const AMAZON_URL = "https://www.amazon.com/author/andreasreith";
 const WHATSAPP_URL = "https://wa.me/50377282624";
 const BASE_ESI_URL = "https://energy-base.org/projects/energy-savings-insurance-europe/";
@@ -1332,6 +1333,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-[.13em] text-[#718692]">
             <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="hover:text-[#159dc5]">Engineering Series</a>
             <a href={APP_URL} target="_blank" rel="noreferrer" className="hover:text-[#159dc5]">Engineering Tools</a>
+            <a href={ADMIN_URL} target="_blank" rel="noreferrer" className="hover:text-[#159dc5]">SISTEA Admin</a>
             <a href="#contact" className="hover:text-[#159dc5]">Contact</a>
           </div>
         </div>
