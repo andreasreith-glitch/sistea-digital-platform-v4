@@ -896,465 +896,377 @@ const chillerManufacturerLinks = [
   ["Trane", "https://www.trane.com/commercial/latin-america/sv/es/products-systems/chillers.html"],
 ] as const;
 
+
+const relaxedCopy = {
+  es: {
+    introEyebrow: "Ingeniería con claridad",
+    introTitle: "Menos ruido. Más espacio para entender cada solución.",
+    introText: "La nueva página presenta cada tema por separado: una solución, una imagen y una explicación breve. Los detalles técnicos siguen disponibles, pero ya no compiten entre sí en la misma pantalla.",
+    solutionCta: "Hablar sobre esta solución",
+    energyLead: "Primero entendemos el consumo. Después definimos la medida.",
+    financeLead: "La ingeniería y el financiamiento deben formar parte de la misma decisión.",
+    toolsLead: "Una primera estimación digital, seguida por validación técnica de SISTEA.",
+    booksIntro: "Cada edición se muestra individualmente. La portada y el botón llevan directamente a la página exacta del libro en Amazon.",
+    amazonDirect: "Abrir este libro en Amazon",
+    amazonAll: "Ver todos los libros del autor",
+    formatKindle: "Kindle eBook",
+    sourcingLead: "Especificación técnica, selección de fabricante y compra directa como un solo proceso.",
+    experienceTitle: "Más de 40 años de experiencia aplicada a decisiones de ingeniería.",
+    experienceText: "SISTEA combina experiencia internacional, ingeniería europea y ejecución adaptada a las condiciones técnicas, climáticas y económicas de Centroamérica.",
+    contactLead: "Cuéntanos el problema. Nosotros comenzamos por los datos.",
+  },
+  en: {
+    introEyebrow: "Engineering with clarity",
+    introTitle: "Less noise. More room to understand each solution.",
+    introText: "The redesigned page presents each subject separately: one solution, one image, and one concise explanation. Technical depth remains available without forcing several topics to compete on the same screen.",
+    solutionCta: "Discuss this solution",
+    energyLead: "First understand the consumption. Then define the measure.",
+    financeLead: "Engineering and financing should be part of the same decision.",
+    toolsLead: "A digital first estimate followed by SISTEA engineering validation.",
+    booksIntro: "Every edition is shown individually. The cover and button lead directly to that exact book on Amazon.",
+    amazonDirect: "Open this book on Amazon",
+    amazonAll: "View all author books",
+    formatKindle: "Kindle eBook",
+    sourcingLead: "Technical specification, manufacturer selection, and direct procurement as one process.",
+    experienceTitle: "More than 40 years of experience applied to engineering decisions.",
+    experienceText: "SISTEA combines international experience, European engineering, and execution adapted to the technical, climatic, and economic conditions of Central America.",
+    contactLead: "Tell us the problem. We start with the data.",
+  },
+  de: {
+    introEyebrow: "Engineering mit Klarheit",
+    introTitle: "Weniger Unruhe. Mehr Raum, um jede Lösung zu verstehen.",
+    introText: "Die neue Seite zeigt jedes Thema einzeln: eine Lösung, ein Bild und eine kurze Erklärung. Die technische Tiefe bleibt erhalten, ohne dass mehrere Themen gleichzeitig um Aufmerksamkeit konkurrieren.",
+    solutionCta: "Über diese Lösung sprechen",
+    energyLead: "Zuerst den Verbrauch verstehen. Danach die Maßnahme definieren.",
+    financeLead: "Engineering und Finanzierung gehören in dieselbe Projektentscheidung.",
+    toolsLead: "Eine digitale Erstabschätzung, anschließend die technische Validierung durch SISTEA.",
+    booksIntro: "Jede Ausgabe wird einzeln gezeigt. Cover und Button führen direkt zur exakten Produktseite dieses Buches bei Amazon.",
+    amazonDirect: "Dieses Buch direkt bei Amazon öffnen",
+    amazonAll: "Alle Bücher des Autors ansehen",
+    formatKindle: "Kindle eBook",
+    sourcingLead: "Technische Spezifikation, Herstellerauswahl und Direktbeschaffung als durchgängiger Prozess.",
+    experienceTitle: "Mehr als 40 Jahre Erfahrung für belastbare Engineering-Entscheidungen.",
+    experienceText: "SISTEA verbindet internationale Erfahrung, europäisches Engineering und eine Umsetzung, die auf die technischen, klimatischen und wirtschaftlichen Bedingungen Zentralamerikas abgestimmt ist.",
+    contactLead: "Sag uns, wo das Problem liegt. Wir beginnen mit den Daten.",
+  },
+} as const;
+
+const bookEditions = [
+  {
+    topic: "CO₂ / R744",
+    language: "Deutsch",
+    title: "Praxisleitfaden CO₂-Kältetechnik: Von klassischen Kältemitteln zu R744 – Planung, Inbetriebnahme, Wartung und Fehlersuche",
+    format: "Kindle eBook",
+    cover: "/images/books/co2-de.webp",
+    href: "https://www.amazon.de/dp/B0HC61VNPS",
+  },
+  {
+    topic: "CO₂ / R744",
+    language: "American English",
+    title: "Practical Guide to CO₂ Refrigeration Technology: From Conventional Refrigerants to R744 – System Design, Commissioning, Maintenance, Energy Optimization, and Troubleshooting",
+    format: "Kindle eBook",
+    cover: "/images/books/co2-en.webp",
+    href: "https://www.amazon.com/dp/B0HCBCSJ2G",
+  },
+  {
+    topic: "CO₂ / R744",
+    language: "Español",
+    title: "Guía práctica de la refrigeración con CO₂: Del refrigerante convencional al R744 – diseño de sistemas, puesta en marcha, mantenimiento y diagnóstico de fallas",
+    format: "Kindle eBook",
+    cover: "/images/books/co2-es.webp",
+    href: "https://www.amazon.com/dp/B0HC8HM1HM",
+  },
+  {
+    topic: "NH₃ / R717",
+    language: "Deutsch",
+    title: "Industriekälte mit Ammoniak (R717): Projektleitfaden für Planung, Auslegung, Inbetriebnahme und energetische Optimierung",
+    format: "Kindle eBook",
+    cover: "/images/books/r717-de.webp",
+    href: "https://www.amazon.de/dp/B0HCNBF9ZJ",
+  },
+  {
+    topic: "NH₃ / R717",
+    language: "American English",
+    title: "Industrial Ammonia Refrigeration (R717): A Practical Guide to Planning, Design, Commissioning, Safety, and Energy Optimization",
+    format: "Kindle eBook",
+    cover: "/images/books/r717-en.webp",
+    href: "https://www.amazon.com/dp/B0HCSRZ1DN",
+  },
+  {
+    topic: "Industrial Heat Pumps",
+    language: "Deutsch",
+    title: "Industriewärmepumpen und Wärmerückgewinnung: Praxisleitfaden für Planung, Auslegung, Systemintegration und energieeffizienten Betrieb",
+    format: "Kindle eBook",
+    cover: "/images/books/heatpump-de.webp",
+    href: "https://www.amazon.de/dp/B0HCRT9WC9",
+  },
+  {
+    topic: "Industrial Heat Pumps",
+    language: "American English",
+    title: "Practical Guide to Industrial Heat Pumps and Heat Recovery: Planning, Design, Commissioning, Operation, and Energy Optimization",
+    format: "Kindle eBook",
+    cover: "/images/books/heatpump-en.webp",
+    href: "https://www.amazon.com/dp/B0HCYS2G31",
+  },
+  {
+    topic: "Industrial Heat Pumps",
+    language: "Español",
+    title: "Guía práctica de bombas de calor industriales y recuperación de calor: Planificación, diseño, puesta en marcha, operación y optimización energética",
+    format: "Kindle eBook",
+    cover: "/images/books/heatpump-es.webp",
+    href: "https://www.amazon.com/dp/B0HCYWDC33",
+  },
+  {
+    topic: "Industrial Energy Efficiency",
+    language: "Deutsch",
+    title: "Praxisleitfaden für industrielle Energieeffizienz: Technische Optimierung von Produktion, Versorgungssystemen und Betriebsabläufen",
+    format: "Kindle eBook",
+    cover: "/images/books/energy-de.webp",
+    href: "https://www.amazon.de/dp/B0H2RCLNCX",
+  },
+  {
+    topic: "Industrial Energy Efficiency",
+    language: "American English",
+    title: "Practical Guide to Industrial Energy Efficiency: Technical Optimization of Production, Supply Systems, and Operations",
+    format: "Kindle eBook",
+    cover: "/images/books/energy-en.webp",
+    href: "https://www.amazon.com/dp/B0HCX5TFCL",
+  },
+  {
+    topic: "Industrial Energy Efficiency",
+    language: "Español",
+    title: "Guía práctica de eficiencia energética industrial: Optimización técnica de la producción, los sistemas de suministro y las operaciones",
+    format: "Kindle eBook",
+    cover: "/images/books/energy-es.webp",
+    href: "https://www.amazon.com/dp/B0HCXMQD5",
+  },
+] as const;
+
+function PrimaryButton({ href, children, external = false }: { href: string; children: ReactNode; external?: boolean }) {
+  return (
+    <a
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noreferrer" : undefined}
+      className="inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#159dc5] px-6 py-3.5 text-center font-black text-white shadow-sm transition hover:bg-[#1185a8]"
+    >
+      {children}<ArrowIcon />
+    </a>
+  );
+}
+
+function SectionDivider() {
+  return <div className="mx-auto h-px w-20 bg-[#a8cbd3]" />;
+}
+
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const currentLocale = localeOf(locale);
   const t = translations[currentLocale];
   const sales = salesCopy[currentLocale];
+  const r = relaxedCopy[currentLocale];
 
   return (
-    <>
-
-      <main>
-        <section className="relative min-h-[760px] overflow-hidden bg-[#cddfe4] text-[#f5f8f9]">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            poster="/images/hero/san-salvador-skyline.jpg"
-            className="absolute inset-0 h-full w-full object-cover [filter:brightness(1.26)_contrast(.91)_saturate(.96)]"
-          >
-            <source src="/videos/sistea-hero-web.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#31586a]/58 via-[#3d6975]/24 to-[#d7e7ea]/8" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#a9d4da]/10 via-transparent to-[#d9e7e9]/8" />
-
-          <div className="relative z-10 mx-auto grid min-h-[760px] max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-[1.25fr_.75fr] lg:py-28">
-            <div>
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#dcebed]/55 bg-[#d9e8ea]/18 px-4 py-2 shadow-sm backdrop-blur-md">
-                <span className="h-2 w-2 rounded-full bg-cyan-400" />
-                <span className="text-xs font-black uppercase tracking-[.16em] text-[#d8f1f5]">{t.heroEyebrow}</span>
-              </div>
-              <h1 className="mt-7 max-w-5xl text-4xl font-black tracking-[-.04em] sm:text-5xl lg:text-7xl lg:leading-[1.02]">
-                {t.heroTitle}
-              </h1>
-              <p className="mt-7 max-w-3xl text-lg leading-8 text-[#f0f5f6]/95 [text-shadow:0_2px_12px_rgba(22,53,70,.35)] lg:text-xl">{t.heroText}</p>
-              <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white shadow-lg shadow-cyan-950/10 transition hover:bg-[#159dc5]">
-                  {t.heroPrimary}<ArrowIcon />
-                </a>
-                <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#e7f0f2]/95 px-6 py-4 font-black text-[#304b5d] shadow-lg shadow-slate-950/10 transition hover:bg-[#f0f5f6]">
-                  {t.heroSecondary}<ArrowIcon />
-                </a>
-                <a href="#solutions" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#dcebed]/55 bg-[#d9e8ea]/16 px-6 py-4 font-black text-white shadow-sm backdrop-blur-md transition hover:bg-[#f0f5f6]/24">
-                  {t.heroThird}
-                </a>
-              </div>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-              {t.stats.map(([value, label]) => (
-                <div key={label} className="rounded-2xl border border-[#b9d2d8] bg-[#dce9ec]/88 p-6 text-[#304b5d] shadow-xl shadow-[#234b61]/10 backdrop-blur-xl">
-                  <div className="text-4xl font-black text-[#20a8cf]">{value}</div>
-                  <div className="mt-2 text-sm font-semibold leading-6 text-[#4d6575]">{label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-[#c2d5da]/75 bg-[#d9e6e9]/90 shadow-[0_-8px_30px_rgba(48,75,93,.06)] backdrop-blur-xl">
-            <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-x-8 gap-y-3 px-6 py-4 text-[11px] font-bold uppercase tracking-[.16em] text-[#4d6575] lg:justify-between">
-              {['HVAC', 'R717 · NH₃', 'R744 · CO₂', 'CHILLERS', 'PV + BATTERY', 'BMS · PLC', 'ESI FINANCING'].map((item) => <span key={item}>{item}</span>)}
-            </div>
-          </div>
-        </section>
-
-        <section className="border-b border-[#bfd2d8] bg-[#dbe8eb] px-6 py-14 lg:py-16">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-7 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
-              <div>
-                <Eyebrow>{sales.quickEyebrow}</Eyebrow>
-                <h2 className="mt-3 text-2xl font-black tracking-tight text-[#304b5d] sm:text-3xl">{sales.quickTitle}</h2>
-              </div>
-              <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-                {sales.quick.map(([number, title, text], index) => {
-                  const href = ['#energy', '#tools', '#books', '#esi'][index];
-                  return (
-                    <a key={number} href={href} className="group rounded-2xl border border-[#bfd3d9] bg-[#e9f0f2] p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#78cada] hover:bg-[#eef4f5] hover:shadow-lg">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-black tracking-[.16em] text-[#159dc5]">{number}</span>
-                        <span className="text-[#6e8792] transition group-hover:translate-x-1 group-hover:text-[#159dc5]"><ArrowIcon /></span>
-                      </div>
-                      <h3 className="mt-4 font-black text-[#304b5d]">{title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-[#607684]">{text}</p>
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-
-                <section id="solutions" className="scroll-mt-24 bg-[#dce6ea] px-6 py-20 lg:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.solutionsEyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.solutionsTitle}</h2>
-              </div>
-              <p className="text-lg leading-8 text-slate-600">{t.solutionsText}</p>
-            </div>
-
-            <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {t.competences.map(([title, body], index) => (
-                <div key={title} className="flex items-start gap-3 rounded-2xl border border-[#c5d6db] bg-[#edf3f4] p-4">
-                  <div className="grid h-9 w-9 flex-none place-items-center rounded-lg bg-[#dff4f8] text-[#159dc5]"><TechIcon index={index} /></div>
-                  <div>
-                    <div className="font-black text-[#304b5d]">{title}</div>
-                    <div className="mt-1 text-xs leading-5 text-[#607684]">{body}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-10">
-              <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
-              <h3 className="mt-3 max-w-5xl text-2xl font-black tracking-tight text-[#304b5d] sm:text-3xl">{t.refrigerationTitle}</h3>
-              <p className="mt-4 max-w-4xl leading-7 text-[#607684]">{t.refrigerationText}</p>
-            </div>
-
-            <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {t.visualSolutions.map(([title, body], index) => (
-                <article key={title} className="group overflow-hidden rounded-3xl border border-[#c2d6dc] bg-[#edf3f4] shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                  <div className="relative h-52 overflow-hidden bg-white">
-                    <a href={visualSolutionImages[index]} target="_blank" rel="noreferrer" aria-label={`${title} – image`} className="block h-full w-full">
-                      <img
-                        src={visualSolutionImages[index]}
-                        alt={title}
-                        loading="lazy"
-                        className={`h-full w-full transition duration-500 group-hover:scale-[1.03] ${index === 0 || index === 2 || index === 3 || index === 4 ? "object-contain p-4" : "object-cover"}`}
-                      />
-                    </a>
-                    <div className="absolute left-4 top-4 rounded-full bg-[#31596a]/90 px-3 py-1.5 text-[10px] font-black uppercase tracking-[.16em] text-white backdrop-blur">
-                      Engineering 0{index + 1}
-                    </div>
-                  </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-black text-[#304b5d]">{title}</h3>
-                    <p className="mt-2 text-sm leading-6 text-[#607684]">{body}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-[#c6d8dd] bg-[#e6eef0] p-5 sm:p-6">
-              <div className="grid gap-5 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
-                <div>
-                  <p className="text-xs font-black uppercase tracking-[.18em] text-[#718692]">{t.brandsLabel}</p>
-                  <p className="mt-2 text-sm leading-6 text-[#607684]">{t.brandEvaluationText}</p>
-                </div>
-                <div className="grid gap-3 sm:grid-cols-3">
-                  {chillerManufacturerLinks.map(([brand, href]) => (
-                    <a key={brand} href={href} target="_blank" rel="noreferrer" className="rounded-xl border border-[#c4d7dc] bg-[#f2f7f8] px-4 py-4 text-center transition hover:border-[#7fd7e9] hover:shadow-md">
-                      <div className="text-lg font-black text-[#405d70]">{brand}</div>
-                      <div className="mt-1 text-[9px] font-black uppercase tracking-[.12em] text-[#159dc5]">{t.brandPortfolioLabel}</div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-<section id="energy" className="bg-[#e6eef0] px-6 py-24">
-          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.9fr_1.1fr] lg:items-start">
-            <div className="lg:sticky lg:top-28">
-              <Eyebrow>{t.energyEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.energyTitle}</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">{t.energyText}</p>
-
-              <div className="mt-9 rounded-2xl border border-[#afd5dd] bg-[#dfecef] p-7">
-                <div className="flex items-start justify-between gap-5">
-                  <h3 className="text-xl font-black text-[#304b5d]">{t.reviewTitle}</h3>
-                  <div className="flex-none rounded-xl border border-[#bfd6dc] bg-[#eef4f5] px-4 py-3 text-center shadow-sm">
-                    <div className="text-2xl font-black text-[#159dc5]">~40%</div>
-                    <div className="mt-1 text-[10px] font-black uppercase tracking-[.12em] text-[#6d8390]">Potential</div>
-                  </div>
-                </div>
-                <p className="mt-4 leading-7 text-slate-700">{t.reviewText}</p>
-                <div className="mt-4 rounded-xl border border-[#b9d7de] bg-[#e8f2f4] px-4 py-3 text-sm leading-6 text-[#516b79]">{t.reviewPrivacy}</div>
-                <a href="#contact" className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#25b4dc] px-5 py-3 font-black text-white shadow-sm transition hover:bg-[#159dc5]">
-                  {t.reviewButton}<ArrowIcon />
-                </a>
-              </div>
-            </div>
-
-            <div className="space-y-5">
-              <LoadProfileVisual peakLabel={sales.peakLabel} optimizedLabel={sales.optimizedLabel} viewLabel={sales.energyViewLabel} profileLabel={sales.energyProfileLabel} potentialLabel={sales.potentialLabel} footnote={sales.visualFootnote} />
-              <div className="rounded-3xl border border-[#c6d8dd] bg-[#dfeaed] p-5 shadow-sm sm:p-6">
-                <div className="grid gap-3 sm:grid-cols-3">
-                  {[sales.billsBadge, sales.baselineBadge, sales.ndaBadge].map((label, index) => (
-                    <div key={label} className="rounded-xl border border-[#c3d7dc] bg-[#edf3f4] p-4">
-                      <div className="text-xs font-black text-[#159dc5]">0{index + 1}</div>
-                      <div className="mt-2 text-sm font-black leading-5 text-[#304b5d]">{label}</div>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {t.energyFlow.map(([title, text], index) => (
-                    <div key={title} className="rounded-xl border border-[#cad9dd] bg-[#e8eff1] p-4">
-                      <div className="flex items-center gap-3">
-                        <span className="grid h-8 w-8 flex-none place-items-center rounded-lg bg-[#d9f1f6] text-xs font-black text-[#159dc5]">0{index + 1}</span>
-                        <div>
-                          <div className="font-black text-[#304b5d]">{title}</div>
-                          <div className="mt-1 text-xs leading-5 text-[#637783]">{text}</div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-auto mt-14 max-w-7xl">
-            <EnergyCostCalculator locale={currentLocale} />
-          </div>
-        </section>
-
-        <section id="industries" className="scroll-mt-24 bg-[#d9e4e8] px-6 py-24">
-          <div className="mx-auto max-w-7xl">
-            <Eyebrow>{t.industriesEyebrow}</Eyebrow>
-            <h2 className="mt-4 max-w-4xl text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.industriesTitle}</h2>
-            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-              {t.industries.map(([title, text], index) => (
-                <article key={title} className="group relative overflow-hidden rounded-2xl border border-[#c5d6db] bg-[#ebf1f3] p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                  <div className="absolute right-4 top-1 text-7xl font-black text-slate-100 transition group-hover:text-cyan-50">0{index + 1}</div>
-                  <div className="relative">
-                    <h3 className="text-xl font-black text-[#304b5d]">{title}</h3>
-                    <p className="mt-4 max-w-sm leading-7 text-slate-600">{text}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-                <section id="knowledge" className="scroll-mt-24 bg-[#edf3f4] px-6 py-20 lg:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.knowledgeEyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.knowledgeTitle}</h2>
-              </div>
-              <p className="text-lg leading-8 text-[#607684]">{t.knowledgeText}</p>
-            </div>
-
-            <div className="mt-10 grid gap-6 lg:grid-cols-2">
-              <article id="tools" className="scroll-mt-24 overflow-hidden rounded-3xl border border-[#bfd3d8] bg-[#e4ecef] shadow-sm">
-                <div className="p-6 sm:p-8">
-                  <Eyebrow>{t.toolsEyebrow}</Eyebrow>
-                  <h3 className="mt-3 text-2xl font-black tracking-tight text-[#304b5d]">{t.toolsTitle}</h3>
-                  <p className="mt-4 leading-7 text-[#607684]">{t.toolsText}</p>
-                  <div className="mt-5 grid gap-2 sm:grid-cols-2">
-                    {t.tools.map(([title], index) => (
-                      <div key={title} className="flex items-center gap-3 rounded-xl border border-[#c6d7dc] bg-[#edf3f4] p-3">
-                        <span className="grid h-7 w-7 flex-none place-items-center rounded-lg bg-[#dff4f8] text-[10px] font-black text-[#159dc5]">0{index + 1}</span>
-                        <span className="text-sm font-black text-[#304b5d]">{title}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-5 rounded-xl border border-[#b9d6d0] bg-[#dfece8] p-4">
-                    <div className="text-xs font-black uppercase tracking-[.14em] text-emerald-800">{sales.appBoundaryTitle}</div>
-                    <p className="mt-2 text-sm leading-6 text-[#526b78]">{sales.appBoundaryText}</p>
-                  </div>
-                  <div className="mt-5 flex flex-col gap-2 sm:flex-row">
-                    <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-5 py-3 font-black text-white hover:bg-[#159dc5]">{t.toolsButton}<ArrowIcon /></a>
-                    <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-5 py-3 font-black text-[#304b5d]">{sales.appProjectButton}<ArrowIcon /></a>
-                  </div>
-                </div>
-                <a href={APP_URL} target="_blank" rel="noreferrer" className="block border-t border-[#bfd3d8] bg-[#304b5d] p-2">
-                  <img src="/images/marketing/engineering-tools-desktop.webp" alt={sales.appVisualLabel} className="w-full rounded-2xl" />
-                </a>
-              </article>
-
-              <article id="books" className="scroll-mt-24 overflow-hidden rounded-3xl border border-[#bfd3d8] bg-[#e4ecef] shadow-sm">
-                <div className="p-6 sm:p-8">
-                  <Eyebrow>{t.booksEyebrow}</Eyebrow>
-                  <h3 className="mt-3 text-2xl font-black tracking-tight text-[#304b5d]">{t.booksTitle}</h3>
-                  <p className="mt-4 leading-7 text-[#607684]">{t.booksText}</p>
-                  <div className="mt-5 grid gap-2 sm:grid-cols-2">
-                    {t.books.map(([code, title, color]) => (
-                      <div key={code} className="flex items-center gap-3 rounded-xl border border-[#c4d5da] bg-[#edf3f4] p-3">
-                        <div className="grid h-8 min-w-12 place-items-center rounded-lg px-2 text-[10px] font-black text-white" style={{backgroundColor: color}}>{code}</div>
-                        <div className="text-sm font-black leading-5 text-[#304b5d]">{title}</div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="mt-5 rounded-xl border border-[#b9d6d0] bg-[#dfece8] p-4">
-                    <div className="text-xs font-black uppercase tracking-[.14em] text-emerald-800">{sales.knowledgeBridgeTitle}</div>
-                    <p className="mt-2 text-sm leading-6 text-[#526b78]">{sales.knowledgeBridgeText}</p>
-                  </div>
-                  <div className="mt-5 flex flex-col gap-2 sm:flex-row">
-                    <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-5 py-3 font-black text-white hover:bg-[#159dc5]">{t.booksButton}<ArrowIcon /></a>
-                    <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-5 py-3 font-black text-[#304b5d]">{sales.booksProjectButton}<ArrowIcon /></a>
-                  </div>
-                </div>
-                <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="block border-t border-[#bfd3d8] bg-[#304b5d] p-2">
-                  <img src="/images/marketing/engineering-series-amazon.webp" alt="SISTEA Engineering Series on Amazon" className="w-full rounded-2xl" />
-                </a>
-              </article>
-            </div>
-
-            <div className="mt-6 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-5">
-              <div className="flex flex-wrap items-center gap-2 text-[10px] font-black uppercase tracking-[.12em] text-[#496172]">
-                {t.knowledgeFlow.map((label, index) => (
-                  <div key={label} className="contents">
-                    <span className="rounded-lg bg-[#eef4f2] px-3 py-2">{label}</span>
-                    {index < t.knowledgeFlow.length - 1 && <span>→</span>}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="procurement" className="scroll-mt-24 bg-[#d9e4e8] px-6 py-20 lg:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.procurementEyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.procurementTitle}</h2>
-              </div>
-              <div>
-                <p className="text-lg leading-8 text-[#607684]">{t.procurementText}</p>
-                <p className="mt-4 rounded-2xl border border-[#b9d6d0] bg-[#dfece8] p-4 text-sm font-semibold leading-6 text-[#526b78]">{t.procurementPromise}</p>
-              </div>
-            </div>
-
-            <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {t.procurementStats.map(([value, label]) => (
-                <div key={label} className="rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-5">
-                  <div className="text-2xl font-black text-[#159dc5]">{value}</div>
-                  <p className="mt-1 text-sm font-bold leading-5 text-[#4f6675]">{label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-6 rounded-3xl border border-[#bdd3da] bg-[#31596a] p-6 text-white sm:p-8">
-              <div className="text-xs font-black uppercase tracking-[.16em] text-cyan-200">{t.procurementFlowLabel}</div>
-              <div className="mt-5 grid gap-3 md:grid-cols-2 lg:grid-cols-3">
-                {t.procurementSteps.map(([n, title, body]) => (
-                  <div key={n} className="rounded-xl border border-white/15 bg-white/10 p-4">
-                    <div className="text-[10px] font-black text-cyan-200">{n}</div>
-                    <div className="mt-2 font-black">{title}</div>
-                    <p className="mt-2 text-xs leading-5 text-white/70">{body}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-6 flex flex-col gap-4 rounded-2xl border border-[#c3d5da] bg-[#edf3f4] p-6 lg:flex-row lg:items-center lg:justify-between">
-              <div>
-                <div className="text-xl font-black text-[#304b5d]">{t.procurementCta}</div>
-                <p className="mt-1 text-sm leading-6 text-[#607684]">{t.procurementIntegrationText}</p>
-              </div>
-              <a href="#contact" className="inline-flex flex-none items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white hover:bg-[#159dc5]">{t.procurementButton}<ArrowIcon /></a>
-            </div>
-          </div>
-        </section>
-
-        <section id="esi" className="scroll-mt-24 bg-[#e4edef] px-6 py-20 lg:py-24">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
-              <div>
-                <Eyebrow>{t.financeEyebrow}</Eyebrow>
-                <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
-              </div>
-              <div>
-                <p className="text-lg leading-8 text-slate-600">{t.financeText}</p>
-                <p className="mt-4 rounded-2xl border border-[#bcd8d2] bg-[#dfece8] p-4 text-sm font-semibold leading-6 text-[#496172]">{t.financeMembership}</p>
-              </div>
-            </div>
-
-            <div className="mt-8 grid gap-4 lg:grid-cols-3">
-              {t.financeModels.map(([title, body], index) => (
-                <article key={title} className="rounded-2xl border border-[#bfd3d8] bg-[#edf3f4] p-6">
-                  <div className="text-xs font-black uppercase tracking-[.15em] text-[#159dc5]">0{index + 1}</div>
-                  <h3 className="mt-3 text-xl font-black text-[#304b5d]">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{body}</p>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link href={`/${currentLocale}/financing`} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#25b4dc] px-6 py-4 font-black text-white hover:bg-[#159dc5]">{t.financeDetailButton}<ArrowIcon /></Link>
-              <a href="#contact" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#b8cfd6] bg-[#edf3f4] px-6 py-4 font-black text-[#304b5d]">{t.financeButton}<ArrowIcon /></a>
-            </div>
-          </div>
-        </section>
-
-<section className="bg-[#e5edef] px-6 py-24">
-          <div className="mx-auto max-w-7xl rounded-3xl border border-[#d7e8ed] bg-gradient-to-br from-[#d9e8eb] via-[#e6eef0] to-[#dce9e5] p-8 text-[#304b5d] shadow-sm sm:p-12 lg:p-14">
-            <div className="max-w-4xl">
-              <Eyebrow>{t.whyEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.whyTitle}</h2>
-            </div>
-            <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
-              {t.why.map(([title, text], index) => (
-                <div key={title} className="border-l border-[#71d8e9] pl-5">
-                  <div className="text-xs font-black text-[#159dc5]">0{index + 1}</div>
-                  <h3 className="mt-4 text-xl font-black text-[#304b5d]">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-[#607684]">{text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="contact" className="bg-gradient-to-b from-[#e2ebee] to-[#d8e8eb] px-6 py-24">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[.85fr_1.15fr]">
-            <div>
-              <Eyebrow>{t.contactEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight text-[#304b5d] sm:text-4xl lg:text-5xl">{t.contactTitle}</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-600">{t.contactText}</p>
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-6 py-4 font-black text-white transition hover:bg-emerald-700">
-                {t.whatsapp}<ArrowIcon />
-              </a>
-              <div className="mt-10 rounded-2xl border border-[#c3d4d9] bg-[#eaf1f2] p-6 text-sm leading-7 text-slate-600 shadow-sm">
-                <div className="font-black text-[#304b5d]">SISTEA S.A. de C.V.</div>
-                <div>www.sisteasv.com</div>
-                <div>info@sisteasv.com</div>
-                <div>WhatsApp +503 7728-2624</div>
-              </div>
-            </div>
-            <div className="rounded-3xl border border-[#c3d4d9] bg-[#eaf1f2] p-5 shadow-[0_18px_45px_rgba(48,75,93,.10)] sm:p-8">
-              <ContactForm locale={currentLocale} />
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="border-t border-[#d7e8ed] bg-[#dce7ea] px-6 py-8 text-[#607684]">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <div><span className="font-black text-[#304b5d]">SISTEA S.A. de C.V.</span> · Engineering for efficient systems</div>
-          <div className="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-[.13em] text-[#718692]">
-            <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="hover:text-[#159dc5]">Engineering Series</a>
-            <a href={APP_URL} target="_blank" rel="noreferrer" className="hover:text-[#159dc5]">Engineering Tools</a>
-            <a href={ADMIN_URL} target="_blank" rel="noreferrer" className="hover:text-[#159dc5]">SISTEA Admin</a>
-            <a href="#contact" className="hover:text-[#159dc5]">Contact</a>
+    <main className="overflow-hidden bg-[#f5f9fa] text-[#304b5d]">
+      <section className="relative min-h-[720px] overflow-hidden bg-[#244957] text-white">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="/images/hero/san-salvador-skyline.jpg"
+          className="absolute inset-0 h-full w-full object-cover [filter:brightness(.72)_contrast(.92)_saturate(.9)]"
+        >
+          <source src="/videos/sistea-hero-web.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#244957]/45 via-[#244957]/58 to-[#244957]/82" />
+        <div className="relative z-10 mx-auto flex min-h-[720px] max-w-4xl flex-col justify-center px-6 py-24 text-center">
+          <Eyebrow light>{t.heroEyebrow}</Eyebrow>
+          <h1 className="mt-6 text-4xl font-black tracking-[-.035em] sm:text-5xl lg:text-6xl lg:leading-[1.05]">{t.heroTitle}</h1>
+          <p className="mx-auto mt-7 max-w-3xl text-lg leading-8 text-white/85">{t.heroText}</p>
+          <div className="mx-auto mt-9 flex w-full max-w-sm flex-col gap-3">
+            <PrimaryButton href="#contact">{t.heroPrimary}</PrimaryButton>
+            <a href={APP_URL} target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/45 bg-white/10 px-6 py-3.5 font-black text-white backdrop-blur transition hover:bg-white/20">
+              {t.heroSecondary}<ArrowIcon />
+            </a>
           </div>
         </div>
+      </section>
+
+      <section className="px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <Eyebrow>{r.introEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{r.introTitle}</h2>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{r.introText}</p>
+        </div>
+      </section>
+
+      {t.visualSolutions.map(([title, body], index) => (
+        <section key={title} id={index === 0 ? "solutions" : undefined} className={`scroll-mt-24 px-6 py-24 sm:py-28 ${index % 2 === 0 ? "bg-white" : "bg-[#edf4f5]"}`}>
+          <div className="mx-auto max-w-5xl text-center">
+            <img
+              src={visualSolutionImages[index]}
+              alt={title}
+              loading="lazy"
+              className="mx-auto max-h-[620px] w-full rounded-3xl border border-[#c8dadd] bg-white object-contain p-3 shadow-[0_20px_60px_rgba(48,75,93,.10)]"
+            />
+            <div className="mx-auto mt-12 max-w-3xl">
+              <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
+              <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">{title}</h2>
+              <p className="mt-5 text-lg leading-8 text-[#607684]">{body}</p>
+              <div className="mx-auto mt-8 max-w-sm">
+                <PrimaryButton href="#contact">{r.solutionCta}</PrimaryButton>
+              </div>
+            </div>
+          </div>
+        </section>
+      ))}
+
+      <section id="energy" className="scroll-mt-24 bg-[#e6eff1] px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-4xl text-center">
+          <Eyebrow>{t.energyEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.energyTitle}</h2>
+          <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.energyLead}</p>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.energyText}</p>
+        </div>
+        <div className="mx-auto mt-12 max-w-5xl">
+          <LoadProfileVisual
+            peakLabel={sales.peakLabel}
+            optimizedLabel={sales.optimizedLabel}
+            viewLabel={sales.energyViewLabel}
+            profileLabel={sales.energyProfileLabel}
+            potentialLabel={sales.potentialLabel}
+            footnote={sales.visualFootnote}
+          />
+        </div>
+        <div className="mx-auto mt-14 max-w-5xl rounded-3xl border border-[#bdd3d8] bg-white p-6 shadow-sm sm:p-9">
+          <h3 className="text-center text-2xl font-black sm:text-3xl">{t.reviewTitle}</h3>
+          <p className="mx-auto mt-5 max-w-3xl text-center leading-8 text-[#607684]">{t.reviewText}</p>
+          <p className="mx-auto mt-4 max-w-3xl rounded-2xl bg-[#edf5f6] p-4 text-center text-sm leading-6 text-[#58717e]">{t.reviewPrivacy}</p>
+        </div>
+        <div className="mx-auto mt-12 max-w-5xl">
+          <EnergyCostCalculator locale={currentLocale} />
+        </div>
+      </section>
+
+      <section id="esi" className="scroll-mt-24 bg-white px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <Eyebrow>{t.financeEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.financeTitle}</h2>
+          <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.financeLead}</p>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.financeText}</p>
+        </div>
+        <div className="mx-auto mt-14 max-w-3xl space-y-12">
+          {t.financeModels.map(([title, body], index) => (
+            <article key={title} className="text-center">
+              <div className="mx-auto mb-5 grid h-10 w-10 place-items-center rounded-full bg-[#dff2f6] text-sm font-black text-[#159dc5]">0{index + 1}</div>
+              <h3 className="text-2xl font-black">{title}</h3>
+              <p className="mt-4 leading-8 text-[#607684]">{body}</p>
+            </article>
+          ))}
+        </div>
+        <div className="mx-auto mt-14 max-w-sm">
+          <Link href={`/${currentLocale}/financing`} className="inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#159dc5] px-6 py-3.5 text-center font-black text-white shadow-sm transition hover:bg-[#1185a8]">{t.financeDetailButton}<ArrowIcon /></Link>
+        </div>
+      </section>
+
+      <section id="tools" className="scroll-mt-24 bg-[#edf4f5] px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-5xl text-center">
+          <img src="/images/marketing/engineering-tools-desktop.webp" alt="SISTEA Engineering Tools" loading="lazy" className="mx-auto w-full rounded-3xl border border-[#c4d8dd] bg-white object-contain shadow-[0_20px_60px_rgba(48,75,93,.10)]" />
+          <div className="mx-auto mt-12 max-w-3xl">
+            <Eyebrow>{t.toolsEyebrow}</Eyebrow>
+            <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.toolsTitle}</h2>
+            <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.toolsLead}</p>
+            <p className="mt-6 text-lg leading-8 text-[#607684]">{t.toolsText}</p>
+            <div className="mx-auto mt-8 max-w-sm">
+              <PrimaryButton href={APP_URL} external>{t.toolsButton}</PrimaryButton>
+            </div>
+            <p className="mt-4 text-sm text-[#6f8490]">{t.toolsNote}</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="books" className="scroll-mt-24 bg-white px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <Eyebrow>{t.booksEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.booksTitle}</h2>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.booksText}</p>
+          <p className="mt-5 rounded-2xl bg-[#edf5f6] p-5 leading-7 text-[#526f7d]">{r.booksIntro}</p>
+        </div>
+
+        <div className="mx-auto mt-20 max-w-3xl">
+          {bookEditions.map((book, index) => (
+            <article key={`${book.href}-${book.language}`} className="py-16 text-center first:pt-0 last:pb-0">
+              {index > 0 && <SectionDivider />}
+              <div className={index > 0 ? "pt-16" : ""}>
+                <a href={book.href} target="_blank" rel="noreferrer" aria-label={`${book.title} – Amazon`}>
+                  <img
+                    src={book.cover}
+                    alt={book.title}
+                    loading="lazy"
+                    className="mx-auto max-h-[560px] w-auto max-w-full rounded-xl border border-[#c8d9dd] bg-white object-contain shadow-[0_24px_60px_rgba(48,75,93,.16)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_30px_70px_rgba(48,75,93,.22)]"
+                  />
+                </a>
+                <div className="mt-8 text-xs font-black uppercase tracking-[.2em] text-[#159dc5]">{book.topic}</div>
+                <div className="mt-3 text-sm font-bold text-[#6b808c]">{book.language} · {book.format}</div>
+                <h3 className="mx-auto mt-4 max-w-2xl text-2xl font-black leading-tight sm:text-3xl">{book.title}</h3>
+                <div className="mx-auto mt-7 max-w-sm">
+                  <PrimaryButton href={book.href} external>{r.amazonDirect}</PrimaryButton>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="mx-auto mt-20 max-w-sm text-center">
+          <a href={AMAZON_URL} target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#8fbfc9] bg-white px-6 py-3.5 font-black text-[#31596a] transition hover:bg-[#edf5f6]">
+            {r.amazonAll}<ArrowIcon />
+          </a>
+        </div>
+      </section>
+
+      <section className="bg-[#edf4f5] px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <Eyebrow>{t.procurementEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.procurementTitle}</h2>
+          <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.sourcingLead}</p>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.procurementText}</p>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.procurementPromise}</p>
+          <div className="mx-auto mt-8 max-w-sm">
+            <PrimaryButton href="#contact">{t.procurementButton}</PrimaryButton>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-3xl text-center">
+          <Eyebrow>{t.whyEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{r.experienceTitle}</h2>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{r.experienceText}</p>
+        </div>
+      </section>
+
+      <section id="contact" className="scroll-mt-24 bg-[#e4eef0] px-6 py-24 pb-32 sm:py-28 sm:pb-32">
+        <div className="mx-auto max-w-3xl text-center">
+          <Eyebrow>{t.contactEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.contactTitle}</h2>
+          <p className="mt-5 text-xl font-bold leading-8 text-[#4f6a78]">{r.contactLead}</p>
+          <p className="mt-6 text-lg leading-8 text-[#607684]">{t.contactText}</p>
+        </div>
+        <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-[#bed3d8] bg-white p-5 shadow-sm sm:p-8">
+          <ContactForm locale={currentLocale} />
+        </div>
+        <div className="mx-auto mt-8 max-w-sm text-center">
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#8fbfc9] bg-white px-6 py-3.5 font-black text-[#31596a] transition hover:bg-[#edf5f6]">
+            {t.whatsapp}<ArrowIcon />
+          </a>
+        </div>
+      </section>
+
+      <footer className="bg-[#2e5262] px-6 py-10 text-center text-sm text-white/70">
+        <p>SISTEA S.A. de C.V. · www.sisteasv.com · info@sisteasv.com</p>
+        <a href={ADMIN_URL} target="_blank" rel="noreferrer" className="mt-4 inline-block text-xs font-bold text-white/45 transition hover:text-white/80">SISTEA Admin</a>
       </footer>
-
-      <div className="fixed inset-x-3 bottom-3 z-50 grid grid-cols-2 gap-2 rounded-2xl border border-[#a8c4cc] bg-[#e9f1f2]/96 p-2 shadow-2xl backdrop-blur-xl md:hidden">
-        <a href="#energy" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#25b4dc] px-3 text-center text-xs font-black text-white">{sales.mobileAnalyze}</a>
-        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center rounded-xl bg-emerald-600 px-3 text-center text-xs font-black text-white">{sales.mobileWhatsApp}</a>
-      </div>
-
-      <a
-        href={WHATSAPP_URL}
-        target="_blank"
-        rel="noreferrer"
-        aria-label="WhatsApp"
-        className="fixed bottom-5 right-5 z-50 hidden h-14 w-14 place-items-center md:grid rounded-full bg-emerald-600 text-white shadow-2xl transition hover:scale-105 hover:bg-emerald-700"
-      >
-        <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor" aria-hidden="true">
-          <path d="M20.52 3.48A11.81 11.81 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.95L.05 24l6.27-1.64a11.9 11.9 0 0 0 5.75 1.46h.01C18.65 23.82 24 18.47 24 11.9c0-3.18-1.24-6.17-3.48-8.42Zm-8.44 18.33h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.72.98.99-3.63-.24-.37a9.86 9.86 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.93-9.92a9.86 9.86 0 0 1 7.02 2.91 9.86 9.86 0 0 1 2.9 7.01c-.01 5.47-4.46 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47a8.9 8.9 0 0 1-1.65-2.05c-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.21 5.1 4.5.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35Z" />
-        </svg>
-      </a>
-    </>
+    </main>
   );
 }
