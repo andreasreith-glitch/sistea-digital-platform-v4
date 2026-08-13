@@ -184,7 +184,7 @@ export default function HomepageApplications({ locale }: { locale: Locale }) {
 
         <div className="mt-12 grid gap-5 md:grid-cols-2">
           {t.priorities.map(([title, body], index) => {
-            const media = priorityMedia[index];
+            const media = priorityMedia[index] ?? priorityMedia[0];
             return (
               <article key={title} className="group overflow-hidden rounded-3xl border border-white/15 bg-white/10 shadow-[0_18px_55px_rgba(0,20,35,.28)] backdrop-blur-sm">
                 <div className="h-52 overflow-hidden bg-[#EAF4F9] sm:h-60">
@@ -227,7 +227,7 @@ export default function HomepageApplications({ locale }: { locale: Locale }) {
               <video autoPlay muted loop playsInline preload="metadata" className="aspect-[16/10] w-full object-cover">
                 <source src={src} type="video/mp4" />
               </video>
-              <figcaption className="px-5 py-4 text-sm font-black text-cyan-100">{t.videoLabels[index]}</figcaption>
+              <figcaption className="px-5 py-4 text-sm font-black text-cyan-100">{t.videoLabels[index] ?? ""}</figcaption>
             </figure>
           ))}
         </div>
