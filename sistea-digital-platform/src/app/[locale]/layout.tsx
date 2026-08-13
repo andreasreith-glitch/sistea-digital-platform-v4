@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import HomepageApplications from "./components/HomepageApplications";
 import HomepagePremiumUpgrade from "./components/HomepagePremiumUpgrade";
+import HomepageVisualPolish from "./components/HomepageVisualPolish";
 
 const locales = ["es", "en", "de"] as const;
 type Locale = (typeof locales)[number];
@@ -55,6 +56,8 @@ export default async function LocaleLayout({
 
   return (
     <>
+      <HomepageVisualPolish />
+
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-xl">
         <div className="mx-auto flex h-[84px] max-w-7xl items-center justify-between gap-5 px-5 lg:px-8">
           <Link
