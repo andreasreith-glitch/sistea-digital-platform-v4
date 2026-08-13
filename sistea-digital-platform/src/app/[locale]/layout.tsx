@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
+import HomepageApplications from "./components/HomepageApplications";
 
 const locales = ["es", "en", "de"] as const;
 type Locale = (typeof locales)[number];
@@ -152,6 +153,7 @@ export default async function LocaleLayout({
       </header>
 
       <main>{children}</main>
+      <HomepageApplications locale={locale} />
 
       <footer className="bg-slate-950 px-6 py-12 text-white">
         <div className="mx-auto max-w-7xl">
