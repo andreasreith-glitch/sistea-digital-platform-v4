@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import HomepageApplications from "./components/HomepageApplications";
+import HomepageVisualRefresh from "./components/HomepageVisualRefresh";
 
 const locales = ["es", "en", "de"] as const;
 type Locale = (typeof locales)[number];
@@ -80,7 +81,7 @@ export default async function LocaleLayout({
             </Link>
 
             <Link
-              href={`/${locale}#solutions`}
+              href={`/${locale}#solutions-refresh`}
               className="text-sm font-medium text-slate-700 transition hover:text-cyan-600"
             >
               {text.solutions}
@@ -153,6 +154,7 @@ export default async function LocaleLayout({
       </header>
 
       <main>{children}</main>
+      <HomepageVisualRefresh locale={locale} />
       <HomepageApplications locale={locale} />
 
       <footer className="bg-slate-950 px-6 py-12 text-white">
