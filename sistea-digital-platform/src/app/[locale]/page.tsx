@@ -890,10 +890,59 @@ const visualSolutionImages = [
   "/images/solutions/adiabatic-cooling-installation.webp",
 ] as const;
 
-const chillerManufacturerLinks = [
-  ["YORK", "https://www.york.com/commercial-equipment/chilled-water-systems/condensing-units/yvaa_ch/yvaa-variable-speed-drive-screw-chiller"],
-  ["Carrier", "https://www.carrier.com/us/en/commercial/chillers/23xw/"],
-  ["Trane", "https://www.trane.com/commercial/latin-america/sv/es/products-systems/chillers.html"],
+const manufacturerShowcase = [
+  {
+    name: "YORK",
+    logo: "/images/manufacturers/main/york-logo.jpg",
+    products: [
+      {
+        kind: "air",
+        brochure: "/brochures/chillers/york-air-cooled-chillers.pdf",
+      },
+      {
+        kind: "water",
+        brochure: "/brochures/chillers/york-water-cooled-chillers.pdf",
+      },
+    ],
+  },
+  {
+    name: "Carrier",
+    logo: "/images/manufacturers/main/carrier-logo.png",
+    products: [
+      {
+        kind: "air",
+        brochure: "/brochures/chillers/carrier-air-cooled-chillers-30XF.pdf",
+      },
+      {
+        kind: "water",
+        brochure: "/brochures/chillers/carrier-water-cooled-chillers-30XW-V.pdf",
+      },
+    ],
+  },
+  {
+    name: "Trane",
+    logo: "/images/manufacturers/main/trane-logo.png",
+    products: [
+      {
+        kind: "air",
+        brochure: "/brochures/chillers/trane-air-cooled-chillers-RTAG.pdf",
+      },
+    ],
+  },
+  {
+    name: "TICA",
+    logo: "/images/manufacturers/main/TICA.png",
+    products: [
+      {
+        kind: "air",
+        brochure: "/brochures/chillers/tica-air-cooled-chillers.pdf",
+      },
+      {
+        kind: "water",
+        brochure: "/brochures/chillers/tica-water-cooled-chillers.pdf",
+      },
+    ],
+  },
 ] as const;
 
 
@@ -915,6 +964,14 @@ const relaxedCopy = {
       ["07", "Optimización", "Monitoreo, ajustes y mejora continua del rendimiento energético y operativo."],
     ],
     solutionCta: "Hablar sobre esta solución",
+    solutionsApplications: "Aplicaciones: cámaras frigoríficas y de congelación · unidades BITZER · mataderos · cervecerías · alimentos y bebidas · logística refrigerada · refrigeración de proceso.",
+    manufacturerEyebrow: "Chillers · selección técnica por proyecto",
+    manufacturerTitle: "YORK, Carrier, Trane y TICA: documentación técnica local, sin desviar al visitante a páginas de proveedores.",
+    manufacturerText: "SISTEA compara soluciones según carga real, eficiencia, hidráulica, nivel sonoro, redundancia, refrigerante, control y costo total de propiedad. Las fichas siguientes son resúmenes técnicos alojados localmente en SISTEA.",
+    brochureButton: "Ver brochure técnica",
+    airCooledLabel: "Chiller enfriado por aire",
+    waterCooledLabel: "Chiller enfriado por agua",
+    manufacturerDisclaimer: "La presentación de marcas sirve para la selección técnica del proyecto y no implica una relación de exclusividad con el fabricante.",
     energyLead: "Primero hacemos visibles el consumo y los picos de demanda. Después diseñamos la medida correcta.",
     financeLead: "La ingeniería y el financiamiento deben formar parte de la misma decisión.",
     toolsLead: "Una primera estimación digital, seguida por validación técnica de SISTEA.",
@@ -944,6 +1001,14 @@ const relaxedCopy = {
       ["07", "Optimization", "Monitoring, fine-tuning and continuous improvement of energy and operating performance."],
     ],
     solutionCta: "Discuss this solution",
+    solutionsApplications: "Applications: cold and freezer rooms · BITZER condensing units · slaughterhouses · breweries · food and beverage · refrigerated logistics · process cooling.",
+    manufacturerEyebrow: "Chillers · project-specific technical selection",
+    manufacturerTitle: "YORK, Carrier, Trane and TICA: local technical documentation without sending visitors to supplier websites.",
+    manufacturerText: "SISTEA compares solutions by real load, efficiency, hydraulics, sound, redundancy, refrigerant, controls and total cost of ownership. The following sheets are technical summaries hosted locally by SISTEA.",
+    brochureButton: "View technical brochure",
+    airCooledLabel: "Air-cooled chiller",
+    waterCooledLabel: "Water-cooled chiller",
+    manufacturerDisclaimer: "Brand presentation supports technical project selection and does not imply an exclusive manufacturer relationship.",
     energyLead: "First make consumption and demand peaks visible. Then design the right measure.",
     financeLead: "Engineering and financing should be part of the same decision.",
     toolsLead: "A digital first estimate followed by SISTEA engineering validation.",
@@ -973,6 +1038,14 @@ const relaxedCopy = {
       ["07", "Optimierung", "Monitoring, Nachregelung und kontinuierliche Verbesserung der energetischen und betrieblichen Performance."],
     ],
     solutionCta: "Über diese Lösung sprechen",
+    solutionsApplications: "Anwendungen: Kühl- und Tiefkühlzellen · BITZER-Aggregate · Schlachthöfe · Brauereien · Lebensmittel & Getränke · Kühllogistik · Prozesskälte.",
+    manufacturerEyebrow: "Chiller · projektbezogene technische Auswahl",
+    manufacturerTitle: "YORK, Carrier, Trane und TICA: technische Unterlagen direkt bei SISTEA – ohne Weiterleitung zu Lieferantenseiten.",
+    manufacturerText: "SISTEA vergleicht Lösungen nach realer Last, Effizienz, Hydraulik, Schall, Redundanz, Kältemittel, Regelung und Total Cost of Ownership. Die folgenden Unterlagen sind technische Kurzfassungen und werden lokal auf der SISTEA-Webseite bereitgestellt.",
+    brochureButton: "Technische Broschüre ansehen",
+    airCooledLabel: "Luftgekühlter Chiller",
+    waterCooledLabel: "Wassergekühlter Chiller",
+    manufacturerDisclaimer: "Die Darstellung der Marken dient der technischen Projektauswahl und stellt keine exklusive Herstellerpartnerschaft dar.",
     energyLead: "Zuerst Verbrauch und Lastspitzen selbst sichtbar machen. Danach die richtige Maßnahme planen.",
     financeLead: "Engineering und Finanzierung gehören in dieselbe Projektentscheidung.",
     toolsLead: "Eine digitale Erstabschätzung, anschließend die technische Validierung durch SISTEA.",
@@ -1209,26 +1282,85 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      {t.visualSolutions.map(([title, body], index) => (
-        <section key={title} id={index === 0 ? "solutions" : undefined} className={`scroll-mt-24 px-6 py-24 sm:py-28 ${index % 2 === 0 ? "bg-white" : "bg-[#E8F2FA]"}`}>
-          <div className="mx-auto max-w-5xl text-center">
-            <img
-              src={visualSolutionImages[index]}
-              alt={title}
-              loading="lazy"
-              className="mx-auto max-h-[620px] w-full rounded-3xl border border-[#C5DCEB] bg-white object-contain p-3 shadow-[0_20px_60px_rgba(48,75,93,.10)]"
-            />
-            <div className="mx-auto mt-12 max-w-3xl">
-              <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
-              <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl">{title}</h2>
-              <p className="mt-5 text-lg leading-8 text-[#426B86]">{body}</p>
-              <div className="mx-auto mt-8 max-w-sm">
-                <PrimaryButton href="#contact">{r.solutionCta}</PrimaryButton>
+      <section id="solutions" className="scroll-mt-24 bg-[#E8F2FA] px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-4xl text-center">
+          <Eyebrow>{t.refrigerationEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{t.refrigerationTitle}</h2>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{t.refrigerationText}</p>
+          <p className="mt-5 rounded-2xl bg-white p-4 text-sm font-bold leading-6 text-[#41647B]">{r.solutionsApplications}</p>
+        </div>
+        <div className="mx-auto mt-14 grid max-w-6xl gap-7 sm:grid-cols-2">
+          {t.visualSolutions.map(([title, body], index) => (
+            <article key={title} className="overflow-hidden rounded-3xl border border-[#C5DCEB] bg-white shadow-[0_14px_38px_rgba(48,75,93,.08)]">
+              <div className="grid h-[250px] place-items-center bg-[#F8FBFD] p-4 sm:h-[280px]">
+                <img
+                  src={visualSolutionImages[index]}
+                  alt={title}
+                  loading="lazy"
+                  className="max-h-full w-full object-contain"
+                />
               </div>
-            </div>
-          </div>
-        </section>
-      ))}
+              <div className="p-7 text-center">
+                <h3 className="text-2xl font-black">{title}</h3>
+                <p className="mt-4 leading-7 text-[#426B86]">{body}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="mx-auto mt-10 max-w-sm">
+          <PrimaryButton href="#contact">{r.solutionCta}</PrimaryButton>
+        </div>
+      </section>
+
+      <section id="manufacturers" className="scroll-mt-24 bg-white px-6 py-24 sm:py-28">
+        <div className="mx-auto max-w-4xl text-center">
+          <Eyebrow>{r.manufacturerEyebrow}</Eyebrow>
+          <h2 className="mt-4 text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl">{r.manufacturerTitle}</h2>
+          <p className="mt-6 text-lg leading-8 text-[#426B86]">{r.manufacturerText}</p>
+        </div>
+
+        <div className="mx-auto mt-12 max-w-5xl">
+          <img
+            src="/images/manufacturers/chiller-manufacturers-overview.webp"
+            alt="YORK Carrier Trane TICA chiller product overview"
+            loading="lazy"
+            className="mx-auto max-h-[900px] w-full rounded-3xl border border-[#C2D9E8] bg-white object-contain p-3 shadow-[0_18px_48px_rgba(48,75,93,.10)]"
+          />
+        </div>
+
+        <div className="mx-auto mt-12 max-w-6xl space-y-10">
+          {manufacturerShowcase.map((manufacturer) => (
+            <article key={manufacturer.name} className="rounded-3xl border border-[#C2D9E8] bg-[#F7FBFE] p-6 shadow-sm sm:p-8">
+              <div className="flex min-h-20 items-center justify-center border-b border-[#D9E8F1] pb-6">
+                <img
+                  src={manufacturer.logo}
+                  alt={`${manufacturer.name} logo`}
+                  loading="lazy"
+                  className="max-h-14 max-w-[210px] object-contain"
+                />
+              </div>
+
+              <div className={`mt-7 grid gap-5 ${manufacturer.products.length > 1 ? "md:grid-cols-2" : "mx-auto max-w-xl"}`}>
+                {manufacturer.products.map((product) => (
+                  <div key={product.brochure} className="rounded-2xl border border-[#D4E4EE] bg-white p-5 text-center">
+                    <h3 className="text-xl font-black">{product.kind === "air" ? r.airCooledLabel : r.waterCooledLabel}</h3>
+                    <a
+                      href={product.brochure}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0E78B7] px-5 py-3 font-black text-white transition hover:bg-[#0E6BA8]"
+                    >
+                      {r.brochureButton}<ArrowIcon />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <p className="mx-auto mt-8 max-w-4xl text-center text-xs leading-5 text-[#5D7B8F]">{r.manufacturerDisclaimer}</p>
+      </section>
 
       <section id="tools" className="scroll-mt-24 bg-[#E8F2FA] px-6 py-24 sm:py-28">
         <div className="mx-auto max-w-5xl text-center">
