@@ -109,7 +109,7 @@ export default async function AiDataCentersPage({ params }: { params: Promise<{ 
 
       <section className="px-6 py-16">
         <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2">
-          {t.sections.map(([heading, body]: [string, string]) => (
+          {t.sections.map(([heading, body]: string[]) => (
             <article key={heading} className="rounded-2xl border border-slate-200 bg-white p-7 shadow-sm">
               <h2 className="text-2xl font-bold text-slate-900">{heading}</h2>
               <p className="mt-4 leading-7 text-slate-600">{body}</p>
