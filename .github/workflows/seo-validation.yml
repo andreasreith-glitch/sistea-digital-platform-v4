@@ -25,4 +25,4 @@ jobs:
       - name: Production build
         run: pnpm build
 
-# Validation active.
+# Validation active and synchronized.
