@@ -24,3 +24,5 @@ jobs:
         run: pnpm typecheck
       - name: Production build
         run: pnpm build
+
+# Validation active and synchronized.
