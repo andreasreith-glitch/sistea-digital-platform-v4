@@ -5,6 +5,8 @@ import HomepageApplications from "./components/HomepageApplications";
 import HomepagePremiumUpgrade from "./components/HomepagePremiumUpgrade";
 import HomepageVisualPolish from "./components/HomepageVisualPolish";
 
+export const runtime = "edge";
+
 const locales = ["es", "en", "de"] as const;
 type Locale = (typeof locales)[number];
 
